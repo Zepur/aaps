@@ -35,8 +35,8 @@
     <color name="tabSelectedText">@color/black_alpha_90</color>
 
     <!--    Buttons-->
-    <color name="buttonBackground">#BABABA</color>
-    <color name="buttonText">#000000</color>
+    <color name="buttonBackground">#000000</color>
+    <color name="buttonText">#BE30C1</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
 
@@ -179,7 +179,7 @@
 
     <color name="colorAcceptTempButton">#E19701</color>
     <color name="colorTreatmentButton">#006493</color>
-    <color name="colorInsulinButton">#67dfe8</color>
+    <color name="colorInsulinButton">#FFA0FE</color>
     <color name="colorCarbsButton">#E19701</color>
     <color name="colorCalibrationButton">#e93057</color>
     <color name="colorCalculatorButton">#66BB6A</color>
@@ -357,9 +357,9 @@
      Because the implementation of google has no idea of a light/dark mode until now
      we generate extra colornames only used for the widget
      Colors for the widget are always taken from the default color.xml-->
-    <color name="widget_inrange">#00FF00</color>
-    <color name="widget_low">#FF0000</color>
-    <color name="widget_high">#FFFF00</color>
+    <color name="widget_inrange">#00FF4C</color>
+    <color name="widget_low">#FF007E</color>
+    <color name="widget_high">#FFC500</color>
     <color name="widget_ribbonWarning">#f4d700</color>
     <color name="widget_ribbonTextDefault">#FFFFFF</color>
     <color name="widget_ribbonCritical">#ff0400</color>
