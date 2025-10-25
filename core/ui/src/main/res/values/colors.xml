@@ -359,7 +359,7 @@
      Colors for the widget are always taken from the default color.xml-->
     <color name="widget_inrange">#00FF4C</color>
     <color name="widget_low">#FF007E</color>
-    <color name="widget_high">#FFC500</color>
+    <color name="widget_high">#FFE619</color>
     <color name="widget_ribbonWarning">#f4d700</color>
     <color name="widget_ribbonTextDefault">#FFFFFF</color>
     <color name="widget_ribbonCritical">#ff0400</color>
