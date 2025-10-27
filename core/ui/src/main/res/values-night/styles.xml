@@ -20,7 +20,7 @@
         <item name="colorOnSecondary">@color/white</item>
         <item name="colorOnBackground">@color/white</item>
         <item name="colorOnError">@color/black</item>
-        <item name="scrimBackground">@color/mtrl_scrim_color</item>
+        <item name="scrimBackground" ns2:ignore="PrivateResource">@color/mtrl_scrim_color</item>
         <!---Application Background Color  -->
         <item name="android:windowBackground">@color/black</item>
         <!---Text Colors -->
@@ -360,7 +360,7 @@
         <item name="android:paddingTop">0dp</item>
         <item name="android:paddingStart">0dp</item>
         <item name="android:paddingEnd">0dp</item>
-        <item name="android:textSize">11dp</item>
+        <item name="android:textSize">11sp</item>
     </style>
 
     <style name="ButtonMediumFontStyle" parent="GrayButton">
@@ -409,7 +409,7 @@
     </style>
 
     <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
-    <style name="AppTheme.Launcher" parent="AppTheme.NoActionBar"></style>
+    <style name="AppTheme.Launcher" parent="AppTheme.NoActionBar" />
 
     <style name="section_header_label">
         <item name="android:layout_width">match_parent</item>
