@@ -338,11 +338,11 @@
     <color name="aaps_theme_dark_error">#F2B8B5</color>
     <color name="aaps_theme_dark_errorContainer">#ffa867</color>
     <color name="aaps_theme_dark_onError">#d17335</color>
-    <color name="aaps_theme_dark_onErrorContainer">#fff7d0</color>
-    <color name="aaps_theme_dark_background">#1D1B1E</color>
-    <color name="aaps_theme_dark_onBackground">#fff7d0</color>
+    <color name="aaps_theme_dark_onErrorContainer">#FFFADE</color>
+    <color name="aaps_theme_dark_background">#2C3350</color>
+    <color name="aaps_theme_dark_onBackground">#FFFADE</color>
     <color name="aaps_theme_dark_surface">#2C3350</color>
-    <color name="aaps_theme_dark_onSurface">#fff7d0</color>
+    <color name="aaps_theme_dark_onSurface">#FFFADE</color>
     <color name="aaps_theme_dark_surfaceVariant">#49454F</color>
     <color name="aaps_theme_dark_onSurfaceVariant">#CAC4D0</color>
     <color name="aaps_theme_dark_outline">#938F99</color>
