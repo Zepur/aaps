@@ -9,7 +9,7 @@
     <color name="colorLightGray">#d8d8d8</color>
     <color name="cardColorBackground">#2C3350</color>
     <color name="gray">#BBBBBB</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#FF2C3350</color>
     <color name="white">#FFFFF7D0</color>
 
     <color name="primaryColorDefault">#222222</color>
