@@ -3,14 +3,14 @@
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
     <color name="colorPrimary">#96CAF2</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryDark">#2c3350</color>
     <color name="colorAccent">#40bbaa</color>
     <color name="mdtp_line_dark">#808080</color>
     <color name="colorLightGray">#d8d8d8</color>
-    <color name="cardColorBackground">#000000</color>
+    <color name="cardColorBackground">#2c3350</color>
     <color name="gray">#BBBBBB</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFF7D0</color>
 
     <color name="primaryColorDefault">#222222</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
@@ -23,11 +23,11 @@
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
 
-    <color name="defaultBackground">#000000</color>
+    <color name="defaultBackground">#2c3350</color>
     <color name="defaultTextColor">#B3FFFFFF</color>
 
     <!---Android Dark ans Light Theme Base colors-->
-    <color name="background_dark">#262626</color>
+    <color name="background_dark">#2c3350</color>
     <color name="background_light">#FFFFFF</color>
 
     <!--    Tabs-->
@@ -35,7 +35,7 @@
     <color name="tabSelectedText">@color/white</color>
 
     <!--    Buttons-->
-    <color name="buttonBackground">#000000</color>
+    <color name="buttonBackground">#2c3350</color>
     <color name="buttonText">#ffffff</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
@@ -55,7 +55,7 @@
     <!--    Dialogs-->
     <color name="dialog_title_background">#303030</color>
     <color name="activity_title_background">#121212</color>
-    <color name="dialog_title_color">#FFFFFF</color>
+    <color name="dialog_title_color">#FFF7D0</color>
     <color name="dialog_title_icon_tint">#FFFFFF</color>
     <color name="warningAlertBackground">#FFFB8C00</color>
     <color name="warningAlertHeaderText">#FF000000</color>

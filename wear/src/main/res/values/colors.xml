@@ -176,7 +176,8 @@
     <color name="gray_700">#616161</color>
     <color name="gray_800">#424242</color>
     <color name="gray_850">#313131</color>
-    <color name="gray_900">#212121</color>
+    <color name="gray_900">#2c3350</color>
+<!--    <color name="gray_900">#212121</color>-->
     <color name="grey_steampunk">#333333</color>
 
     <!-- Blue Gray -->
