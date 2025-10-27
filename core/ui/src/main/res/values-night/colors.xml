@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-    <color name="colorPrimary">#96CAF2</color>
+    <color name="colorPrimary">#434968</color>
     <color name="colorPrimaryDark">#151E39</color>
     <color name="colorAccent">#40bbaa</color>
     <color name="mdtp_line_dark">#808080</color>
@@ -103,10 +103,10 @@
     <color name="weekendOutline">#1e88e5</color>
 
     <!-- Notification-->
-    <color name="notificationAnnouncement">#FF8C00</color>
-    <color name="notificationUrgent">#008B88</color>
-    <color name="notificationNormal">#00C2BD</color>
-    <color name="notificationLow">#00C2BD</color>
+    <color name="notificationAnnouncement">#FFB35F</color>
+    <color name="notificationUrgent">#C790BD</color>
+    <color name="notificationNormal">#95729E</color>
+    <color name="notificationLow">#67547D</color>
 
     <!-- Green Colors -->
     <color name="notificationInfo">#009705</color>

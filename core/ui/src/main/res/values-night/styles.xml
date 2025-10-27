@@ -364,7 +364,7 @@
         <item name="android:paddingEnd">0dp</item>
         <item name="android:textSize">11sp</item>
         <item name="android:elevation">0dp</item>
-        <item name="elevation">0dp</item>
+        <item name="android:backgroundTint">@color/buttonBackground</item>
     </style>
 
     <style name="ButtonMediumFontStyle" parent="GrayButton">
