@@ -353,7 +353,7 @@
         <item name="android:layout_marginEnd">@dimen/gray_material_button_margin_horizontal</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:elevation">0dp</item>
-        <item name="elevation">0dp</item>
+        <item name="android:background">@color/buttonBackground</item>
     </style>
 
     <style name="ButtonSmallFontStyle" parent="GrayButton">

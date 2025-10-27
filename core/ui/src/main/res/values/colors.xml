@@ -35,7 +35,7 @@
     <color name="tabSelectedText">@color/black_alpha_90</color>
 
     <!--    Buttons-->
-    <color name="buttonBackground">#000000</color>
+    <color name="buttonBackground">#151E39</color>
     <color name="buttonText">#BE30C1</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
