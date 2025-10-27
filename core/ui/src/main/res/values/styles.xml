@@ -333,8 +333,8 @@
         <item name="android:layout_weight">1</item>
         <item name="android:checked">true</item>
         <item name="android:paddingTop">7dp</item>
-        <item name="android:textOn"></item>
-        <item name="android:textOff"></item>
+        <item name="android:textOn" />
+        <item name="android:textOff" />
         <item name="android:layout_marginEnd">2dp</item>
     </style>
 
@@ -420,7 +420,7 @@
     </style>
 
     <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
-    <style name="AppTheme.Launcher" parent="AppTheme.NoActionBar"></style>
+    <style name="AppTheme.Launcher" parent="AppTheme.NoActionBar" />
 
     <style name="section_header_label">
         <item name="android:layout_width">match_parent</item>
