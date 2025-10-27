@@ -50,11 +50,11 @@
     <color name="toggle_button_stroke">#8A8A8A</color>
 
     <!--    Fragments-->
-    <color name="pumpStatusBackground">#505050</color>
+    <color name="pumpStatusBackground">#151E39</color>
 
     <!--    Dialogs-->
-    <color name="dialog_title_background">#303030</color>
-    <color name="activity_title_background">#121212</color>
+    <color name="dialog_title_background">#151E39</color>
+    <color name="activity_title_background">#151E39</color>
     <color name="dialog_title_color">#FFFADE</color>
     <color name="dialog_title_icon_tint">#FFFFFF</color>
     <color name="warningAlertBackground">#FFFB8C00</color>
@@ -215,7 +215,7 @@
     <!-- Gray colors -->
     <color name="darkGray">#323232</color>
     <color name="darkGrayVariant">#424242</color>
-    <color name="objectivesBackground">#3C3C3C</color>
+    <color name="objectivesBackground">#151E39</color>
     <color name="plastic_grey">#666666</color>
     <color name="byodaGray">#999999</color>
     <color name="sphere_plastic_grey">#8c8c8c</color>
