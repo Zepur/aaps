@@ -3,13 +3,13 @@
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
     <color name="colorPrimary">#96CAF2</color>
-    <color name="colorPrimaryDark">#2C3350</color>
+    <color name="colorPrimaryDark">#151E39</color>
     <color name="colorAccent">#40bbaa</color>
     <color name="mdtp_line_dark">#808080</color>
     <color name="colorLightGray">#d8d8d8</color>
-    <color name="cardColorBackground">#2C3350</color>
+    <color name="cardColorBackground">#151E39</color>
     <color name="gray">#BBBBBB</color>
-    <color name="black">#FF2C3350</color>
+    <color name="black">#FF151E39</color>
     <color name="white">#FFFFFADE</color>
 
     <color name="primaryColorDefault">#222222</color>
@@ -23,11 +23,11 @@
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
 
-    <color name="defaultBackground">#2C3350</color>
+    <color name="defaultBackground">#151E39</color>
     <color name="defaultTextColor">#B3FFFFFF</color>
 
     <!---Android Dark ans Light Theme Base colors-->
-    <color name="background_dark">#2C3350</color>
+    <color name="background_dark">#151E39</color>
     <color name="background_light">#FFFFFF</color>
 
     <!--    Tabs-->
@@ -35,7 +35,7 @@
     <color name="tabSelectedText">@color/white</color>
 
     <!--    Buttons-->
-    <color name="buttonBackground">#2C3350</color>
+    <color name="buttonBackground">#151E39</color>
     <color name="buttonText">#ffffff</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
@@ -160,7 +160,7 @@
     <color name="cobAlert">#7484E2</color>
     <color name="inRangeBackground">#3C00FF00</color>
     <color name="baseBasal">#C83F51B5</color>
-    <color name="graphGrid">#454141</color>
+    <color name="graphGrid">#67547D</color>
     <color name="warning">#ff1a1a</color>
     <color name="info">#77dd77</color>
     <color name="error_background">#66FC0000</color>

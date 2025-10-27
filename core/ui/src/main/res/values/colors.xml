@@ -164,7 +164,7 @@
     <color name="cobAlert">#7484E2</color>
     <color name="inRangeBackground">#2800FF00</color>
     <color name="baseBasal">#C83F51B5</color>
-    <color name="graphGrid">#757575</color>
+    <color name="graphGrid">#67547D</color>
     <color name="warning">#ff1a1a</color>
     <color name="info">#77dd77</color>
     <color name="error_background">#66FC0000</color>
@@ -339,9 +339,9 @@
     <color name="aaps_theme_dark_errorContainer">#ffa867</color>
     <color name="aaps_theme_dark_onError">#d17335</color>
     <color name="aaps_theme_dark_onErrorContainer">#FFFADE</color>
-    <color name="aaps_theme_dark_background">#2C3350</color>
+    <color name="aaps_theme_dark_background">#151E39</color>
     <color name="aaps_theme_dark_onBackground">#FFFADE</color>
-    <color name="aaps_theme_dark_surface">#2C3350</color>
+    <color name="aaps_theme_dark_surface">#151E39</color>
     <color name="aaps_theme_dark_onSurface">#FFFADE</color>
     <color name="aaps_theme_dark_surfaceVariant">#49454F</color>
     <color name="aaps_theme_dark_onSurfaceVariant">#CAC4D0</color>
@@ -349,7 +349,7 @@
     <color name="aaps_theme_dark_inverseOnSurface">#1D1B1E</color>
     <color name="aaps_theme_dark_inverseSurface">#E7E1E5</color>
     <color name="aaps_theme_dark_inversePrimary">#006493</color>
-    <color name="aaps_theme_dark_shadow">#2C3350</color>
+    <color name="aaps_theme_dark_shadow">#151E39</color>
     <color name="aaps_theme_dark_primaryInverse">#006493</color>
 
     <!-- widget theme color -->
@@ -372,7 +372,7 @@
 
     <!--    Toasts-->
     <color name="toastBorder">#666666</color>
-    <color name="toastBase">#2C3350</color>
+    <color name="toastBase">#151E39</color>
     <color name="toastOk">#77dd77</color>
     <color name="toastError">#ff0400</color>
     <color name="toastWarn">#FF8C00</color>
