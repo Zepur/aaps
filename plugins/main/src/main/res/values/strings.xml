@@ -124,7 +124,7 @@
     <string name="short_fat">Fat</string>
     <string name="category">Category</string>
     <string name="subcategory">Subcategory</string>
-    <string name="calculator_label">Calculator</string>
+    <string name="calculator_label">Maffs</string>
 
     <!-- Theme switcher dark and light mode-->
     <string name="theme_switcher" translatable="false">Theme switcher</string>
