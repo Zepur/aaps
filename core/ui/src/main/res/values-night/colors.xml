@@ -2,8 +2,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-    <color name="colorPrimary">#434968</color>
-    <color name="colorPrimaryDark">#151E39</color>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <color name="colorPrimary">#151E38</color>
+    <color name="colorPrimaryDark">#151E38</color>
     <color name="colorAccent">#40bbaa</color>
     <color name="mdtp_line_dark">#151E39</color>
     <color name="colorLightGray">#d8d8d8</color>

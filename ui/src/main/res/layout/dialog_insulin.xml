@@ -154,6 +154,7 @@
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:backgroundTint="@null"
                 android:layout_weight="1"
                 tools:text="+0.5" />
 
@@ -162,8 +163,8 @@
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:backgroundTint="@null"
                 android:layout_weight="1"
-                android:backgroundTint="@color/ffffff"
                 tools:text="+1.0" />
 
             <com.google.android.material.button.MaterialButton
