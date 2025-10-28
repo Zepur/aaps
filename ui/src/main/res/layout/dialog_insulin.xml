@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
+    android:background="@color/background_dark"
     tools:context=".dialogs.InsulinDialog">
 
     <LinearLayout
@@ -162,6 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@color/ffffff"
                 tools:text="+1.0" />
 
             <com.google.android.material.button.MaterialButton

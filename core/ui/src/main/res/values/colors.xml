@@ -27,7 +27,8 @@
     <color name="defaultTextColor">#000000</color>
 
     <!---Android Dark ans Light Theme Base colors-->
-    <color name="background_dark">#262626</color>
+    <color name="ffffff">#FFFFFF</color>
+    <color name="background_dark">#151E39</color>
     <color name="background_light">#FFFFFF</color>
 
     <!--    Tabs-->
