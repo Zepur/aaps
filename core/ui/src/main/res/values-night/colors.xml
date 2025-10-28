@@ -2,24 +2,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <color name="colorPrimary">#151E38</color>
-    <color name="colorPrimaryDark">#151E38</color>
+    <color name="colorPrimary">#151E39</color>
+    <color name="colorPrimaryDark">#40bbaa</color>
     <color name="colorAccent">#40bbaa</color>
     <color name="mdtp_line_dark">#151E39</color>
     <color name="colorLightGray">#d8d8d8</color>
@@ -27,6 +11,8 @@
     <color name="gray">#BBBBBB</color>
     <color name="black">#FF151E39</color>
     <color name="white">#FFFFFADE</color>
+    <color name="ok_cancel_yellow">#F9F871</color>
+    <color name="dropDownBlurple">#3C385B</color>
 
     <color name="primaryColorDefault">#222222</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
@@ -34,8 +20,8 @@
     <color name="secondaryColorDefault">#03dac6</color>
     <color name="secondaryLightColorDefault">#e3e3e3</color>
     <color name="secondaryDarkColorDefault">#848484</color>
-    <color name="primaryTextColorDefault">#ffffff</color>
-    <color name="secondaryTextColorDefault">#000000</color>
+    <color name="primaryTextColorDefault">#FFFADE</color>
+    <color name="secondaryTextColorDefault">#151E39</color>
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
 
@@ -43,7 +29,6 @@
     <color name="defaultTextColor">#B3FFFFFF</color>
 
     <!---Android Dark ans Light Theme Base colors-->
-    <color name="ffffff">#FFFFFF</color>
     <color name="background_dark">#151E39</color>
     <color name="background_light">#FFFFFF</color>
 
@@ -106,7 +91,7 @@
     <color name="extendedBolus">#67DFE8</color>
     <color name="iobPredAS">#1ea3e5</color>
     <color name="cob">#FFFB8C00</color>
-    <color name="carbs">#FFFFA0FE</color>
+    <color name="carbs">#FFFAB0DB</color>
     <color name="uam">#c9bd60</color>
     <color name="zt">#00d2d2</color>
     <color name="calibration">#E83258</color>
@@ -158,7 +143,7 @@
     <color name="importListAdditionalInfo">#BBBBBB</color>
     <color name="importListFileName">#FFFFFF</color>
 
-    <color name="ribbonWarning">#99FFA0FE</color>
+    <color name="ribbonWarning">#99FAB0DB</color>
     <color name="ribbonCritical">#d17335</color>
     <color name="ribbonTextDefault">#FFFFFF</color>
     <color name="ribbonTextWarning">#303030</color>
@@ -166,7 +151,7 @@
 
     <color name="prediction">#ff00ff</color>
     <color name="iobPred">#00d2d2</color>
-    <color name="bolus">#FFA0FE</color>
+    <color name="bolus">#FAB0DB</color>
     <color name="ratio">#FFFFFF</color>
     <color name="activity">#d3f166</color>
     <color name="bgi">#00EEEE</color>
@@ -192,11 +177,11 @@
 
     <color name="colorAcceptTempButton">#f4d700</color>
     <color name="colorTreatmentButton">#67dfe8</color>
-    <color name="colorInsulinButton">#FFA0FE</color>
-    <color name="colorCarbsButton">#FFA0FE</color>
-    <color name="colorCalibrationButton">#FFA0FE</color>
-    <color name="colorCalculatorButton">#FFA0FE</color>
-    <color name="colorQuickWizardButton">#ffae01</color>
+    <color name="colorInsulinButton">#C790BD</color>
+    <color name="colorCarbsButton">#C790BD</color>
+    <color name="colorCalculatorButton">#C790BD</color>
+    <color name="colorCalibrationButton">#C790BD</color>
+    <color name="colorQuickWizardButton">#C790BD</color>
     <color name="colorSetTempButton">#FF478EFF</color>
     <color name="colorSetExtendedButton">#FFDD7792</color>
     <color name="colorProfileSwitchButton">#ca77dd</color>
@@ -257,7 +242,7 @@
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#9E9E9E</color>
 
     <!-- Omnipod Wizard -->
-    <color name="omnipod_wizard_progress_bar">#0099CC</color>
+    <color name="omnipod_wizard_progress_bar">#FAB0DB</color>
     <color name="omnipod_wizard_finish_button">#ff669900</color>
     <color name="icon_omnipod_wizard_success">#77DD77</color>
 

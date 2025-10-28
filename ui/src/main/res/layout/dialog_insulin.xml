@@ -154,7 +154,7 @@
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@null"
+                android:background="@color/colorPrimaryDark"
                 android:layout_weight="1"
                 tools:text="+0.5" />
 
@@ -163,7 +163,7 @@
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@null"
+                android:background="@color/colorPrimaryDark"
                 android:layout_weight="1"
                 tools:text="+1.0" />
 
@@ -172,7 +172,7 @@
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@null"
+                android:background="@color/colorPrimaryDark"
                 android:layout_weight="1"
                 tools:text="+2.0" />
 

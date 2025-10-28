@@ -11,6 +11,8 @@
     <color name="gray">#BBBBBB</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ok_cancel_yellow">#F9F871</color>
+    <color name="dropDownBlurple">#3C385B</color>
 
     <color name="primaryColorDefault">#222222</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
@@ -27,7 +29,6 @@
     <color name="defaultTextColor">#000000</color>
 
     <!---Android Dark ans Light Theme Base colors-->
-    <color name="ffffff">#FFFFFF</color>
     <color name="background_dark">#151E39</color>
     <color name="background_light">#FFFFFF</color>
 
@@ -180,7 +181,7 @@
 
     <color name="colorAcceptTempButton">#E19701</color>
     <color name="colorTreatmentButton">#006493</color>
-    <color name="colorInsulinButton">#FFA0FE</color>
+    <color name="colorInsulinButton">#FAB0DB</color>
     <color name="colorCarbsButton">#E19701</color>
     <color name="colorCalibrationButton">#e93057</color>
     <color name="colorCalculatorButton">#66BB6A</color>
