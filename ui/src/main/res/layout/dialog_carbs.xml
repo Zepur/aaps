@@ -226,6 +226,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="+5"
+                android:background="@color/colorPrimaryDark"
                 tools:ignore="HardcodedText" />
 
             <com.google.android.material.button.MaterialButton
@@ -235,6 +236,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="+10"
+                android:background="@color/colorPrimaryDark"
                 tools:ignore="HardcodedText" />
 
             <com.google.android.material.button.MaterialButton
@@ -244,6 +246,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="+20"
+                android:background="@color/colorPrimaryDark"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>

@@ -75,6 +75,7 @@
             android:singleLine="true"
             android:text="@string/carbs"
             android:textColor="?attr/icBolusCarbsColor"
+            android:background="@color/ok_cancel_yellow"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -89,6 +90,7 @@
             android:singleLine="true"
             android:text="@string/calculator_label"
             android:textColor="?attr/icCalculatorColor"
+            android:background="@color/background_dark"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton

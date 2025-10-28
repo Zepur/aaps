@@ -3,8 +3,8 @@
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
     <color name="colorPrimary">#151E39</color>
-    <color name="colorPrimaryDark">#40bbaa</color>
-    <color name="colorAccent">#40bbaa</color>
+    <color name="colorPrimaryDark">#151E39</color>
+    <color name="colorAccent">#151E39</color>
     <color name="mdtp_line_dark">#151E39</color>
     <color name="colorLightGray">#d8d8d8</color>
     <color name="cardColorBackground">#151E39</color>
@@ -14,9 +14,9 @@
     <color name="ok_cancel_yellow">#F9F871</color>
     <color name="dropDownBlurple">#3C385B</color>
 
-    <color name="primaryColorDefault">#222222</color>
+    <color name="primaryColorDefault">#151E39</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
-    <color name="primaryDarkColorDefault">#222222</color>
+    <color name="primaryDarkColorDefault">#151E39</color>
     <color name="secondaryColorDefault">#03dac6</color>
     <color name="secondaryLightColorDefault">#e3e3e3</color>
     <color name="secondaryDarkColorDefault">#848484</color>
@@ -49,6 +49,7 @@
 
     <!--    Toggle Buttons-->
     <color name="toggle_button_background">#303030</color>
+    <color name="toggle_button_background_blood">#67547D</color>
     <color name="toggle_button_stroke">#8A8A8A</color>
 
     <!--    Fragments-->
@@ -84,9 +85,12 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRange">#00FF4C</color>
-    <color name="low">#FF007E</color>
-    <color name="high">#FFE619</color>
+    <color name="inRange">#FAB0DB</color>
+    <color name="low">#E1786A</color>
+    <color name="high">#A4506F</color>
+<!--    <color name="inRange">#00FF4C</color>-->
+<!--    <color name="low">#FF007E</color>-->
+<!--    <color name="high">#FFE619</color>-->
     <color name="iob">#1e88e5</color>
     <color name="extendedBolus">#67DFE8</color>
     <color name="iobPredAS">#1ea3e5</color>
@@ -99,7 +103,7 @@
     <color name="profileSwitch">#FFFFFF</color>
     <color name="sens">#008585</color>
 
-    <color name="ribbonDefault">#5a595b</color>
+    <color name="ribbonDefault">#151E39</color>
     <color name="daySelected">#D000FF00</color>
     <color name="weekdayOutline">#1ea3e5</color>
     <color name="weekendOutline">#1e88e5</color>
