@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-    <color name="colorPrimary">#434968</color>
+    <color name="colorPrimary">#151E39</color>
+    <color name="ffffff">#d8d8d8</color>
+    <color name="background_dark">#151E39</color>
+
+
+
+
     <color name="colorPrimaryDark">#151E39</color>
     <color name="colorAccent">#40bbaa</color>
     <color name="mdtp_line_dark">#151E39</color>
@@ -27,8 +48,8 @@
     <color name="defaultTextColor">#B3FFFFFF</color>
 
     <!---Android Dark ans Light Theme Base colors-->
-    <color name="ffffff">#FFFFFF</color>
-    <color name="background_dark">#151E39</color>
+<!--    <color name="ffffff">#FFFFFF</color>-->
+<!--    <color name="background_dark">#151E39</color>-->
     <color name="background_light">#FFFFFF</color>
 
     <!--    Tabs-->
