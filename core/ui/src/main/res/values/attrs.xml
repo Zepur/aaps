@@ -224,4 +224,7 @@
     <attr name="crossTargetColor" format="reference|color" />
     <!---Custom button -->
     <attr name="customBtnStyle" format="reference" />
+    <!--- custom shit -->
+    <attr name="progressDrawable" format="reference" />
+    <attr name="indeterminateDrawable" format="reference" />
 </resources>

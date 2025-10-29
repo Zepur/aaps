@@ -330,7 +330,7 @@
     <color name="aaps_theme_dark_onPrimary">#00344F</color>
     <color name="aaps_theme_dark_primaryContainer">#004B6F</color>
     <color name="aaps_theme_dark_onPrimaryContainer">#C7E6FF</color>
-    <color name="aaps_theme_dark_secondary">#17DECA</color>
+    <color name="aaps_theme_dark_secondary">#FAB0DB</color>
     <color name="aaps_theme_dark_onSecondary">#003730</color>
     <color name="aaps_theme_dark_secondaryContainer">#005047</color>
     <color name="aaps_theme_dark_onSecondaryContainer">#4FFBE6</color>
