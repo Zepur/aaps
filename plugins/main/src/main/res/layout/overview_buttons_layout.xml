@@ -46,6 +46,7 @@
             android:singleLine="true"
             android:text="@string/overview_treatment_label"
             android:textColor="?attr/icBolusColor"
+            android:background="@color/background_dark"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -107,6 +108,7 @@
             android:singleLine="true"
             android:text="@string/calibration"
             android:textColor="?attr/icCalibrationColor"
+            android:background="@color/background_dark"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -139,6 +141,7 @@
             android:hint="@string/quickwizard"
             android:text="@string/quickwizard"
             android:textColor="?attr/icCalibrationColor"
+            android:background="@color/background_dark"
             app:iconPadding="-4dp" />
 
     </LinearLayout>
