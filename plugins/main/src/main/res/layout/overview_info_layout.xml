@@ -79,6 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@+id/aps_mode_layout"
         app:layout_constraintStart_toEndOf="@+id/arrows_layout"
         app:layout_constraintBottom_toBottomOf="@+id/arrows_layout">
@@ -403,6 +404,7 @@
         app:layout_constraintStart_toEndOf="@+id/extended_layout"
         app:layout_constraintTop_toTopOf="@+id/iob_layout"
         tools:ignore="UseCompoundDrawables"
+        android:visibility="gone"
         android:focusable="true">
 
         <ImageView

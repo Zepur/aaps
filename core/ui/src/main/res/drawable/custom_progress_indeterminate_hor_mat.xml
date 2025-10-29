@@ -15,11 +15,11 @@
 -->
 
 <animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@android:drawable/vector_drawable_progress_indeterminate_horizontal" >
+    android:drawable="@drawable/custom_vect_draw_prog_inde_hor" >
     <target
         android:name="rect2_grp"
-        android:animation="@anim/progress_indeterminate_horizontal_rect2" />
+        android:animation="@android:anim/progress_indeterminate_horizontal_rect2" />
     <target
         android:name="rect1_grp"
-        android:animation="@anim/progress_indeterminate_horizontal_rect1" />
+        android:animation="@android:anim/progress_indeterminate_horizontal_rect1" />
 </animated-vector>

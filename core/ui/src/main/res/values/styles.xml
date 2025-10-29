@@ -388,11 +388,13 @@
         <item name="buttonBarNegativeButtonStyle">@style/DialogOkCancelButtonStyle</item>
         <item name="buttonBarPositiveButtonStyle">@style/DialogOkCancelButtonStyle</item>
         <item name="dialogTitleBackground">@color/dialog_title_background</item>
+        <item name="background">@color/background_dark</item>
         <item name="buttonBarNeutralButtonStyle">@style/DialogOkCancelButtonStyle</item>
     </style>
 
     <style name="DialogOkCancelButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
         <item name="android:textColor">@color/okButtonText</item>
+        <item name="backgroundTint">@color/toggle_button_background_blood</item>
     </style>
 
     <style name="AppThemeWarningDialog" parent="DialogTheme">
@@ -453,8 +455,8 @@
     </style>
 
     <style name="custom_hor_prog_bar" parent="@android:style/Widget.Material.ProgressBar.Horizontal">
-        <item name="progressDrawable">@+drawable/progress_horizontal_material</item>
-        <item name="indeterminateDrawable">@+drawable/progress_indeterminate_horizontal_material</item>
+        <item name="progressDrawable">@drawable/custom_prog_hor_material</item>
+        <item name="indeterminateDrawable">@drawable/custom_progress_indeterminate_hor_mat</item>
         <item name="minHeight">16dip</item>
         <item name="maxHeight">16dip</item>
     </style>

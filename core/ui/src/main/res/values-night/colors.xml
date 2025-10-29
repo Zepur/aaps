@@ -180,7 +180,7 @@
     <color name="alarm">#ffff4444</color>
 
     <color name="colorAcceptTempButton">#f4d700</color>
-    <color name="colorTreatmentButton">#67dfe8</color>
+    <color name="colorTreatmentButton">#C790BD</color>
     <color name="colorInsulinButton">#C790BD</color>
     <color name="colorCarbsButton">#C790BD</color>
     <color name="colorCalculatorButton">#C790BD</color>
