@@ -61,6 +61,7 @@
             android:singleLine="true"
             android:text="@string/overview_insulin_label"
             android:textColor="?attr/icBolusColor"
+            android:background="@color/background_dark"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -122,6 +123,7 @@
             android:singleLine="true"
             android:text="@string/overview_cgm"
             android:textColor="?attr/icCalibrationColor"
+            android:background="@color/background_dark"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
