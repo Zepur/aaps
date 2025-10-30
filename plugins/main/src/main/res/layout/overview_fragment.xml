@@ -239,11 +239,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:background="?attr/pumpStatusBackground"
+            android:background="@color/pink"
             android:gravity="center_vertical|center_horizontal"
             android:paddingTop="6dp"
             android:paddingBottom="6dp"
             android:text="@string/initializing"
+            android:textColor="@color/buttonTextDark"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </LinearLayout>

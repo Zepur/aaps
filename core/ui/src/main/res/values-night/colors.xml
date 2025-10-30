@@ -2,34 +2,41 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-    <color name="colorPrimary">#151E39</color>
-    <color name="colorPrimaryDark">#151E39</color>
-    <color name="colorAccent">#151E39</color>
-    <color name="mdtp_line_dark">#151E39</color>
+    <color name="colorPrimary">@color/dark_blue</color>
+    <color name="colorPrimaryDark">@color/dark_blue</color>
+    <color name="colorAccent">@color/dark_blue</color>
+    <color name="mdtp_line_dark">@color/dark_blue</color>
     <color name="colorLightGray">#d8d8d8</color>
-    <color name="cardColorBackground">#151E39</color>
+    <color name="cardColorBackground">@color/dark_blue</color>
     <color name="gray">#BBBBBB</color>
     <color name="black">#FF151E39</color>
     <color name="white">#FFFFFADE</color>
     <color name="ok_cancel_yellow">#F9F871</color>
     <color name="dropDownBlurple">#3C385B</color>
 
-    <color name="primaryColorDefault">#151E39</color>
+    <color name="pink">#FAB0DB</color>
+    <color name="pink_dark">#C790BD</color>
+    <color name="pink_darker">#95729E</color>
+    <color name="pink_darkest">#67547D</color>
+    <color name="dark_blue">#151E39</color>
+    <color name="buttonTextDark">@color/dark_blue</color>
+
+    <color name="primaryColorDefault">@color/dark_blue</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
-    <color name="primaryDarkColorDefault">#151E39</color>
+    <color name="primaryDarkColorDefault">@color/dark_blue</color>
     <color name="secondaryColorDefault">#03dac6</color>
     <color name="secondaryLightColorDefault">#e3e3e3</color>
     <color name="secondaryDarkColorDefault">#848484</color>
     <color name="primaryTextColorDefault">#FFFADE</color>
-    <color name="secondaryTextColorDefault">#151E39</color>
+    <color name="secondaryTextColorDefault">@color/dark_blue</color>
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
 
-    <color name="defaultBackground">#151E39</color>
+    <color name="defaultBackground">@color/dark_blue</color>
     <color name="defaultTextColor">#B3FFFFFF</color>
 
     <!---Android Dark ans Light Theme Base colors-->
-    <color name="background_dark">#151E39</color>
+    <color name="background_dark">@color/dark_blue</color>
     <color name="background_light">#FFFFFF</color>
 
     <!--    Tabs-->
@@ -37,7 +44,7 @@
     <color name="tabSelectedText">@color/white</color>
 
     <!--    Buttons-->
-    <color name="buttonBackground">#151E39</color>
+    <color name="buttonBackground">@color/dark_blue</color>
     <color name="buttonText">#ffffff</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
@@ -54,11 +61,11 @@
     <color name="toggle_button_stroke">#8A8A8A</color>
 
     <!--    Fragments-->
-    <color name="pumpStatusBackground">#151E39</color>
+    <color name="pumpStatusBackground">@color/dark_blue</color>
 
     <!--    Dialogs-->
-    <color name="dialog_title_background">#151E39</color>
-    <color name="activity_title_background">#151E39</color>
+    <color name="dialog_title_background">@color/dark_blue</color>
+    <color name="activity_title_background">@color/dark_blue</color>
     <color name="dialog_title_color">#FFFADE</color>
     <color name="dialog_title_icon_tint">#FFFFFF</color>
     <color name="warningAlertBackground">#FFFB8C00</color>
@@ -86,7 +93,7 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRange">#FAB0DB</color>
+    <color name="inRange">@color/pink</color>
     <color name="low">#E1786A</color>
     <color name="high">#A4506F</color>
 <!--    <color name="inRange">#00FF4C</color>-->
@@ -96,7 +103,7 @@
     <color name="extendedBolus">#67DFE8</color>
     <color name="iobPredAS">#1ea3e5</color>
     <color name="cob">#FFFB8C00</color>
-    <color name="carbs">#FFFAB0DB</color>
+    <color name="carbs">@color/pink</color>
     <color name="uam">#c9bd60</color>
     <color name="zt">#00d2d2</color>
     <color name="calibration">#E83258</color>
@@ -104,16 +111,16 @@
     <color name="profileSwitch">#FFFFFF</color>
     <color name="sens">#008585</color>
 
-    <color name="ribbonDefault">#151E39</color>
+    <color name="ribbonDefault">@color/dark_blue</color>
     <color name="daySelected">#D000FF00</color>
     <color name="weekdayOutline">#1ea3e5</color>
     <color name="weekendOutline">#1e88e5</color>
 
     <!-- Notification-->
     <color name="notificationAnnouncement">#FFB35F</color>
-    <color name="notificationUrgent">#C790BD</color>
-    <color name="notificationNormal">#95729E</color>
-    <color name="notificationLow">#67547D</color>
+    <color name="notificationUrgent">@color/pink_dark</color>
+    <color name="notificationNormal">@color/pink_darker</color>
+    <color name="notificationLow">@color/pink_darkest</color>
 
     <!-- Green Colors -->
     <color name="notificationInfo">#009705</color>
@@ -156,7 +163,7 @@
 
     <color name="prediction">#ff00ff</color>
     <color name="iobPred">#00d2d2</color>
-    <color name="bolus">#FAB0DB</color>
+    <color name="bolus">@color/pink</color>
     <color name="ratio">#FFFFFF</color>
     <color name="activity">#d3f166</color>
     <color name="bgi">#00EEEE</color>
@@ -181,12 +188,12 @@
     <color name="alarm">#ffff4444</color>
 
     <color name="colorAcceptTempButton">#f4d700</color>
-    <color name="colorTreatmentButton">#C790BD</color>
-    <color name="colorInsulinButton">#C790BD</color>
-    <color name="colorCarbsButton">#C790BD</color>
-    <color name="colorCalculatorButton">#C790BD</color>
-    <color name="colorCalibrationButton">#C790BD</color>
-    <color name="colorQuickWizardButton">#C790BD</color>
+    <color name="colorTreatmentButton">@color/pink_dark</color>
+    <color name="colorInsulinButton">@color/pink_dark</color>
+    <color name="colorCarbsButton">@color/pink_dark</color>
+    <color name="colorCalculatorButton">@color/pink_dark</color>
+    <color name="colorCalibrationButton">@color/pink_dark</color>
+    <color name="colorQuickWizardButton">@color/pink_dark</color>
     <color name="colorSetTempButton">#FF478EFF</color>
     <color name="colorSetExtendedButton">#FFDD7792</color>
     <color name="colorProfileSwitchButton">#ca77dd</color>
@@ -222,7 +229,7 @@
     <!-- Gray colors -->
     <color name="darkGray">#323232</color>
     <color name="darkGrayVariant">#424242</color>
-    <color name="objectivesBackground">#151E39</color>
+    <color name="objectivesBackground">@color/dark_blue</color>
     <color name="plastic_grey">#666666</color>
     <color name="byodaGray">#999999</color>
     <color name="sphere_plastic_grey">#8c8c8c</color>
@@ -247,7 +254,7 @@
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#9E9E9E</color>
 
     <!-- Omnipod Wizard -->
-    <color name="omnipod_wizard_progress_bar">#FAB0DB</color>
+    <color name="omnipod_wizard_progress_bar">@color/pink</color>
     <color name="omnipod_wizard_finish_button">#ff669900</color>
     <color name="icon_omnipod_wizard_success">#77DD77</color>
 

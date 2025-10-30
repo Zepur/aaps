@@ -14,6 +14,13 @@
     <color name="ok_cancel_yellow">#F9F871</color>
     <color name="dropDownBlurple">#3C385B</color>
 
+    <color name="pink">#FAB0DB</color>
+    <color name="pink_dark">#C790BD</color>
+    <color name="pink_darker">#95729E</color>
+    <color name="pink_darkest">#95729E</color>
+    <color name="dark_blue">#151E39</color>
+    <color name="buttonTextDark">#151E39</color>
+
     <color name="primaryColorDefault">#222222</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
     <color name="primaryDarkColorDefault">#222222</color>
@@ -41,7 +48,7 @@
     <color name="buttonText">#BE30C1</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
-    <color name="fadeButtonTextColor">@color/buttonBackground</color>
+    <color name="fadeButtonTextColor">@color/colorInsulinButton</color>
 
     <color name="ic_actions_refill">#E93057</color>
     <color name="ic_local_activate">#67DFE8</color>

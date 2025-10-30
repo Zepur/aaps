@@ -382,11 +382,13 @@
         <item name="buttonBarNegativeButtonStyle">@style/DialogOkCancelButtonStyle</item>
         <item name="buttonBarPositiveButtonStyle">@style/DialogOkCancelButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">@style/DialogOkCancelButtonStyle</item>
+        <item name="android:background">@color/dark_blue</item>
+        <item name="android:textColor">@color/ok_cancel_yellow</item>
     </style>
 
     <style name="DialogOkCancelButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="android:textColor">@color/okButtonText</item>
-        <item name="android:background">@color/inRange</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:background">@color/pink</item>
     </style>
 
     <style name="AppThemeWarningDialog" parent="DialogTheme">

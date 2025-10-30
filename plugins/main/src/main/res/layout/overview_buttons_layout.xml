@@ -47,7 +47,7 @@
             android:singleLine="true"
             android:text="@string/overview_treatment_label"
             android:textColor="?attr/icFadeColor"
-            android:background="@color/background_dark"
+            android:background="@color/transparent"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -63,7 +63,7 @@
             android:singleLine="true"
             android:text="@string/overview_insulin_label"
             android:textColor="?attr/icFadeColor"
-            android:backgroundTint="@color/transparent"
+            android:background="@color/transparent"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -78,7 +78,7 @@
             android:singleLine="true"
             android:text="@string/carbs"
             android:textColor="?attr/icFadeColor"
-            android:backgroundTint="@color/transparent"
+            android:background="@color/transparent"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -93,7 +93,7 @@
             android:singleLine="true"
             android:text="@string/calculator_label"
             android:textColor="?attr/icFadeColor"
-            android:background="@color/background_dark"
+            android:background="@color/transparent"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
