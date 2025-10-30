@@ -92,6 +92,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="end|center_vertical"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <LinearLayout
@@ -202,6 +203,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:orientation="vertical"
+            android:textColor="@color/ok_cancel_yellow"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
@@ -209,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/iob"
-                android:src="@drawable/ic_bolus" />
+                android:src="@drawable/ic_bolus_widget" />
 
             <TextView
                 android:id="@+id/iob"

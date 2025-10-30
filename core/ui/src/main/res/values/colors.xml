@@ -93,9 +93,12 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRange">#00FF00</color>
-    <color name="low">#FF0000</color>
-    <color name="high">#FFFB8C00</color>
+<!--    <color name="inRange">#00FF00</color>-->
+<!--    <color name="low">#FF0000</color>-->
+<!--    <color name="high">#FFFB8C00</color>-->
+    <color name="inRange">@color/pink</color>
+    <color name="low">#E1786A</color>
+    <color name="high">#A4506F</color>
     <color name="iob">#1e88e5</color>
     <color name="extendedBolus">#1e88e5</color>
     <color name="iobPredAS">#1ea3e5</color>
@@ -368,9 +371,9 @@
      Because the implementation of google has no idea of a light/dark mode until now
      we generate extra colornames only used for the widget
      Colors for the widget are always taken from the default color.xml-->
-    <color name="widget_inrange">#00FF4C</color>
-    <color name="widget_low">#FF007E</color>
-    <color name="widget_high">#FFE619</color>
+    <color name="widget_inrange">@color/inRange</color>
+    <color name="widget_low">@color/low</color>
+    <color name="widget_high">@color/high</color>
     <color name="widget_ribbonWarning">#f4d700</color>
     <color name="widget_ribbonTextDefault">#FFFFFF</color>
     <color name="widget_ribbonCritical">#ff0400</color>
