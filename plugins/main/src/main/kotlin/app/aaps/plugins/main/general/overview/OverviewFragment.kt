@@ -595,8 +595,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             } else {
                 setRibbon(
                     binding.buttonsLayout.insulinButton,
-                    app.aaps.core.ui.R.attr.icBolusColor,
-                    app.aaps.core.ui.R.attr.ribbonDefaultColor,
+                    app.aaps.core.ui.R.attr.icFadeColor,
+                    app.aaps.core.ui.R.attr.viewPortBackgroundColor,
                     rh.gs(app.aaps.core.ui.R.string.overview_insulin_label)
                 )
             }

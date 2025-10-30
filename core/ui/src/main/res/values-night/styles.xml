@@ -387,7 +387,7 @@
     </style>
 
     <style name="DialogOkCancelButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textColor">@color/ok_cancel_yellow</item>
         <item name="android:background">@color/pink</item>
     </style>
 

@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/transparent"
+        android:background="@color/ok_cancel_yellow"
         android:paddingStart="@dimen/gray_material_button_margin_horizontal"
         android:paddingEnd="@dimen/gray_material_button_margin_horizontal">
 
