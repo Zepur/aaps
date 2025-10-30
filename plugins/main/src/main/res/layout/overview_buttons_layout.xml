@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/transparent"
         android:paddingStart="@dimen/gray_material_button_margin_horizontal"
         android:paddingEnd="@dimen/gray_material_button_margin_horizontal">
 
@@ -45,7 +46,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_treatment_label"
-            android:textColor="?attr/icBolusColor"
+            android:textColor="?attr/icFadeColor"
             android:background="@color/background_dark"
             android:visibility="gone"
             app:iconPadding="-4dp" />
@@ -61,8 +62,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_insulin_label"
-            android:textColor="?attr/icBolusColor"
-            android:background="@color/background_dark"
+            android:textColor="?attr/icFadeColor"
+            android:backgroundTint="@color/transparent"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -76,8 +77,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/carbs"
-            android:textColor="?attr/icBolusCarbsColor"
-            android:background="@color/ok_cancel_yellow"
+            android:textColor="?attr/icFadeColor"
+            android:backgroundTint="@color/transparent"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -91,7 +92,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/calculator_label"
-            android:textColor="?attr/icCalculatorColor"
+            android:textColor="?attr/icFadeColor"
             android:background="@color/background_dark"
             app:iconPadding="-4dp" />
 
@@ -107,8 +108,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/calibration"
-            android:textColor="?attr/icCalibrationColor"
-            android:background="@color/background_dark"
+            android:textColor="?attr/icFadeColor"
+            android:background="@color/transparent"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -124,8 +125,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_cgm"
-            android:textColor="?attr/icCalibrationColor"
-            android:background="@color/background_dark"
+            android:textColor="?attr/icFadeColor"
+            android:background="@color/transparent"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -140,8 +141,8 @@
             android:drawableTop="@drawable/ic_quick_wizard"
             android:hint="@string/quickwizard"
             android:text="@string/quickwizard"
-            android:textColor="?attr/icCalibrationColor"
-            android:background="@color/background_dark"
+            android:textColor="?attr/icFadeColor"
+            android:backgroundTint="@color/transparent"
             app:iconPadding="-4dp" />
 
     </LinearLayout>

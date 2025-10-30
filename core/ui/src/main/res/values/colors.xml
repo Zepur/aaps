@@ -41,6 +41,7 @@
     <color name="buttonText">#BE30C1</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
+    <color name="fadeButtonTextColor">@color/buttonBackground</color>
 
     <color name="ic_actions_refill">#E93057</color>
     <color name="ic_local_activate">#67DFE8</color>

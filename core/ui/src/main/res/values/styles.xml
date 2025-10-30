@@ -158,6 +158,7 @@
         <!-- Icon Colors -->
         <!-- Overview Buttons -->
         <item name="icBolusColor">@color/bolus</item>
+        <item name="icFadeColor">@color/fadeButtonTextColor</item>
         <item name="icBolusCarbsColor">@color/colorCarbsButton</item>
         <item name="icCalculatorColor">@color/colorCalculatorButton</item>
         <item name="icQuickWizardColor">@color/colorQuickWizardButton</item>

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/gradback"
     tools:context=".general.overview.OverviewFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -93,7 +94,6 @@
                 app:cardCornerRadius="4dp"
                 app:contentPadding="2dp"
                 app:cardElevation="0dp"
-                app:cardBackgroundColor="@color/aaps_theme_dark_background"
                 app:cardUseCompatPadding="false"
                 android:layout_gravity="center">
 
