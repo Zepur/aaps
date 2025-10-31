@@ -99,7 +99,7 @@
 
                 <include
                     android:id="@+id/info_layout"
-                    layout="@layout/overview_info_layout" />
+                    layout="@layout/main_page_info_layout" />
 
             </com.google.android.material.card.MaterialCardView>
 

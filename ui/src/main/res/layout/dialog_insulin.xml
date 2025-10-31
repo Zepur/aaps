@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    android:background="@color/background_dark"
+    android:background="@drawable/gradback_card"
     tools:context=".dialogs.InsulinDialog">
 
     <LinearLayout
