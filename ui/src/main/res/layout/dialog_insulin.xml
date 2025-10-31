@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            style="@style/StyleDialogHeader"
+            style="@style/StyleDialogHeaderFade"
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,6 +37,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/overview_insulin_label"
                 android:textAlignment="center"
+                android:textColor="@color/dark_blue"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
         </RelativeLayout>
@@ -154,26 +155,48 @@
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimaryDark"
+                android:textColor="?attr/icFadeColor"
+                android:textStyle="bold"
+                android:background="@color/transparent"
                 android:layout_weight="1"
                 tools:text="+0.5" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/plus10"
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimaryDark"
+                android:textColor="?attr/icFadeColor"
+                android:background="@color/transparent"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 tools:text="+1.0" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/plus20"
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimaryDark"
+                android:textColor="?attr/icFadeColor"
+                android:background="@color/transparent"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 tools:text="+2.0" />
 
         </LinearLayout>
