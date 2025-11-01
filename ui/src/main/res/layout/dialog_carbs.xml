@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
+    android:background="@drawable/gradback_card"
     tools:context=".ui.dialogs.CarbsDialog">
 
     <LinearLayout
@@ -23,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:importantForAccessibility="no"
-                app:srcCompat="@drawable/ic_cp_bolus_carbs" />
+                app:srcCompat="@drawable/ic_cp_bolus_white" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -34,9 +35,18 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/carbs"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_gravity="center"
+            android:background="@color/white"/>
 
         <LinearLayout
             android:id="@+id/spacer"
@@ -57,21 +67,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:text="@string/start_activity_tt" />
+                android:text="@string/start_activity_tt"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white" />
 
             <CheckBox
                 android:id="@+id/eating_soon_tt"
                 style="@style/Widget.App.CheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/start_eating_soon_tt" />
+                android:text="@string/start_eating_soon_tt"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white" />
 
             <CheckBox
                 android:id="@+id/hypo_tt"
                 style="@style/Widget.App.CheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/start_hypo_tt" />
+                android:text="@string/start_hypo_tt"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
@@ -104,6 +120,7 @@
                         android:text="@string/time_offset"
                         android:gravity="center_vertical"
                         android:layout_weight="1"
+                        android:textColor="@color/white"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textStyle="bold" />
 
@@ -116,6 +133,7 @@
                         android:checked="false"
                         android:padding="2dp"
                         android:layoutDirection="rtl"
+                        android:buttonTint="@color/white"
                         android:contentDescription="@string/a11y_carb_reminder"
                         android:drawableEnd="@drawable/ic_access_alarm_24dp" />
 
@@ -136,6 +154,7 @@
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
                     android:text="@string/unit_minute_short"
+                    android:textColor="@color/white"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
             </TableRow>
@@ -153,6 +172,7 @@
                     android:padding="10dp"
                     android:width="120dp"
                     android:text="@string/duration_label"
+                    android:textColor="@color/white"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textStyle="bold" />
 
@@ -172,6 +192,7 @@
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
                     android:text="@string/shorthour"
+                    android:textColor="@color/white"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
             </TableRow>
@@ -181,18 +202,19 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical">
 
-                    <TextView
-                        android:id="@+id/carbs_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        android:width="120dp"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        android:text="@string/carbs"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/carbs_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:width="120dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/carbs"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textStyle="bold" />
 
                 <app.aaps.core.ui.elements.NumberPicker
                     android:id="@+id/carbs"
@@ -200,15 +222,16 @@
                     android:layout_height="40dp"
                     app:customContentDescription="@string/carbs" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:minWidth="45dp"
-                        android:paddingStart="5dp"
-                        android:paddingEnd="5dp"
-                        android:text="@string/shortgramm"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:minWidth="45dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/shortgramm"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
 
             </TableRow>
         </TableLayout>
@@ -224,29 +247,54 @@
                 android:id="@+id/plus1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="+5"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/transparent"
+                android:textAppearance="?android:attr/textAppearance"
                 tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/GrayButton"
                 android:id="@+id/plus2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="+10"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/transparent"
+                android:textAppearance="?android:attr/textAppearance"
                 tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
 
             <com.google.android.material.button.MaterialButton
                 style="@style/GrayButton"
                 android:id="@+id/plus3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:text="+20"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/transparent"
+                android:textAppearance="?android:attr/textAppearance"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>

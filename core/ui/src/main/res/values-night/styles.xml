@@ -137,8 +137,8 @@
         <item name="omniGrayColor">@color/midGray</item>
         <item name="omniWizardFinishButtonColor">@color/omnipod_wizard_finish_button</item>
         <!---Warning Colors : WarnColors.kt-->
-        <item name="warnColor">@color/omni_yellow</item>
-        <item name="urgentColor">@color/alarm</item>
+        <item name="warnColor">@color/ok_cancel_yellow</item>
+        <item name="urgentColor">#FD6868</item>
         <!---Automation -->
         <item name="userAction">@color/mdtp_line_dark</item>
         <item name="validActions">@color/ribbonDefault</item>
