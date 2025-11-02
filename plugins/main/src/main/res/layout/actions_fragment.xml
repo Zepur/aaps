@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradback"
     tools:context=".general.actions.ActionsFragment">
 
     <LinearLayout
@@ -43,7 +44,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/profile_switch"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_actions_profileswitch"
@@ -58,7 +59,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/temp_target"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_temptarget_high"
@@ -73,7 +74,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/set_temp_basal"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_actions_start_temp_basal"
@@ -88,7 +89,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/cancel_temp_basal"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_cancel_basal"
@@ -104,7 +105,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/extended_bolus"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_actions_start_extended_bolus"
@@ -119,7 +120,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/extended_bolus_cancel"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_actions_cancel_extended_bolus"
@@ -190,7 +191,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/bg_check"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:drawableTop="@drawable/ic_cp_bgcheck"
@@ -205,7 +206,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/cgm_sensor_insert"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:drawableTop="@drawable/ic_cp_cgm_insert"
@@ -220,7 +221,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/fill"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_cp_pump_cannula"
@@ -235,7 +236,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/pump_battery_change"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:drawableTop="@drawable/ic_cp_pump_battery"
@@ -250,7 +251,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/note"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:drawableTop="@drawable/ic_cp_note"
@@ -265,7 +266,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/exercise"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:drawableTop="@drawable/ic_cp_exercise"
@@ -280,7 +281,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/announcement"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:drawableTop="@drawable/ic_cp_announcement"
@@ -295,7 +296,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/question"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:drawableTop="@drawable/ic_cp_question"
@@ -343,7 +344,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/history_browser"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_pump_history"
@@ -358,7 +359,7 @@
 
                 <app.aaps.core.ui.elements.SingleClickButton
                     android:id="@+id/tdd_stats"
-                    style="@style/GrayButton"
+                    style="@style/ButtonSmallFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_cp_stats"
