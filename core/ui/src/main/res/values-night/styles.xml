@@ -410,6 +410,7 @@
         <item name="android:paddingStart">0dp</item>
         <item name="android:paddingEnd">0dp</item>
 
+        <item name="android:stateListAnimator">@null</item>
         <!-- Your Customizations -->
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center</item>
