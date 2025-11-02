@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    android:background="@color/background_dark"
+    android:background="@drawable/gradback_card"
     tools:context=".dialogs.InsulinDialog">
 
     <LinearLayout
@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            style="@style/StyleDialogHeader"
+            style="@style/StyleDialogHeaderFade"
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,8 +24,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:importantForAccessibility="no"
-                app:srcCompat="@drawable/ic_bolus" />
+                app:srcCompat="@drawable/ic_bolus_white" />
 
             <TextView
                 android:id="@+id/header_text"
@@ -37,9 +38,18 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/overview_insulin_label"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_gravity="center"
+            android:background="@color/white"/>
 
         <LinearLayout
             android:id="@+id/spacer"
@@ -154,26 +164,48 @@
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@color/transparent"
                 android:layout_weight="1"
                 tools:text="+0.5" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/plus10"
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:background="@color/transparent"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 tools:text="+1.0" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/plus20"
                 style="@style/GrayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:background="@color/transparent"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 tools:text="+2.0" />
 
         </LinearLayout>

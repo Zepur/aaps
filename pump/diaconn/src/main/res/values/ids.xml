@@ -9,4 +9,7 @@
     <item name="diaconn_g8_history_dailybolus" type="id" />
     <item name="diaconn_g8_history_dailytotal" type="id" />
     <item name="diaconn_g8_history_alarm" type="id" />
+    <item name="custom_scrollbar_id" type="id" />
+    <item name="customSecondaryProgress" type="id" />
+    <item name="custom_progress" type="id" />
 </resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/custom_scrollbar_id"
+        android:gravity="center_vertical|fill_horizontal">
+        <shape android:shape="rectangle"
+            android:tint="@color/background_dark">
+            <corners android:radius="2dp" />
+            <size android:height="4dp" />
+            <solid android:color="@color/ok_cancel_yellow" />
+        </shape>
+    </item>
+    <item android:id="@+id/customSecondaryProgress"
+        android:gravity="center_vertical|fill_horizontal">
+        <scale android:scaleWidth="100%">
+            <shape android:shape="rectangle"
+                android:tint="?attr/colorControlActivated">
+                <corners android:radius="2dp" />
+                <size android:height="4dp" />
+                <solid android:color="@color/toggle_button_background_blood" />
+            </shape>
+        </scale>
+    </item>
+    <item android:id="@+id/custom_progress"
+        android:gravity="center_vertical|fill_horizontal">
+        <scale android:scaleWidth="100%">
+            <shape android:shape="rectangle"
+                android:tint="?attr/colorControlActivated">
+                <corners android:radius="2dp" />
+                <size android:height="4dp" />
+                <solid android:color="@color/white" />
+            </shape>
+        </scale>
+    </item>
+</layer-list>

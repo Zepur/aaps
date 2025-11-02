@@ -14,6 +14,14 @@
     <color name="ok_cancel_yellow">#F9F871</color>
     <color name="dropDownBlurple">#3C385B</color>
 
+    <color name="pink">#FAB0DB</color>
+    <color name="pink_dark">#C790BD</color>
+    <color name="pink_darker">#95729E</color>
+    <color name="pink_darkest">#95729E</color>
+    <color name="dark_blue">#151E39</color>
+    <color name="dark_red">#A4506F</color>
+    <color name="buttonTextDark">#151E39</color>
+
     <color name="primaryColorDefault">#222222</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
     <color name="primaryDarkColorDefault">#222222</color>
@@ -41,6 +49,7 @@
     <color name="buttonText">#BE30C1</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
+    <color name="fadeButtonTextColor">@color/colorInsulinButton</color>
 
     <color name="ic_actions_refill">#E93057</color>
     <color name="ic_local_activate">#67DFE8</color>
@@ -85,9 +94,12 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRange">#00FF00</color>
-    <color name="low">#FF0000</color>
-    <color name="high">#FFFB8C00</color>
+<!--    <color name="inRange">#00FF00</color>-->
+<!--    <color name="low">#FF0000</color>-->
+<!--    <color name="high">#FFFB8C00</color>-->
+    <color name="inRange">@color/pink</color>
+    <color name="low">#E1786A</color>
+    <color name="high">#A4506F</color>
     <color name="iob">#1e88e5</color>
     <color name="extendedBolus">#1e88e5</color>
     <color name="iobPredAS">#1ea3e5</color>
@@ -330,7 +342,7 @@
     <color name="aaps_theme_dark_onPrimary">#00344F</color>
     <color name="aaps_theme_dark_primaryContainer">#004B6F</color>
     <color name="aaps_theme_dark_onPrimaryContainer">#C7E6FF</color>
-    <color name="aaps_theme_dark_secondary">#17DECA</color>
+    <color name="aaps_theme_dark_secondary">#FAB0DB</color>
     <color name="aaps_theme_dark_onSecondary">#003730</color>
     <color name="aaps_theme_dark_secondaryContainer">#005047</color>
     <color name="aaps_theme_dark_onSecondaryContainer">#4FFBE6</color>
@@ -360,9 +372,9 @@
      Because the implementation of google has no idea of a light/dark mode until now
      we generate extra colornames only used for the widget
      Colors for the widget are always taken from the default color.xml-->
-    <color name="widget_inrange">#00FF4C</color>
-    <color name="widget_low">#FF007E</color>
-    <color name="widget_high">#FFE619</color>
+    <color name="widget_inrange">@color/inRange</color>
+    <color name="widget_low">@color/low</color>
+    <color name="widget_high">@color/high</color>
     <color name="widget_ribbonWarning">#f4d700</color>
     <color name="widget_ribbonTextDefault">#FFFFFF</color>
     <color name="widget_ribbonCritical">#ff0400</color>

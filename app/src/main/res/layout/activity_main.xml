@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:clipChildren="false"
     android:clipToPadding="false"
+    android:background="@drawable/gradback"
     android:orientation="vertical">
 
     <LinearLayout
@@ -22,7 +23,8 @@
             android:layout_margin="30dp"
             android:text="@string/loading"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/white"/>
 
         <ImageView
             android:layout_width="match_parent"

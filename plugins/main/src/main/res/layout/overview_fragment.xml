@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/gradback"
     tools:context=".general.overview.OverviewFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -93,13 +94,12 @@
                 app:cardCornerRadius="4dp"
                 app:contentPadding="2dp"
                 app:cardElevation="0dp"
-                app:cardBackgroundColor="@color/aaps_theme_dark_background"
                 app:cardUseCompatPadding="false"
                 android:layout_gravity="center">
 
                 <include
                     android:id="@+id/info_layout"
-                    layout="@layout/overview_info_layout" />
+                    layout="@layout/main_page_info_layout" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -239,11 +239,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:background="?attr/pumpStatusBackground"
+            android:background="@color/pink"
             android:gravity="center_vertical|center_horizontal"
             android:paddingTop="6dp"
             android:paddingBottom="6dp"
             android:text="@string/initializing"
+            android:textColor="@color/buttonTextDark"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </LinearLayout>
