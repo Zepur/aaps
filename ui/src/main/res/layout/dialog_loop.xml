@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
+    android:background="@drawable/gradback_card"
     tools:context=".dialogs.LoopDialog">
 
     <LinearLayout
@@ -33,6 +34,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:textColor="@color/white"
                 android:text="@string/loop"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -59,6 +61,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:textColor="@color/white"
                 android:text="@string/loop"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -165,6 +168,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:textColor="@color/white"
                 android:text="@string/suspendloop"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -262,6 +266,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:textColor="@color/white"
                 android:text="@string/disconnectpump"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 

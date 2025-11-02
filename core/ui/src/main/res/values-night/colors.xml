@@ -19,6 +19,7 @@
     <color name="pink_darker">#95729E</color>
     <color name="pink_darkest">#67547D</color>
     <color name="dark_blue">#151E39</color>
+    <color name="dark_red">#A4506F</color>
     <color name="buttonTextDark">@color/dark_blue</color>
 
     <color name="primaryColorDefault">@color/dark_blue</color>
@@ -95,7 +96,7 @@
     <!--    BgReading-->
     <color name="inRange">@color/pink</color>
     <color name="low">#E1786A</color>
-    <color name="high">#A4506F</color>
+    <color name="high">@color/dark_red</color>
 <!--    <color name="inRange">#00FF4C</color>-->
 <!--    <color name="low">#FF007E</color>-->
 <!--    <color name="high">#FFE619</color>-->

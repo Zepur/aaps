@@ -31,30 +31,35 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/decrement"
         android:layout_width="40dp"
         android:layout_height="0dp"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="-4dp"
-        android:layout_marginBottom="3.7dp"
         android:contentDescription="@string/a11y_min_button_description"
-        android:src="@drawable/ic_minus"
         android:background="@drawable/ic_rounded_minus"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_minus"
+        android:tintMode="src_in"
+        app:tint="?attr/colorOnSecondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+    />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/increment"
         android:layout_width="40dp"
         android:layout_height="0dp"
-        android:layout_marginTop="-4dp"
-        android:layout_marginEnd="-2dp"
-        android:layout_marginBottom="3.7dp"
         android:contentDescription="@string/a11y_plus_button_description"
         android:src="@drawable/ic_plus"
         android:background="@drawable/ic_rounded_plus"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        android:tintMode="src_in"
+        app:tint="?attr/colorOnSecondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
