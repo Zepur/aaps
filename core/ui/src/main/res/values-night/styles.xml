@@ -262,7 +262,6 @@
 
         <!-- Reduce internal padding so the text fits in the smaller height -->
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout.Compact</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.App.TextInputLayout.Square</item>
     </style>
 
     <style name="ThemeOverlay.App.TextInputLayout.Compact" parent="">
@@ -274,6 +273,10 @@
         <!-- Reduce the padding inside the actual EditText -->
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout.Square" parent="Widget.App.TextInputLayout.Compact">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.TextInputLayout.Square</item>
     </style>
 
     <style name="ShapeAppearance.App.TextInputLayout.Square" parent="">
@@ -378,7 +381,6 @@
         <item name="android:layout_marginEnd">@dimen/gray_material_button_margin_horizontal</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:elevation">0dp</item>
-        <item name="android:backgroundTint">@color/transparent</item>
     </style>
 
     <style name="ButtonSmallFontStyle" parent="GrayButton">
@@ -389,7 +391,7 @@
         <item name="android:textSize">11sp</item>
         <item name="android:elevation">0dp</item>
         <item name="android:strokeColor">@color/transparent</item>
-        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:backgroundTint">@color/mtrl_btn_bg_color_selector_grey</item>
     </style>
 
     <style name="ButtonMediumFontStyle" parent="GrayButton">
