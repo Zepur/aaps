@@ -11,23 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/decrement"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/a11y_min_button_description"
-        android:background="@drawable/ic_rounded_minus"
-        android:clickable="true"
-        android:focusable="true"
-        android:scaleType="center"
-        android:src="@drawable/ic_minus"
-        android:tintMode="src_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="?attr/colorOnSecondary" />
+        <ImageView
+            android:id="@+id/decrement"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_rounded_minus"
+            android:clickable="true"
+            android:contentDescription="@string/a11y_min_button_description"
+            android:focusable="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_minus"
+            android:tintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="?attr/colorOnSecondary" />
 
-    <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.App.TextInputLayout.Compact"
         android:layout_width="0dp"
@@ -42,14 +43,14 @@
         app:layout_constraintStart_toEndOf="@id/decrement"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/display"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:imeOptions="actionDone"
-            android:inputType="number"
-            tools:text="1" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                tools:text="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,12 +69,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="?attr/colorOnSecondary" />
-
-        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
