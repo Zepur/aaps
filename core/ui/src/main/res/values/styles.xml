@@ -366,16 +366,36 @@
     <!--    Common Buttons -->
     <dimen name="gray_material_button_margin_horizontal">2dp</dimen>
 
-    <style name="GrayButton" parent="Widget.MaterialComponents.Button">
-        <item name="android:backgroundTint">@color/mtrl_btn_bg_color_selector_grey</item>
+    <style name="OmniPodManagementButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <!-- Basic Layout -->
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center</item>
-        <item name="android:elevation">0dp</item>
         <item name="android:layout_marginStart">@dimen/gray_material_button_margin_horizontal</item>
         <item name="android:layout_marginEnd">@dimen/gray_material_button_margin_horizontal</item>
         <item name="android:textAllCaps">true</item>
+
+        <!-- Visuals -->
+        <item name="android:elevation">0dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0</item>
+
+        <!-- State-Aware Colors (THE IMPORTANT PART) -->
+        <item name="backgroundTint">@color/mtrl_btn_bg_color_selector_grey</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="GrayButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">@dimen/gray_material_button_margin_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/gray_material_button_margin_horizontal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:elevation">0dp</item>
     </style>
 
     <style name="ButtonSmallFontStyle" parent="GrayButton">
@@ -385,7 +405,8 @@
         <item name="android:paddingEnd">0dp</item>
         <item name="android:textSize">11sp</item>
         <item name="android:elevation">0dp</item>
-        <item name="android:stateListAnimator">@null</item>
+        <item name="android:strokeColor">@color/transparent</item>
+        <item name="backgroundTint">@color/mtrl_btn_bg_color_selector_grey</item>
     </style>
 
     <style name="ButtonMediumFontStyle" parent="GrayButton">

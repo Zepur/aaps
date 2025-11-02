@@ -7,67 +7,47 @@
     android:orientation="horizontal"
     tools:context="app.aaps.core.ui.elements.NumberPicker">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/decrement"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_rounded_minus"
+        android:clickable="true"
+        android:contentDescription="@string/a11y_min_button_description"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_minus"
+        app:tint="?attr/colorOnSecondary" />
 
-        <ImageView
-            android:id="@+id/decrement"
-            android:layout_width="40dp"
-            android:layout_height="0dp"
-            android:background="@drawable/ic_rounded_minus"
-            android:clickable="true"
-            android:contentDescription="@string/a11y_min_button_description"
-            android:focusable="true"
-            android:scaleType="center"
-            android:src="@drawable/ic_minus"
-            android:tintMode="src_in"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:tint="?attr/colorOnSecondary" />
-
-        <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.App.TextInputLayout.Square"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:errorEnabled="true"
-        app:errorIconDrawable="@null"
-        app:hintEnabled="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/increment"
-        app:layout_constraintStart_toEndOf="@id/decrement"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:hintEnabled="false">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/display"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:imeOptions="actionDone"
-                android:inputType="number"
-                tools:text="1" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            tools:text="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/increment"
         android:layout_width="40dp"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:contentDescription="@string/a11y_plus_button_description"
-        android:src="@drawable/ic_plus"
         android:background="@drawable/ic_rounded_plus"
         android:clickable="true"
         android:focusable="true"
         android:scaleType="center"
-        android:tintMode="src_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_plus"
         app:tint="?attr/colorOnSecondary" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
