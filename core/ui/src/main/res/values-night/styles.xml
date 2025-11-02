@@ -262,6 +262,7 @@
 
         <!-- Reduce internal padding so the text fits in the smaller height -->
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout.Compact</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.TextInputLayout.Square</item>
     </style>
 
     <style name="ThemeOverlay.App.TextInputLayout.Compact" parent="">
@@ -273,6 +274,11 @@
         <!-- Reduce the padding inside the actual EditText -->
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.TextInputLayout.Square" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">0dp</item>
     </style>
 
     <style name="CommonSpinnerItemStyle" parent="Widget.AppCompat.TextView.SpinnerItem">
