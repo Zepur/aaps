@@ -256,6 +256,24 @@
         <item name="customBtnStyle">@style/GrayButton</item>
     </style>
 
+    <style name="Widget.App.TextInputLayout.Compact" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- This is the most important part. It sets the overall height -->
+        <item name="android:minHeight">40dp</item>
+
+        <!-- Reduce internal padding so the text fits in the smaller height -->
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout.Compact</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputLayout.Compact" parent="">
+        <!-- This targets the EditText itself -->
+        <item name="editTextStyle">@style/Widget.App.TextInputEditText.Compact</item>
+    </style>
+
+    <style name="Widget.App.TextInputEditText.Compact" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <!-- Reduce the padding inside the actual EditText -->
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
 
     <style name="CommonSpinnerItemStyle" parent="Widget.AppCompat.TextView.SpinnerItem">
         <item name="android:textColor">@android:color/white</item>
@@ -379,7 +397,7 @@
 
     <!-- Alert Dialogs -->
     <style name="DialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="colorSurface">#151E39</item> <!-- workaround; color compensated elevation -->
+        <item name="colorSurface">#d2a517</item> <!-- workaround; color compensated elevation -->
         <item name="buttonBarNegativeButtonStyle">@style/DialogOkCancelButtonStyle</item>
         <item name="buttonBarPositiveButtonStyle">@style/DialogOkCancelButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">@style/DialogOkCancelButtonStyle</item>
