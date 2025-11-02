@@ -14,7 +14,7 @@
         <ImageView
             android:id="@+id/decrement"
             android:layout_width="40dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:background="@drawable/ic_rounded_minus"
             android:clickable="true"
             android:contentDescription="@string/a11y_min_button_description"
@@ -55,7 +55,7 @@
     <ImageView
         android:id="@+id/increment"
         android:layout_width="40dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:contentDescription="@string/a11y_plus_button_description"
         android:src="@drawable/ic_plus"
         android:background="@drawable/ic_rounded_plus"
