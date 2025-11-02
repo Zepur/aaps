@@ -394,6 +394,7 @@
     </style>
 
     <style name="GrayButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/mtrl_btn_bg_color_selector_grey</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_vertical</item>
@@ -401,29 +402,14 @@
         <item name="android:layout_marginStart">@dimen/gray_material_button_margin_horizontal</item>
         <item name="android:layout_marginEnd">@dimen/gray_material_button_margin_horizontal</item>
         <item name="android:textAllCaps">true</item>
-        <item name="android:elevation">0dp</item>
     </style>
 
-    <style name="ButtonSmallFontStyle" parent="Widget.MaterialComponents.Button.TextButton">
-        <!-- Inherits a transparent background and 0dp elevation from the parent -->
+    <style name="ButtonSmallFontStyle" parent="GrayButton">
+        <item name="android:letterSpacing">0</item>
         <item name="android:paddingTop">0dp</item>
         <item name="android:paddingStart">0dp</item>
         <item name="android:paddingEnd">0dp</item>
-
-        <item name="android:stateListAnimator">@null</item>
-        <!-- Your Customizations -->
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_marginStart">@dimen/gray_material_button_margin_horizontal</item>
-        <item name="android:layout_marginEnd">@dimen/gray_material_button_margin_horizontal</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">11sp</item>
-        <item name="android:letterSpacing">0</item>
-
-        <!-- State-Aware Colors (The Important Part) -->
-        <item name="backgroundTint">@color/mtrl_btn_bg_color_selector_grey</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="iconTint">@color/white</item>
+        <item name="android:textSize">11dp</item>
     </style>
 
     <style name="ButtonMediumFontStyle" parent="GrayButton">
