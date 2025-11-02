@@ -26,7 +26,6 @@
             android:gravity="center"
             android:imeOptions="actionDone"
             android:inputType="number"
-            android:padding="9dp"
             tools:text="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -36,7 +35,7 @@
         android:layout_width="40dp"
         android:layout_height="0dp"
         android:contentDescription="@string/a11y_min_button_description"
-        android:background="@drawable/ic_rounded_minus"
+        android:backgroundTint="@drawable/ic_rounded_minus"
         android:clickable="true"
         android:focusable="true"
         android:scaleType="center"
@@ -46,6 +45,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textInputLayout"
     />
 
     <ImageView
@@ -54,12 +54,13 @@
         android:layout_height="0dp"
         android:contentDescription="@string/a11y_plus_button_description"
         android:src="@drawable/ic_plus"
-        android:background="@drawable/ic_rounded_plus"
+        android:backgroundTint="@drawable/ic_rounded_plus"
         android:clickable="true"
         android:focusable="true"
         android:scaleType="center"
         android:tintMode="src_in"
         app:tint="?attr/colorOnSecondary"
+        app:layout_constraintStart_toEndOf="@id/textInputLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
