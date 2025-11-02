@@ -400,6 +400,7 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center</item>
         <item name="elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
         <item name="android:layout_marginStart">@dimen/gray_material_button_margin_horizontal</item>
         <item name="android:layout_marginEnd">@dimen/gray_material_button_margin_horizontal</item>
         <item name="android:textAllCaps">true</item>

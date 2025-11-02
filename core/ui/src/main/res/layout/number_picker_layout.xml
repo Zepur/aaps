@@ -17,6 +17,7 @@
         android:focusable="true"
         android:scaleType="center"
         android:src="@drawable/ic_minus"
+        android:elevation="1dp"
         app:tint="?attr/colorOnSecondary" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -48,6 +49,7 @@
         android:background="@drawable/ic_rounded_plus"
         android:clickable="true"
         android:focusable="true"
+        android:elevation="1dp"
         android:scaleType="center"
         android:src="@drawable/ic_plus"
         app:tint="?attr/colorOnSecondary" />
