@@ -273,6 +273,8 @@
         <!-- Reduce the padding inside the actual EditText -->
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/candylightpink</item>
+        <item name="android:drawableTint">@color/candylightpink</item>
     </style>
 
     <style name="Widget.App.TextInputLayout.Square" parent="Widget.App.TextInputLayout.Compact">
