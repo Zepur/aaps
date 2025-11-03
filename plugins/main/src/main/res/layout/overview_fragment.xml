@@ -56,7 +56,7 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
                         app:drawableStartCompat="@drawable/ic_ribbon_profile"
-                        app:drawableTint="@color/ok_cancel_yellow"
+                        app:drawableTint="@color/yellow"
                         tools:ignore="HardcodedText" />
                 </androidx.cardview.widget.CardView>
 
@@ -79,7 +79,7 @@
                         android:text="@string/value_unavailable_short"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:drawableTint="@color/ok_cancel_yellow"
+                        app:drawableTint="@color/yellow"
                         app:drawableStartCompat="@drawable/ic_crosstarget"
                         tools:ignore="HardcodedText" />
                 </androidx.cardview.widget.CardView>
@@ -113,7 +113,7 @@
                 android:layout_marginBottom="1dp"
                 android:layout_marginStart="6dp"
                 android:layout_marginEnd="6dp"
-                android:background="#95729E"/>
+                android:background="@color/yellow"/>
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/statusCard"
@@ -142,7 +142,7 @@
                 android:layout_marginBottom="1dp"
                 android:layout_marginStart="6dp"
                 android:layout_marginEnd="6dp"
-                android:background="#95729E"/>
+                android:background="@color/yellow"/>
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/nsclientCard"

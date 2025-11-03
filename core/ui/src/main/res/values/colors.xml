@@ -11,7 +11,7 @@
     <color name="gray">#BBBBBB</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="ok_cancel_yellow">#F9F871</color>
+    <color name="yellow">#F9F871</color>
     <color name="dropDownBlurple">#3C385B</color>
 
     <color name="pink">#FAB0DB</color>
@@ -20,6 +20,7 @@
     <color name="pink_darkest">#95729E</color>
     <color name="dark_blue">#151E39</color>
     <color name="dark_red">#A4506F</color>
+    <color name="orange">#FFB35F</color>
     <color name="buttonTextDark">#151E39</color>
 
     <color name="primaryColorDefault">#222222</color>

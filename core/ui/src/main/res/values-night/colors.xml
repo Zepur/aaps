@@ -11,7 +11,7 @@
     <color name="gray">#BBBBBB</color>
     <color name="black">#FF151E39</color>
     <color name="white">#FFFFFADE</color>
-    <color name="ok_cancel_yellow">#F9F871</color>
+    <color name="yellow">#F9F871</color>
     <color name="dropDownBlurple">#3C385B</color>
 
     <color name="pink">#FAB0DB</color>
@@ -20,6 +20,7 @@
     <color name="pink_darkest">#67547D</color>
     <color name="dark_blue">#151E39</color>
     <color name="dark_red">#A4506F</color>
+    <color name="orange">#FFB35F</color>
     <color name="buttonTextDark">@color/dark_blue</color>
 
     <color name="primaryColorDefault">@color/dark_blue</color>
@@ -120,7 +121,7 @@
     <color name="weekendOutline">#1e88e5</color>
 
     <!-- Notification-->
-    <color name="notificationAnnouncement">#FFB35F</color>
+    <color name="notificationAnnouncement">@color/orange</color>
     <color name="notificationUrgent">@color/pink_dark</color>
     <color name="notificationNormal">@color/pink_darker</color>
     <color name="notificationLow">@color/pink_darkest</color>

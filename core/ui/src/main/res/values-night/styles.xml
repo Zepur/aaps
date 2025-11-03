@@ -137,7 +137,7 @@
         <item name="omniGrayColor">@color/midGray</item>
         <item name="omniWizardFinishButtonColor">@color/omnipod_wizard_finish_button</item>
         <!---Warning Colors : WarnColors.kt-->
-        <item name="warnColor">@color/ok_cancel_yellow</item>
+        <item name="warnColor">@color/yellow</item>
         <item name="urgentColor">#FD6868</item>
         <!---Automation -->
         <item name="userAction">@color/mdtp_line_dark</item>
@@ -361,12 +361,12 @@
         <item name="android:minWidth">@dimen/material_button_min_width</item>
         <item name="android:paddingStart">@dimen/material_button_text_padding_horizontal</item>
         <item name="android:paddingEnd">@dimen/material_button_text_padding_horizontal</item>
-        <item name="android:textColor">@color/ok_cancel_yellow</item>
+        <item name="android:textColor">@color/yellow</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="PickerTextButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="android:textColor">@color/ok_cancel_yellow</item>
+        <item name="android:textColor">@color/yellow</item>
     </style>
 
     <!--    Common Buttons -->
@@ -430,11 +430,11 @@
         <item name="buttonBarPositiveButtonStyle">@style/DialogOkCancelButtonStyle</item>
         <item name="buttonBarNeutralButtonStyle">@style/DialogOkCancelButtonStyle</item>
         <item name="android:background">@color/dark_blue</item>
-        <item name="android:textColor">@color/ok_cancel_yellow</item>
+        <item name="android:textColor">@color/yellow</item>
     </style>
 
     <style name="DialogOkCancelButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="android:textColor">@color/ok_cancel_yellow</item>
+        <item name="android:textColor">@color/yellow</item>
         <item name="android:background">@color/pink</item>
     </style>
 

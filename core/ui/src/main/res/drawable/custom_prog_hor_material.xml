@@ -7,7 +7,7 @@
             android:tint="@color/background_dark">
             <corners android:radius="2dp" />
             <size android:height="4dp" />
-            <solid android:color="@color/ok_cancel_yellow" />
+            <solid android:color="@color/yellow" />
         </shape>
     </item>
     <item android:id="@+id/customSecondaryProgress"

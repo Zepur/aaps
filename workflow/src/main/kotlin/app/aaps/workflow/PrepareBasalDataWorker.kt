@@ -112,12 +112,12 @@ class PrepareBasalDataWorker(
         // create series
         data.overviewData.baseBasalGraphSeries = LineGraphSeries(Array(baseBasalArray.size) { i -> baseBasalArray[i] }).also {
             it.isDrawBackground = true
-            it.backgroundColor = rh.gac(ctx, app.aaps.core.ui.R.attr.baseBasalColor)
+            it.backgroundColor = rh.gac(ctx, app.aaps.core.ui.R.attr.orangeColor)
             it.thickness = 0
         }
         data.overviewData.tempBasalGraphSeries = LineGraphSeries(Array(tempBasalArray.size) { i -> tempBasalArray[i] }).also {
             it.isDrawBackground = true
-            it.backgroundColor = rh.gac(ctx, app.aaps.core.ui.R.attr.tempBasalColor)
+            it.backgroundColor = rh.gac(ctx, app.aaps.core.ui.R.attr.yellowColor)
             it.thickness = 0
         }
         data.overviewData.basalLineGraphSeries = LineGraphSeries(Array(basalLineArray.size) { i -> basalLineArray[i] }).also {
