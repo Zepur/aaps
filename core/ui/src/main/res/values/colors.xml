@@ -27,6 +27,9 @@
     <color name="candypink">#DD84A3</color>
     <color name="candylightpink">#FFE3F3</color>
     <color name="candyteal">#00C9C4</color>
+    <color name="candygreen">#C2FDBC</color>
+    <color name="candypurple">#E1C6FD</color>
+    <color name="candyorange">#FCAC6C</color>
 
     <color name="primaryColorDefault">#222222</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>

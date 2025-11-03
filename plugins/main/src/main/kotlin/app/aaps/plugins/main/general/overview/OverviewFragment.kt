@@ -875,7 +875,13 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         val profile = profileFunction.getProfile()
         runOnUiThread {
             _binding ?: return@runOnUiThread
-            val profileBackgroundColor = app.aaps.core.ui.R.attr.transparentColor
+            val profileBackgroundColor = profile?.let {
+                if (it is ProfileSealed.EPS) {
+                    if (it.value.originalPercentage != 100 || it.value.originalTimeshift != 0L || it.value.originalDuration != 0L)
+                        app.aaps.core.ui.R.attr.ribbonWarningColor
+                    else app.aaps.core.ui.R.attr.transparentColor
+                } else app.aaps.core.ui.R.attr.transparentColor
+            } ?: app.aaps.core.ui.R.attr.ribbonCriticalColor
 
             val profileTextColor = profile?.let {
                 if (it is ProfileSealed.EPS) {
@@ -1018,8 +1024,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     } else {
                         setRibbon(
                             binding.tempTarget,
-                            app.aaps.core.ui.R.attr.ribbonTextDefaultColor,
-                            app.aaps.core.ui.R.attr.ribbonDefaultColor,
+                            app.aaps.core.ui.R.attr.yellowColor,
+                            app.aaps.core.ui.R.attr.transparentColor,
                             profileUtil.toTargetRangeString(profile.getTargetLowMgdl(), profile.getTargetHighMgdl(), GlucoseUnit.MGDL, units)
                         )
                     }

@@ -3,6 +3,7 @@ package app.aaps
 import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
+import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -111,11 +112,26 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
     private var isProtectionCheckActive = false
     private lateinit var binding: ActivityMainBinding
 
+    private fun getRandomColors() : GradientDrawable {
+        val candyColors: IntArray = this.resources.getIntArray(R.array.candy_colors)
+        val startColor = candyColors.random()
+        var endColor = candyColors.random()
+
+        while (endColor == startColor) {
+            endColor = candyColors.random()
+        }
+
+        val gradientDrawable = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(startColor, endColor))
+        return gradientDrawable
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Iconify.with(FontAwesomeModule())
         LocaleHelper.update(applicationContext)
+        val gradient = getRandomColors()
         binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.root.background = gradient
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
