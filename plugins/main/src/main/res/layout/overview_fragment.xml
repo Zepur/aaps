@@ -55,6 +55,7 @@
                         android:hint="active profile"
                         android:text="Profile"
                         android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/yellow"
                         android:foreground="@color/transparent"
                         app:drawableStartCompat="@drawable/ic_ribbon_profile"
                         app:drawableTint="@color/yellow"
@@ -79,7 +80,8 @@
                         android:hint="temp target"
                         android:text="@string/value_unavailable_short"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:textColor="@color/yellow"
+                        android:foreground="@color/transparent"
                         app:drawableTint="@color/yellow"
                         app:drawableStartCompat="@drawable/ic_crosstarget"
                         tools:ignore="HardcodedText" />

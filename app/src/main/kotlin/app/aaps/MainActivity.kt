@@ -113,15 +113,15 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
     private lateinit var binding: ActivityMainBinding
 
     private fun getRandomColors() : GradientDrawable {
-        val candyColors: IntArray = this.resources.getIntArray(R.array.candy_colors)
-        val startColor = candyColors.random()
-        var endColor = candyColors.random()
+        // val candyColors: IntArray = this.resources.getIntArray(R.array.candy_colors)
+        // val startColor = candyColors.random()
+        // var endColor = candyColors.random()
+        //
+        // while (endColor == startColor) {
+        //     endColor = candyColors.random()
+        // }
 
-        while (endColor == startColor) {
-            endColor = candyColors.random()
-        }
-
-        val gradientDrawable = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(startColor, endColor))
+        val gradientDrawable = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(app.aaps.core.ui.R.color.dark_blue, app.aaps.core.ui.R.color.pink))
         return gradientDrawable
     }
 
