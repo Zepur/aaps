@@ -23,6 +23,11 @@
     <color name="orange">#FFB35F</color>
     <color name="buttonTextDark">@color/dark_blue</color>
 
+    <color name="candydarkpink">#A4506F</color>
+    <color name="candypink">#c03565</color>
+    <color name="candylightpink">#FFE3F3</color>
+    <color name="candyteal">#00C9C4</color>
+
     <color name="primaryColorDefault">@color/dark_blue</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
     <color name="primaryDarkColorDefault">@color/dark_blue</color>

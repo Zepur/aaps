@@ -1,4 +1,5 @@
 <resources>
+    <attr name="transparentColor" format="reference|color" />
     <!---bolus color -->
     <attr name="bolusColor" format="reference|color" />
     <!---NS Client action text color -->
