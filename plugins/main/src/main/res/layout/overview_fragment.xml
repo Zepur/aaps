@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@drawable/gradback"
+    android:background="@color/transparent"
     tools:context=".general.overview.OverviewFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -18,6 +18,7 @@
             android:id="@+id/inner_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/transparent"
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
@@ -41,7 +42,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="4dp"
                     app:cardCornerRadius="4dp"
-                    android:background="@color/transparent"
+                    app:cardBackgroundColor="@color/transparent"
                     app:cardElevation="0dp">
 
                     <TextView
@@ -55,18 +56,25 @@
                         android:hint="active profile"
                         android:text="Profile"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/yellow"
+                        android:textColor="@color/candylightpink"
                         android:foreground="@color/transparent"
                         app:drawableStartCompat="@drawable/ic_ribbon_profile"
-                        app:drawableTint="@color/yellow"
+                        app:drawableTint="@color/candylightpink"
                         tools:ignore="HardcodedText" />
                 </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/yellow"
+                    android:layout_margin="4dp"/>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:cardCornerRadius="4dp"
+                    app:cardBackgroundColor="@color/transparent"
                     app:cardElevation="0dp">
 
                     <TextView
@@ -80,9 +88,9 @@
                         android:hint="temp target"
                         android:text="@string/value_unavailable_short"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/yellow"
+                        android:textColor="@color/candylightpink"
                         android:foreground="@color/transparent"
-                        app:drawableTint="@color/yellow"
+                        app:drawableTint="@color/candylightpink"
                         app:drawableStartCompat="@drawable/ic_crosstarget"
                         tools:ignore="HardcodedText" />
                 </androidx.cardview.widget.CardView>
