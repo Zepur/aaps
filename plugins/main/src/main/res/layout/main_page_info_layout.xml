@@ -350,6 +350,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/ic_cp_basal_no_tbr"
+            app:tint="@color/pink"
             android:contentDescription="@string/basal" />
 
         <TextView
