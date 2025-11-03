@@ -129,9 +129,9 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         super.onCreate(savedInstanceState)
         Iconify.with(FontAwesomeModule())
         LocaleHelper.update(applicationContext)
-        val gradient = getRandomColors()
+        // val gradient = getRandomColors()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.root.background = gradient
+        // binding.root.background = gradient
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
