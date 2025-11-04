@@ -92,10 +92,10 @@
 
     <!--    Treatment-->
     <!-- <color name="tempbasal">#C803A9F4</color> -->
-    <color name="tempbasal">@color/pink_dark</color>
+    <color name="tempbasal">#FF00FF20</color>
     <color name="list_delimiter">#505050</color>
     <!-- <color name="basal">#00ffff</color> -->
-    <color name="basal">@color/white</color>
+    <color name="basal">#FFAA00FF</color>
 
     <!--    Loop     -->
     <color name="loopDisconnected">#939393</color>

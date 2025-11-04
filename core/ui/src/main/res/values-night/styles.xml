@@ -132,6 +132,9 @@
         <!-- dash and eros colors -->
         <item name="omniMagentaColor">@color/prediction</item>
         <item name="omniYellowColor">@color/omni_yellow</item>
+        <item name="yellowColor">@color/yellow</item>
+        <item name="orangeColor">@color/orange</item>
+        <item name="transparentColor">@android:color/transparent</item>
         <item name="omniCyanColor">@color/omni_cyan</item>
         <item name="omniGreenColor">@color/omni_green</item>
         <item name="omniGrayColor">@color/midGray</item>
