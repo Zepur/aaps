@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="palette5">#FE6847</color>
+    <color name="palette4">#FBB13C</color>
+    <color name="palette3">#B66D0D</color>
+    <color name="palette2">#57B8FF</color>
+    <color name="palette1">#2176AE</color>
+
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
     <color name="colorPrimary">@color/dark_blue</color>

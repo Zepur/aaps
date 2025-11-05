@@ -209,6 +209,7 @@
     <attr name="baseBasalColor" format="reference|color" />
     <attr name="orangeColor" format="reference|color" />
     <attr name="yellowColor" format="reference|color" />
+    <attr name="candyTextColor" format="reference|color" />
     <attr name="dotLineColor" format="reference|color" />
     <!---Popupmenu TextColor -->
     <attr name="menuTextColor" format="reference|color" />

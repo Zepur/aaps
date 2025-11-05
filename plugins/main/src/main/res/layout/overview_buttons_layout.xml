@@ -46,7 +46,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_treatment_label"
-            android:textColor="?attr/icFadeColor"
+            android:drawableTint="@color/palette4"
+            android:textColor="@color/palette4"
             android:background="@color/transparent"
             android:visibility="gone"
             app:iconPadding="-4dp" />
@@ -62,7 +63,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_insulin_label"
-            android:textColor="?attr/icFadeColor"
+            android:drawableTint="@color/palette4"
+            android:textColor="@color/palette4"
             android:background="@color/transparent"
             app:iconPadding="-4dp" />
 
@@ -77,7 +79,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/carbs"
-            android:textColor="?attr/icFadeColor"
+            android:drawableTint="@color/palette4"
+            android:textColor="@color/palette4"
             android:background="@color/transparent"
             app:iconPadding="-4dp" />
 
@@ -92,7 +95,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/calculator_label"
-            android:textColor="?attr/icFadeColor"
+            android:drawableTint="@color/palette4"
+            android:textColor="@color/palette4"
             android:background="@color/transparent"
             app:iconPadding="-4dp" />
 
@@ -108,7 +112,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/calibration"
-            android:textColor="?attr/icFadeColor"
+            android:drawableTint="@color/palette4"
+            android:textColor="@color/palette4"
             android:background="@color/transparent"
             android:visibility="gone"
             app:iconPadding="-4dp" />
@@ -125,7 +130,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_cgm"
-            android:textColor="?attr/icFadeColor"
+            android:drawableTint="@color/palette4"
+            android:textColor="@color/palette4"
             android:background="@color/transparent"
             android:visibility="gone"
             app:iconPadding="-4dp" />
@@ -141,7 +147,8 @@
             android:drawableTop="@drawable/ic_quick_wizard"
             android:hint="@string/quickwizard"
             android:text="@string/quickwizard"
-            android:textColor="?attr/icFadeColor"
+            android:drawableTint="@color/palette4"
+            android:textColor="@color/palette4"
             android:backgroundTint="@color/transparent"
             app:iconPadding="-4dp" />
 

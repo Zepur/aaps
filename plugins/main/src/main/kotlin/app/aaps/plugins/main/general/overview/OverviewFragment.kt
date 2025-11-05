@@ -886,10 +886,10 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             val profileTextColor = profile?.let {
                 if (it is ProfileSealed.EPS) {
                     if (it.value.originalPercentage != 100 || it.value.originalTimeshift != 0L || it.value.originalDuration != 0L)
-                        app.aaps.core.ui.R.attr.yellowColor
-                    else app.aaps.core.ui.R.attr.yellowColor
-                } else app.aaps.core.ui.R.attr.yellowColor
-            } ?: app.aaps.core.ui.R.attr.yellowColor
+                        app.aaps.core.ui.R.attr.candyTextColor
+                    else app.aaps.core.ui.R.attr.candyTextColor
+                } else app.aaps.core.ui.R.attr.candyTextColor
+            } ?: app.aaps.core.ui.R.attr.candyTextColor
             setRibbon(binding.activeProfile, profileTextColor, profileBackgroundColor, profileFunction.getProfileNameWithRemainingTime())
         }
     }
