@@ -7,6 +7,11 @@
     <color name="palette2">#F7E1D7</color>
     <color name="palette1">#EDAFB8</color>
 
+    <color name="gradient_dark">#03001e</color>
+    <color name="gradient_mid_dark">#7303c0</color>
+    <color name="gradient_mid_light">#ec38bc</color>
+    <color name="gradient_light">#fdeff9</color>
+
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
     <color name="colorPrimary">#3378C5</color>

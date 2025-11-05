@@ -112,7 +112,7 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
     private var isProtectionCheckActive = false
     private lateinit var binding: ActivityMainBinding
 
-    private fun getRandomColors() : GradientDrawable {
+    private fun getRandomColors(): GradientDrawable {
         // val candyColors: IntArray = this.resources.getIntArray(R.array.candy_colors)
         // val startColor = candyColors.random()
         // var endColor = candyColors.random()
@@ -125,13 +125,27 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         return gradientDrawable
     }
 
+    fun createBackground(): GradientDrawable {
+        val backgroundColors =
+            intArrayOf(
+                Context.getColor(this, app.aaps.core.ui.R.color.gradient_dark),
+                Context.getColor(this, app.aaps.core.ui.R.color.gradient_mid_dark),
+                Context.getColor(this, app.aaps.core.ui.R.color.gradient_mid_light),
+                Context.getColor(this, app.aaps.core.ui.R.color.gradient_light)
+            )
+
+        val positions = floatArrayOf(0.0f, 0.30f, 0.60f, 1.0f)
+
+        return GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, backgroundColors)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Iconify.with(FontAwesomeModule())
         LocaleHelper.update(applicationContext)
         // val gradient = getRandomColors()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        // binding.root.background = gradient
+        binding.root.background = createBackground()
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -364,9 +378,10 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         if (config.appInitialized) binding.splash.visibility = View.GONE
         if (!isProtectionCheckActive) {
             isProtectionCheckActive = true
-            protectionCheck.queryProtection(this, ProtectionCheck.Protection.APPLICATION, UIRunnable { isProtectionCheckActive = false },
-                                            UIRunnable { OKDialog.show(this, "", rh.gs(R.string.authorizationfailed), true) { isProtectionCheckActive = false; finish() } },
-                                            UIRunnable { OKDialog.show(this, "", rh.gs(R.string.authorizationfailed), true) { isProtectionCheckActive = false; finish() } }
+            protectionCheck.queryProtection(
+                this, ProtectionCheck.Protection.APPLICATION, UIRunnable { isProtectionCheckActive = false },
+                UIRunnable { OKDialog.show(this, "", rh.gs(R.string.authorizationfailed), true) { isProtectionCheckActive = false; finish() } },
+                UIRunnable { OKDialog.show(this, "", rh.gs(R.string.authorizationfailed), true) { isProtectionCheckActive = false; finish() } }
             )
         }
     }
