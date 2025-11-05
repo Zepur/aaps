@@ -413,6 +413,7 @@
     </style>
 
     <style name="ButtonSmallFontStyle" parent="GrayButton">
+        <item name="android:backgroundTint">@color/mtrl_btn_bg_color_selector_grey</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:paddingTop">0dp</item>
         <item name="android:paddingStart">0dp</item>

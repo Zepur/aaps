@@ -24,6 +24,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F9F871</color>
+    <color name="brightYellow">#F0CE41</color>
     <color name="dropDownBlurple">#3C385B</color>
 
     <color name="pink">#FAB0DB</color>

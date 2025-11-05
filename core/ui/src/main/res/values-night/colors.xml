@@ -13,16 +13,17 @@
     <color name="gradient_light">#fdeff9</color>
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-    <color name="colorPrimary">@color/dark_blue</color>
-    <color name="colorPrimaryDark">@color/dark_blue</color>
-    <color name="colorAccent">@color/dark_blue</color>
-    <color name="mdtp_line_dark">@color/dark_blue</color>
+    <color name="colorPrimary">@color/gradient_dark</color>
+    <color name="colorPrimaryDark">@color/gradient_dark</color>
+    <color name="colorAccent">@color/gradient_dark</color>
+    <color name="mdtp_line_dark">@color/gradient_dark</color>
     <color name="colorLightGray">#d8d8d8</color>
-    <color name="cardColorBackground">@color/dark_blue</color>
+    <color name="cardColorBackground">@color/gradient_dark</color>
     <color name="gray">#BBBBBB</color>
     <color name="black">#FF151E39</color>
     <color name="white">#FFFFFADE</color>
     <color name="yellow">#F9F871</color>
+    <color name="brightYellow">#FFFF00</color>
     <color name="dropDownBlurple">#3C385B</color>
 
     <color name="pink">#FAB0DB</color>
@@ -116,9 +117,9 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRange">@color/pink</color>
-    <color name="low">#E1786A</color>
-    <color name="high">@color/dark_red</color>
+    <color name="inRange">#0080FF</color>
+    <color name="low">#FF4994</color>
+    <color name="high">#9265F1</color>
 <!--    <color name="inRange">#00FF4C</color>-->
 <!--    <color name="low">#FF007E</color>-->
 <!--    <color name="high">#FFE619</color>-->

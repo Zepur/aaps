@@ -90,8 +90,8 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="@color/candylightpink"
                         android:foreground="@color/transparent"
-                        app:drawableTint="@color/candylightpink"
                         app:drawableStartCompat="@drawable/ic_crosstarget"
+                        app:drawableTint="@color/candylightpink"
                         tools:ignore="HardcodedText" />
                 </androidx.cardview.widget.CardView>
 

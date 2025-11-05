@@ -16,7 +16,6 @@
         android:fontFamily="@font/fira_code_medium"
         android:textSize="60sp"
         android:textStyle="bold"
-        android:textColor="@color/palette4"
         app:layout_constraintEnd_toStartOf="@+id/delta_large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -286,7 +285,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/ic_bolus_pink"
-            app:tint="@color/palette4"
+            app:tint="@color/yellow"
             android:contentDescription="@string/iob" />
 
         <TextView
@@ -320,7 +319,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/anim_carbs_pink"
-            app:tint="@color/palette4"
+            app:tint="@color/yellow"
             android:contentDescription="@string/cob" />
 
         <TextView
@@ -353,7 +352,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/ic_cp_basal_no_tbr"
-            app:tint="@color/palette4"
+            app:tint="@color/yellow"
             android:contentDescription="@string/basal" />
 
         <TextView

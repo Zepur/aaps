@@ -126,17 +126,10 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
 
         val positions = floatArrayOf(0.0f, 0.30f, 0.60f, 1.0f)
 
-        val linearGradientShader = LinearGradient(
-            0f, 0f, 0f, binding.root.height.toFloat(),
-            backgroundColors,
-            positions,
-            Shader.TileMode.CLAMP
-        )
-
-        val paint = Paint()
-        paint.shader = linearGradientShader
-
-        return GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, backgroundColors)
+        val linearGradient = GradientDrawable()
+        linearGradient.orientation = GradientDrawable.Orientation.TOP_BOTTOM
+        linearGradient.setColors(backgroundColors, positions)
+        return linearGradient
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -145,7 +138,7 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         LocaleHelper.update(applicationContext)
         // val gradient = getRandomColors()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        createBackground()
+        binding.root.background = createBackground()
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
