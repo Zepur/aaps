@@ -55,6 +55,8 @@
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
 
+    <color name="pod_icon_stroke">@color/yellow</color>
+
     <color name="defaultBackground">#FFFFFF</color>
     <color name="defaultTextColor">#000000</color>
 

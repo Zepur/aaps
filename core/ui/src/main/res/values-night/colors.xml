@@ -7,10 +7,10 @@
     <color name="palette2">#57B8FF</color>
     <color name="palette1">#2176AE</color>
 
-    <color name="gradient_dark">#03001e</color>
+    <color name="gradient_dark">#03001E</color>
     <color name="gradient_mid_dark">#7303c0</color>
-    <color name="gradient_mid_light">#ec38bc</color>
-    <color name="gradient_light">#fdeff9</color>
+    <color name="gradient_mid_light">#EC38BC</color>
+    <color name="gradient_light">#FDEFF9</color>
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
     <color name="colorPrimary">@color/gradient_dark</color>
@@ -54,6 +54,8 @@
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
 
+    <color name="pod_icon_stroke">@color/gradient_light</color>
+
     <color name="defaultBackground">@color/dark_blue</color>
     <color name="defaultTextColor">#B3FFFFFF</color>
 
@@ -66,7 +68,7 @@
     <color name="tabSelectedText">@color/white</color>
 
     <!--    Buttons-->
-    <color name="buttonBackground">@color/dark_blue</color>
+    <color name="buttonBackground">@color/gradient_dark</color>
     <color name="buttonText">#ffffff</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
@@ -182,7 +184,7 @@
     <color name="ribbonWarning">#99FAB0DB</color>
     <color name="ribbonCritical">#d17335</color>
     <color name="ribbonTextDefault">#FFFFFF</color>
-    <color name="ribbonTextWarning">#303030</color>
+    <color name="ribbonTextWarning">#CC6E00</color>
     <color name="tempTargetConfirmation">#77dd77</color>
 
     <color name="prediction">#ff00ff</color>
@@ -273,7 +275,7 @@
     <color name="omni_green">#00FF00</color>
 
     <!-- Button icons - general -->
-    <color name="pod_icon_outline">#9E9E9E</color>
+    <color name="pod_icon_outline">@color/gradient_dark</color>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#9E9E9E</color>
 
@@ -283,7 +285,7 @@
     <color name="icon_omnipod_wizard_success">#77DD77</color>
 
     <!-- Omnipod tab - Button icons -->
-    <color name="ic_omnipod_overview_acknowledge_alerts">#FF4444</color>
+    <color name="ic_omnipod_overview_acknowledge_alerts">@color/brightYellow</color>
     <color name="ic_omnipod_overview_acknowledge_alerts_outline">@color/pod_icon_outline</color>
     <color name="ic_omnipod_overview_pod_management">#4CAF50</color>
     <color name="ic_omnipod_overview_pod_management_graph">@color/pod_icon_outline</color>
