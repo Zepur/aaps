@@ -134,7 +134,7 @@
         <item name="omniYellowColor">@color/omni_yellow</item>
         <item name="yellowColor">@color/yellow</item>
         <item name="candyTextColor">@color/candylightpink</item>
-        <item name="orangeColor">@color/orange</item>
+        <item name="orangeColor">@color/palette5</item>
         <item name="transparentColor">@android:color/transparent</item>
         <item name="omniCyanColor">@color/omni_cyan</item>
         <item name="omniGreenColor">@color/omni_green</item>
