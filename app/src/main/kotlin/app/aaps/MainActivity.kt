@@ -2,7 +2,10 @@ package app.aaps
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.LinearGradient
+import android.graphics.Paint
 import android.graphics.Rect
+import android.graphics.Shader
 import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Build
@@ -112,19 +115,6 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
     private var isProtectionCheckActive = false
     private lateinit var binding: ActivityMainBinding
 
-    private fun getRandomColors(): GradientDrawable {
-        // val candyColors: IntArray = this.resources.getIntArray(R.array.candy_colors)
-        // val startColor = candyColors.random()
-        // var endColor = candyColors.random()
-        //
-        // while (endColor == startColor) {
-        //     endColor = candyColors.random()
-        // }
-
-        val gradientDrawable = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, intArrayOf(app.aaps.core.ui.R.color.dark_blue, app.aaps.core.ui.R.color.pink))
-        return gradientDrawable
-    }
-
     fun createBackground(): GradientDrawable {
         val backgroundColors =
             intArrayOf(
@@ -136,6 +126,16 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
 
         val positions = floatArrayOf(0.0f, 0.30f, 0.60f, 1.0f)
 
+        val linearGradientShader = LinearGradient(
+            0f, 0f, 0f, binding.root.height.toFloat(),
+            backgroundColors,
+            positions,
+            Shader.TileMode.CLAMP
+        )
+
+        val paint = Paint()
+        paint.shader = linearGradientShader
+
         return GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, backgroundColors)
     }
 
@@ -145,7 +145,7 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         LocaleHelper.update(applicationContext)
         // val gradient = getRandomColors()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.root.background = createBackground()
+        createBackground()
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
