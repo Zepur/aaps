@@ -20,7 +20,7 @@
     <color name="colorLightGray">#d8d8d8</color>
     <color name="cardColorBackground">@color/gradient_dark</color>
     <color name="gray">#BBBBBB</color>
-    <color name="black">#FF151E39</color>
+    <color name="black">#57F0AD</color>
     <color name="white">#FFFFFADE</color>
     <color name="yellow">#F9F871</color>
     <color name="brightYellow">#FFFF00</color>
@@ -30,7 +30,7 @@
     <color name="pink_dark">#C790BD</color>
     <color name="pink_darker">#95729E</color>
     <color name="pink_darkest">#67547D</color>
-    <color name="dark_blue">#151E39</color>
+    <color name="dark_blue">@color/gradient_dark</color>
     <color name="dark_red">#A4506F</color>
     <color name="orange">#FFB35F</color>
     <color name="buttonTextDark">@color/dark_blue</color>

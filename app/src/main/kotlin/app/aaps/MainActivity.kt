@@ -124,7 +124,7 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
                 getColor(app.aaps.core.ui.R.color.gradient_light)
             )
 
-        val positions = floatArrayOf(0.0f, 0.30f, 0.60f, 1.0f)
+        val positions = floatArrayOf(0.0f, 0.34f, 0.82f, 1.0f)
 
         val linearGradient = GradientDrawable()
         linearGradient.orientation = GradientDrawable.Orientation.TOP_BOTTOM
