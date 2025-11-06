@@ -20,7 +20,7 @@
     <color name="colorLightGray">#d8d8d8</color>
     <color name="cardColorBackground">@color/gradient_dark</color>
     <color name="gray">#BBBBBB</color>
-    <color name="black">#57F0AD</color>
+    <color name="black">@color/gradient_dark</color>
     <color name="white">#FFFFFADE</color>
     <color name="yellow">#F9F871</color>
     <color name="brightYellow">#FFFF00</color>
@@ -280,7 +280,7 @@
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#9E9E9E</color>
 
     <!-- Omnipod Wizard -->
-    <color name="omnipod_wizard_progress_bar">@color/pink</color>
+    <color name="omnipod_wizard_progress_bar">@color/gradient_dark</color>
     <color name="omnipod_wizard_finish_button">#ff669900</color>
     <color name="icon_omnipod_wizard_success">#77DD77</color>
 
