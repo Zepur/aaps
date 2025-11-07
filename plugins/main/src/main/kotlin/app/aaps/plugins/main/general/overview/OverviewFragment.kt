@@ -827,7 +827,9 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     @SuppressLint("SetTextI18n")
     fun updateBg() {
         val lastBg = lastBgData.lastBg()
+
         val isWidget = binding.root.findViewById<MaterialCardView>(R.id.infoCard) == null
+
         val lastBgColor = if (isWidget) lastBgColorWidget(context) else lastBgData.lastBgColor(context)
         val isActualBg = lastBgData.isActualBg()
         val glucoseStatus = glucoseStatusProvider.glucoseStatusData
