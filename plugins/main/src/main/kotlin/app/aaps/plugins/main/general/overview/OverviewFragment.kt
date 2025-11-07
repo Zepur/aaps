@@ -106,6 +106,7 @@ import app.aaps.plugins.main.general.overview.notifications.NotificationStore
 import app.aaps.plugins.main.general.overview.notifications.events.EventUpdateOverviewNotification
 import app.aaps.plugins.main.general.overview.ui.StatusLightHandler
 import app.aaps.plugins.main.skins.SkinProvider
+import com.google.android.material.card.MaterialCardView
 import com.jjoe64.graphview.GraphView
 import dagger.android.HasAndroidInjector
 import dagger.android.support.DaggerFragment
@@ -816,7 +817,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     @SuppressLint("SetTextI18n")
     fun updateBg() {
         val lastBg = lastBgData.lastBg()
-        val isWidget = binding.infoCard == null
+        val isWidget = binding.root.findViewById<MaterialCardView>(app.aaps.core.ui.R.id.infoCard) == null
         val lastBgColor = if (isWidget) lastBgData.lastBgColorWidget(context) else lastBgData.lastBgColor(context)
         val isActualBg = lastBgData.isActualBg()
         val glucoseStatus = glucoseStatusProvider.glucoseStatusData
