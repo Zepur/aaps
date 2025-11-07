@@ -4,14 +4,14 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/aaps_theme_dark_secondary</item>
+        <item name="colorAccent">@color/candypurple</item>
         <item name="dialogTitleBackground">@color/dialog_title_background</item>
         <item name="dialogTitleColor">@color/dialog_title_color</item>
         <item name="dialogTitleIconTint">@color/dialog_title_icon_tint</item>
         <!-- New MaterialComponents attributes. -->
         <item name="materialTimePickerTheme">@style/ThemeOverlay.MaterialComponents.TimePicker</item>
         <item name="materialCalendarTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar</item>
-        <item name="colorSecondary">@color/aaps_theme_dark_secondary</item>
+        <item name="colorSecondary">@color/gradient_dark</item>
         <item name="colorPrimaryVariant">@color/primaryLightColorDefault</item>
         <item name="colorSecondaryVariant">@color/secondaryLightColorDefault</item>
         <item name="colorOnPrimary">@color/primaryTextColorDefault</item>
