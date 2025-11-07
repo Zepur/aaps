@@ -3,7 +3,7 @@
     android:shape="rectangle">
 
     <!-- This sets the fill color of the button's background -->
-    <solid android:color="#ffb35f" />
+    <solid android:color="@color/yellow" />
 
     <!-- This defines the corner radii -->
     <corners

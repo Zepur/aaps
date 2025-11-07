@@ -259,7 +259,7 @@
             android:paddingBottom="6dp"
             android:text="@string/initializing"
             android:textColor="@color/gradient_light"
-            android:backgroundTint="@color/gradient_mid_dark"
+            android:backgroundTint="@color/gradient_dark"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </LinearLayout>

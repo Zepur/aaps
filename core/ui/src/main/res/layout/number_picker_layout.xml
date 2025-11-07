@@ -19,7 +19,7 @@
         android:scaleType="center"
         android:src="@drawable/ic_minus"
         android:elevation="1dp"
-        app:tint="?attr/colorOnSecondary" />
+        app:tint="@color/gradient_dark" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -53,6 +53,6 @@
         android:elevation="1dp"
         android:scaleType="center"
         android:src="@drawable/ic_plus"
-        app:tint="?attr/colorOnSecondary" />
+        app:tint="@color/gradient_dark" />
 
 </LinearLayout>
