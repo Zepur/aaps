@@ -21,6 +21,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import androidx.core.text.toSpanned
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.aaps.core.data.configuration.Constants
@@ -450,14 +451,15 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                                 runOnUiThread {
                                     protectionCheck.queryProtection(activity, ProtectionCheck.Protection.BOLUS, UIRunnable {
                                         if (isAdded)
-                                            OKDialog.showConfirmation(activity, rh.gs(app.aaps.core.ui.R.string.tempbasal_label), lastRun.constraintsProcessed?.resultAsSpanned()
-                                                ?: "".toSpanned(), {
-                                                                          uel.log(Action.ACCEPTS_TEMP_BASAL, Sources.Overview)
-                                                                          (context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager?)?.cancel(Constants.notificationID)
-                                                                          rxBus.send(EventMobileToWear(EventData.CancelNotification(dateUtil.now())))
-                                                                          handler.post { loop.acceptChangeRequest() }
-                                                                          binding.buttonsLayout.acceptTempButton.visibility = View.GONE
-                                                                      })
+                                            OKDialog.showConfirmation(
+                                                activity, rh.gs(app.aaps.core.ui.R.string.tempbasal_label), lastRun.constraintsProcessed?.resultAsSpanned()
+                                                    ?: "".toSpanned(), {
+                                                    uel.log(Action.ACCEPTS_TEMP_BASAL, Sources.Overview)
+                                                    (context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager?)?.cancel(Constants.notificationID)
+                                                    rxBus.send(EventMobileToWear(EventData.CancelNotification(dateUtil.now())))
+                                                    handler.post { loop.acceptChangeRequest() }
+                                                    binding.buttonsLayout.acceptTempButton.visibility = View.GONE
+                                                })
                                     })
                                 }
                             }
@@ -814,11 +816,19 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         task?.let { handler.postDelayed(it, 500) }
     }
 
+    @ColorInt
+    fun lastBgColorWidget(context: Context?): Int =
+        when {
+            lastBgData.isLow()  -> rh.gac(context, app.aaps.core.ui.R.attr.bgLowWidget)
+            lastBgData.isHigh() -> rh.gac(context, app.aaps.core.ui.R.attr.highColorWidget)
+            else                -> rh.gac(context, app.aaps.core.ui.R.attr.bgInRangeWidget)
+        }
+
     @SuppressLint("SetTextI18n")
     fun updateBg() {
         val lastBg = lastBgData.lastBg()
-        val isWidget = binding.root.findViewById<MaterialCardView>(app.aaps.core.ui.R.id.infoCard) == null
-        val lastBgColor = if (isWidget) lastBgData.lastBgColorWidget(context) else lastBgData.lastBgColor(context)
+        val isWidget = binding.root.findViewById<MaterialCardView>(R.id.infoCard) == null
+        val lastBgColor = if (isWidget) lastBgColorWidget(context) else lastBgData.lastBgColor(context)
         val isActualBg = lastBgData.isActualBg()
         val glucoseStatus = glucoseStatusProvider.glucoseStatusData
         val trendDescription = trendCalculator.getTrendDescription(iobCobCalculator.ads)
