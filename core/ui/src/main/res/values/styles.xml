@@ -226,7 +226,7 @@
         <item name="devSlopeNegColor">@color/devSlopeNeg</item>
         <item name="heartRateColor">@color/heartRate</item>
         <item name="stepsColor">@color/steps</item>
-        <item name="deviationGreyColor">@color/deviationGrey</item>
+        <item name="deviationGreyColor">@color/deviationGray</item>
         <item name="deviationBlackColor">@color/deviationBlack</item>
         <item name="deviationGreenColor">@color/deviationGreen</item>
         <item name="deviationRedColor">@color/deviationRed</item>
@@ -241,13 +241,13 @@
         <item name="menuTextColor">@color/black</item>
         <item name="menuTextColorInverse">@color/white</item>
         <!-- CardView specific colors  -->
-        <item name="strokeColor">@color/plastic_grey</item>
+        <item name="strokeColor">@color/plastic_gray</item>
         <item name="textAppearanceMediumColor">@color/textAppearanceMediumLight</item>
         <!-- Actionbar  -->
         <item name="actionBarStyle">@style/Aaps_ActionBarStyle</item>
         <!-- Objectives specific colors  -->
         <item name="isAccomplishedColor">@color/isAccomplished</item>
-        <item name="separatorColor">@color/sphere_plastic_grey</item>
+        <item name="separatorColor">@color/sphere_plastic_gray</item>
         <item name="isCompletedColor">@color/isCompleted</item>
         <item name="isNotCompletedColor">@color/isNotCompleted</item>
         <!---Nightscout client TitelColor -->

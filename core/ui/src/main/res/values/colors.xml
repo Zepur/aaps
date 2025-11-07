@@ -241,7 +241,7 @@
     <color name="colorScheduled">#de7550</color>
     <color name="colorActive">#25912e</color>
 
-    <color name="deviationGrey">#c8666666</color>
+    <color name="deviationGray">#c8666666</color>
     <color name="deviationGreen">#7200FF00</color>
     <color name="deviationRed">#72FF0000</color>
     <color name="deviationBlack">#72000000</color>
@@ -264,9 +264,9 @@
     <color name="darkGray">#323232</color>
     <color name="darkGrayVariant">#424242</color>
     <color name="objectivesBackground">#8C8C8C</color>
-    <color name="plastic_grey">#666666</color>
+    <color name="plastic_gray">#666666</color>
     <color name="byodaGray">#777777</color>
-    <color name="sphere_plastic_grey">#8c8c8c</color>
+    <color name="sphere_plastic_gray">#8c8c8c</color>
     <color name="lightSandGray">#72000000</color>
     <color name="sandGray">#c8666666</color>
     <color name="midGray">#B2B2B2</color>

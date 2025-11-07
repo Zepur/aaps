@@ -767,7 +767,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
     private fun prepareGraphsIfNeeded(numOfGraphs: Int) {
         if (numOfGraphs != secondaryGraphs.size - 1) {
-            //aapsLogger.debug("New secondary graph count ${numOfGraphs-1}")
+            // aapsLogger.debug("New secondary graph count ${numOfGraphs-1}")
             // rebuild needed
             secondaryGraphs.clear()
             secondaryGraphsLabel.clear()

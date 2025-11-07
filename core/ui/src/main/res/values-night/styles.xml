@@ -227,7 +227,7 @@
         <item name="devSlopeNegColor">@color/devSlopeNeg</item>
         <item name="heartRateColor">@color/heartRate</item>
         <item name="stepsColor">@color/steps</item>
-        <item name="deviationGreyColor">@color/deviationGrey</item>
+        <item name="deviationGreyColor">@color/deviationGray</item>
         <item name="deviationBlackColor">@color/deviationBlack</item>
         <item name="deviationGreenColor">@color/deviationGreen</item>
         <item name="deviationRedColor">@color/deviationRed</item>
@@ -248,7 +248,7 @@
         <item name="actionBarStyle">@style/Aaps_ActionBarStyle</item>
         <!-- Objectives specific colors  -->
         <item name="isAccomplishedColor">@color/isAccomplished</item>
-        <item name="separatorColor">@color/sphere_plastic_grey</item>
+        <item name="separatorColor">@color/sphere_plastic_gray</item>
         <item name="isCompletedColor">@color/isCompleted</item>
         <item name="isNotCompletedColor">@color/isNotCompleted</item>
         <item name="materialCalendarStyle">@style/DatePicker</item>
@@ -367,12 +367,19 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center</item>
         <item name="android:stateListAnimator">@null</item>
-        <item name="android:background">@drawable/material_button_background</item>
+        <item name="backgroundTint">@color/ok_cancel_background_selector</item>
+        <item name="android:textColor">@color/ok_cancel_text_selector</item>
         <item name="android:minWidth">@dimen/material_button_min_width</item>
         <item name="android:paddingStart">@dimen/material_button_text_padding_horizontal</item>
         <item name="android:paddingEnd">@dimen/material_button_text_padding_horizontal</item>
-        <item name="android:textColor">@color/yellow</item>
         <item name="android:textAllCaps">true</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.Button.Rounded</item>
+    </style>
+
+    <!-- This new style defines the shape with the desired corner radius -->
+    <style name="ShapeAppearance.App.Button.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
     </style>
 
     <style name="PickerTextButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
