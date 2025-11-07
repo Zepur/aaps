@@ -117,6 +117,10 @@
         <item name="bgLow">@color/low</item>
         <item name="highColor">@color/high</item>
         <item name="bgInRange">@color/tempTargetConfirmation</item>
+        <!---BG WIDGET color-->
+        <item name="bgLowWidget">@color/bgLowWidget</item>
+        <item name="highColorWidget">@color/highColorWidget</item>
+        <item name="bgInRangeWidget">@color/bgInRangeWidget</item>
         <!---Profile Helper -->
         <item name="helperProfileColor">@color/helperProfile</item>
         <item name="examinedProfileColor">@color/examinedProfile</item>

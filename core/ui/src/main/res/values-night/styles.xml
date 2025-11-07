@@ -114,6 +114,10 @@
         <item name="bgLow">@color/low</item>
         <item name="highColor">@color/high</item>
         <item name="bgInRange">@color/inRange</item>
+        <!---BG WIDGET color-->
+        <item name="bgLowWidget">@color/bgLowWidget</item>
+        <item name="highColorWidget">@color/highColorWidget</item>
+        <item name="bgInRangeWidget">@color/bgInRangeWidget</item>
         <!---Profile Helper -->
         <item name="helperProfileColor">@color/helperProfile</item>
         <item name="examinedProfileColor">@color/examinedProfile</item>
@@ -505,6 +509,7 @@
     <style name="custom_hor_prog_bar" parent="@android:style/Widget.Material.ProgressBar.Horizontal">
         <item name="progressDrawable">@drawable/custom_prog_hor_material</item>
         <item name="indeterminateDrawable">@drawable/custom_progress_indeterminate_hor_mat</item>
+        <item name="android:tint">@color/gradient_dark</item>
         <item name="minHeight">16dip</item>
         <item name="maxHeight">16dip</item>
     </style>

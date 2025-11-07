@@ -124,6 +124,11 @@
     <color name="inRange">@color/pink</color>
     <color name="low">#E1786A</color>
     <color name="high">#A4506F</color>
+    <!---BG WIDGET color-->
+    <color name="bgLowWidget">@color/low</color>
+    <color name="highColorWidget">@color/high</color>
+    <color name="bgInRangeWidget">@color/gradient_dark</color>
+
     <color name="iob">#1e88e5</color>
     <color name="extendedBolus">#1e88e5</color>
     <color name="iobPredAS">#1ea3e5</color>

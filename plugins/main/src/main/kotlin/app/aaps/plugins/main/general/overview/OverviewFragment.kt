@@ -816,7 +816,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     @SuppressLint("SetTextI18n")
     fun updateBg() {
         val lastBg = lastBgData.lastBg()
-        val lastBgColor = lastBgData.lastBgColor(context)
+        val isWidget = binding.infoCard == null
+        val lastBgColor = if (isWidget) lastBgData.lastBgColorWidget(context) else lastBgData.lastBgColor(context)
         val isActualBg = lastBgData.isActualBg()
         val glucoseStatus = glucoseStatusProvider.glucoseStatusData
         val trendDescription = trendCalculator.getTrendDescription(iobCobCalculator.ads)

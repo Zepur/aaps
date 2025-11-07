@@ -122,6 +122,10 @@
     <color name="inRange">#0080FF</color>
     <color name="low">#FF4994</color>
     <color name="high">#9265F1</color>
+    <!---BG WIDGET color-->
+    <color name="bgLowWidget">@color/low</color>
+    <color name="highColorWidget">@color/high</color>
+    <color name="bgInRangeWidget">@color/gradient_dark</color>
 <!--    <color name="inRange">#00FF4C</color>-->
 <!--    <color name="low">#FF007E</color>-->
 <!--    <color name="high">#FFE619</color>-->
