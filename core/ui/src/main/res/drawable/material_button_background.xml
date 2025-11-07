@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_shortAnimTime">
-    <item android:state_enabled="false" android:drawable="@color/dark_red" />
+    <item android:state_enabled="false" android:drawable="@drawable/material_button_unavailable" />
     <item android:drawable="@drawable/material_button_selected" android:state_focused="true" />
     <item android:drawable="@drawable/material_button_selected" android:state_pressed="true" />
-    <item android:drawable="@android:color/transparent" />
+    <item android:state_enabled="true" android:drawable="@drawable/material_button_available" />
 </selector>
