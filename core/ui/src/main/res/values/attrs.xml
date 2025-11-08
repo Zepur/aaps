@@ -149,7 +149,12 @@
     <!-- IOB -->
     <attr name="iobColor" format="reference|color" />
     <!-- Basal -->
-    <attr name="basal" format="reference|color" />
+    <attr name="basalGraphOutlineColor" format="reference|color" />
+    <attr name="basalTextColorHigh" format="reference|color" />
+    <attr name="basalTextColorNormal" format="reference|color" />
+    <attr name="basalTextColorLow" format="reference|color" />
+    <attr name="tempBasalGraphColor" format="reference|color" />
+    <attr name="baseBasalGraphColor" format="reference|color" />
     <!---Loop Icon-->
     <!---Loop Paused Icon Color-->
     <attr name="loopPaused" format="reference|color" />

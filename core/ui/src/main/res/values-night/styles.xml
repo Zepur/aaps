@@ -172,7 +172,12 @@
         <!-- IOB -->
         <item name="iobColor">@color/iob</item>
         <!-- Basal -->
-        <item name="basal">@color/basal</item>
+        <item name="basalGraphOutlineColor">@color/gradient_dark</item>
+        <item name="basalTextColorHigh">@color/high</item>
+        <item name="basalTextColorNormal">@color/gradient_light</item>
+        <item name="basalTextColorLow">@color/low</item>
+        <item name="tempBasalGraphColor">@color/high</item>
+        <item name="baseBasalGraphColor">@color/gradient_dark</item>
         <!-- Carbs -->
         <item name="carbsColor">@color/carbs</item>
         <!-- Temp Target -->
