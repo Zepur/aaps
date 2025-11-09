@@ -61,9 +61,9 @@ class DetermineBasalSMB @Inject constructor(
 
     fun convert_bg(value: Double): String =
         profileUtil.fromMgdlToStringInUnits(value).replace("-0.0", "0.0")
-    //DecimalFormat("0.#").format(profileUtil.fromMgdlToUnits(value))
-    //if (profile.out_units === "mmol/L") round(value / 18, 1).toFixed(1);
-    //else Math.round(value);
+    // DecimalFormat("0.#").format(profileUtil.fromMgdlToUnits(value))
+    // if (profile.out_units === "mmol/L") round(value / 18, 1).toFixed(1);
+    // else Math.round(value);
 
     fun enable_smb(profile: OapsProfile, microBolusAllowed: Boolean, meal_data: MealData, target_bg: Double): Boolean {
         // disable SMB when a high temptarget is set
@@ -122,7 +122,7 @@ class DetermineBasalSMB @Inject constructor(
 
         // experimental
         if (currentBG > 4.8 && rate != 0.0) {
-            val reasonString = "BG too low for correction, ignoring $rate at bg $currentBG"
+            val reasonString = "BG too low for correction, ignoring $rate at bg ${convert_bg(currentBG)}"
             reason(rT,reasonString)
             rxBus.send(EventSpecialApsReason(reasonString))
             return rT

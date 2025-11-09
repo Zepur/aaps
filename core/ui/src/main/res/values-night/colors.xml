@@ -119,7 +119,7 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRangeAlpha">#990080FF</color>
+    <color name="inRangeAlpha">#B757AAFF</color>
     <color name="inRange">#0080FF</color>
     <color name="low">#FF4994</color>
     <color name="high">#FFBEBE</color>

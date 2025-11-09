@@ -357,15 +357,14 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         disposable += activePlugin.activeOverview.overviewBus
             .toObservable(EventSpecialApsReason::class.java)
             .observeOn(aapsSchedulers.main)
-            .subscribe({
-                event ->
-                binding.apsReasonText.text = event.reason
-                binding.apsReasonText.visibility = View.VISIBLE
-
-                binding.apsReasonText.postDelayed({
-                    binding.apsReasonText.visibility = View.GONE
-                                                  }, 300000)
-            }, fabricPrivacy::logException)
+            .subscribe({ event ->
+                           binding.apsReasonText.text = event.reason
+                           binding.apsReasonText.visibility = View.VISIBLE
+                           lastBgData.lastBg()
+                           binding.apsReasonText.postDelayed({
+                                                                 binding.apsReasonText.text = createSentence()
+                                                             }, 30000)
+                       }, fabricPrivacy::logException)
 
         refreshLoop = Runnable {
             refreshAll()
@@ -395,6 +394,128 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         processAps()
         updateProfile()
         updateTemporaryTarget()
+    }
+
+    fun createSentence(): String {
+        return "${getAdjective()} ${getNoun()} ${getVerb()} ${getNoun()} ${getAdverb()}"
+    }
+
+    fun getNoun(): String {
+        val wordList: List<String> = listOf(
+            "bears",
+            "fish",
+            "freaks",
+            "humans", "girls", "men", "boys", "developers"
+        )
+        return wordList.random()
+    }
+
+    fun getVerb(): String {
+        val wordList: List<String> = listOf(
+            "slay",
+            "dwell",
+            "abide", "frolic", "jump around", "fart", "contemplate"
+        )
+        return wordList.random()
+    }
+
+    fun getAdverb(): String {
+        val wordList: List<String> = listOf(
+            "abruptly",
+            "angrily", "accordingly",
+            "additionally",
+            "also",
+            "anyway",
+            "besides",
+            "certainly",
+            "conversely",
+            "finally",
+            "hence",
+            "however",
+            "instead",
+            "in conclusion",
+            "lately",
+            "likewise",
+            "moreover",
+            "namely",
+            "nevertheless",
+            "so",
+            "then",
+            "yet"
+        )
+        return wordList.random()
+    }
+
+    fun getAdjective(): String {
+        val wordList: List<String> = listOf(
+            "attractive",
+            "bald",
+            "beautiful",
+            "chubby",
+            "clean",
+            "dazzling",
+            "drab",
+            "elegant",
+            "fancy",
+            "fit",
+            "flabby",
+            "glamorous",
+            "gorgeous",
+            "handsome",
+            "long",
+            "magnificent",
+            "muscular",
+            "plain",
+            "plump",
+            "quaint",
+            "scruffy",
+            "shapely",
+            "short",
+            "skinny",
+            "stocky",
+            "ugly",
+            "unkempt",
+            "unsightly",
+            "ashy",
+            "black",
+            "blue",
+            "gray",
+            "green",
+            "icy",
+            "lemon",
+            "mango",
+            "orange",
+            "purple",
+            "red",
+            "salmon",
+            "white",
+            "yellow",
+            "alive",
+            "better",
+            "careful",
+            "clever",
+            "dead",
+            "easy",
+            "famous",
+            "gifted",
+            "hallowed",
+            "helpful",
+            "important",
+            "inexpensive",
+            "mealy",
+            "mushy",
+            "odd",
+            "poor",
+            "powerful",
+            "rich",
+            "shy",
+            "tender",
+            "unimportant",
+            "uninterested",
+            "vast",
+            "wrong"
+        )
+        return wordList.random()
     }
 
     @Synchronized
