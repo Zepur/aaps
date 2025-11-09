@@ -24,12 +24,8 @@
 
     <Button
         android:id="@+id/cancel"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_width="wrap_content"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
         android:layout_marginEnd="8dp"
         style="@style/OkCancelButton.Text"
         android:text="@string/cancel" />
@@ -47,7 +43,7 @@
     <Button
         android:id="@+id/ok"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginEnd="16dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"

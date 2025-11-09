@@ -357,7 +357,7 @@
     <dimen name="material_button_height">48dp</dimen>
     <dimen name="material_button_text_size">14sp</dimen>
     <dimen name="material_button_min_width">64dp</dimen>
-    <dimen name="material_button_text_padding_horizontal">8dp</dimen>
+    <dimen name="material_button_text_padding_horizontal">12dp</dimen>
 
     <style name="OkCancelButton">
         <item name="android:layout_width">wrap_content</item>
