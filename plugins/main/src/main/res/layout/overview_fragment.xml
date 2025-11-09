@@ -264,6 +264,21 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/aps_reason_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:backgroundTint="@color/gradient_light"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/gradient_dark"
+        android:alpha="0.7"
+        tools:text="Reason: SMB enabled for COB of 20. Setting temp basal." />
+
+
     <ProgressBar
         android:id="@+id/progress_bar"
         style="@style/custom_hor_prog_bar"

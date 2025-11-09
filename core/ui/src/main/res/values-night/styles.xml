@@ -176,8 +176,8 @@
         <item name="basalTextColorHigh">@color/high</item>
         <item name="basalTextColorNormal">@color/gradient_light</item>
         <item name="basalTextColorLow">@color/low</item>
-        <item name="tempBasalGraphColor">@color/gradient_light</item>
-        <item name="baseBasalGraphColor">@color/gradient_dark</item>
+        <item name="tempBasalGraphColor">@color/inRangeAlpha</item>
+        <item name="baseBasalGraphColor">@color/inRangeAlpha</item>
         <!-- Carbs -->
         <item name="carbsColor">@color/carbs</item>
         <!-- Temp Target -->

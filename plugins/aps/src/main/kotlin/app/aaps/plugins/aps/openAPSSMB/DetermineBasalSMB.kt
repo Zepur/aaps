@@ -10,6 +10,8 @@ import app.aaps.core.interfaces.aps.OapsProfile
 import app.aaps.core.interfaces.aps.Predictions
 import app.aaps.core.interfaces.aps.RT
 import app.aaps.core.interfaces.profile.ProfileUtil
+import app.aaps.core.interfaces.rx.bus.RxBus
+import app.aaps.core.interfaces.rx.events.EventSpecialApsReason
 import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
 import java.text.DecimalFormat
 import java.time.Instant
@@ -25,7 +27,8 @@ import kotlin.math.roundToInt
 @Singleton
 class DetermineBasalSMB @Inject constructor(
     private val profileUtil: ProfileUtil,
-    private val fabricPrivacy: FabricPrivacy
+    private val fabricPrivacy: FabricPrivacy,
+    private val rxBus: RxBus
 ) {
 
     private val consoleError = mutableListOf<String>()
@@ -110,11 +113,21 @@ class DetermineBasalSMB @Inject constructor(
     private fun getMaxSafeBasal(profile: OapsProfile): Double =
         min(profile.max_basal, min(profile.max_daily_safety_multiplier * profile.max_daily_basal, profile.current_basal_safety_multiplier * profile.current_basal))
 
-    fun setTempBasal(_rate: Double, duration: Int, profile: OapsProfile, rT: RT, currenttemp: CurrentTemp): RT {
+    fun setTempBasal(_rate: Double, duration: Int, profile: OapsProfile, rT: RT, currenttemp: CurrentTemp, currentBG: Double): RT {
+
         //var maxSafeBasal = Math.min(profile.max_basal, 3 * profile.max_daily_basal, 4 * profile.current_basal);
 
         val maxSafeBasal = getMaxSafeBasal(profile)
         var rate = _rate
+
+        // experimental
+        if (currentBG > 8.1 && rate != 0.0) {
+            val reasonString = "BG too low for correction, ignoring $rate at bg $currentBG"
+            reason(rT,reasonString)
+            rxBus.send(EventSpecialApsReason(reasonString))
+            return rT
+        }
+
         if (rate < 0) rate = 0.0
         else if (rate > maxSafeBasal) rate = maxSafeBasal
 
@@ -886,7 +899,7 @@ class DetermineBasalSMB @Inject constructor(
             durationReq = round(durationReq / 30.0) * 30
             // always set a 30-120m zero temp (oref0-pump-loop will let any longer SMB zero temp run)
             durationReq = min(120, max(30, durationReq))
-            return setTempBasal(0.0, durationReq, profile, rT, currenttemp)
+            return setTempBasal(0.0, durationReq, profile, rT, currenttemp, bg)
         }
 
         // if not in LGS mode, cancel temps before the top of the hour to reduce beeping/vibration
@@ -894,7 +907,7 @@ class DetermineBasalSMB @Inject constructor(
         val minutes = Instant.ofEpochMilli(rT.deliverAt!!).atZone(ZoneId.systemDefault()).toLocalDateTime().minute
         if (profile.skip_neutral_temps && minutes >= 55) {
             rT.reason.append("; Canceling temp at " + minutes + "m past the hour. ")
-            return setTempBasal(0.0, 0, profile, rT, currenttemp)
+            return setTempBasal(0.0, 0, profile, rT, currenttemp, bg)
         }
 
         if (eventualBG < min_bg) { // if eventual BG is below target:
@@ -904,7 +917,7 @@ class DetermineBasalSMB @Inject constructor(
                 // if naive_eventualBG < 40, set a 30m zero temp (oref0-pump-loop will let any longer SMB zero temp run)
                 if (naive_eventualBG < 40) {
                     rT.reason.append(", naive_eventualBG < 40. ")
-                    return setTempBasal(0.0, 30, profile, rT, currenttemp)
+                    return setTempBasal(0.0, 30, profile, rT, currenttemp, bg)
                 }
                 if (glucose_status.delta > minDelta) {
                     rT.reason.append(", but Delta ${convert_bg(tick.toDouble())} > expectedDelta ${convert_bg(expectedDelta)}")
@@ -916,7 +929,7 @@ class DetermineBasalSMB @Inject constructor(
                     return rT
                 } else {
                     rT.reason.append("; setting current basal of ${round(basal, 2)} as temp. ")
-                    return setTempBasal(basal, 30, profile, rT, currenttemp)
+                    return setTempBasal(basal, 30, profile, rT, currenttemp, bg)
                 }
             }
 
@@ -946,7 +959,7 @@ class DetermineBasalSMB @Inject constructor(
             val minInsulinReq = Math.min(insulinReq, naiveInsulinReq)
             if (insulinScheduled < minInsulinReq - basal * 0.3) {
                 rT.reason.append(", ${currenttemp.duration}m@${(currenttemp.rate).toFixed2()} is a lot less than needed. ")
-                return setTempBasal(rate, 30, profile, rT, currenttemp)
+                return setTempBasal(rate, 30, profile, rT, currenttemp, bg)
             }
             if (currenttemp.duration > 5 && rate >= currenttemp.rate * 0.8) {
                 rT.reason.append(", temp ${currenttemp.rate} ~< req ${round(rate, 2)}U/hr. ")
@@ -967,12 +980,12 @@ class DetermineBasalSMB @Inject constructor(
                     //console.error(durationReq);
                     if (durationReq > 0) {
                         rT.reason.append(", setting ${durationReq}m zero temp. ")
-                        return setTempBasal(rate, durationReq, profile, rT, currenttemp)
+                        return setTempBasal(rate, durationReq, profile, rT, currenttemp, bg)
                     }
                 } else {
                     rT.reason.append(", setting ${round(rate, 2)}U/hr. ")
                 }
-                return setTempBasal(rate, 30, profile, rT, currenttemp)
+                return setTempBasal(rate, 30, profile, rT, currenttemp, bg)
             }
         }
 
@@ -994,7 +1007,7 @@ class DetermineBasalSMB @Inject constructor(
                     return rT
                 } else {
                     rT.reason.append("; setting current basal of ${round(basal, 2)} as temp. ")
-                    return setTempBasal(basal, 30, profile, rT, currenttemp)
+                    return setTempBasal(basal, 30, profile, rT, currenttemp, bg)
                 }
             }
         }
@@ -1008,7 +1021,7 @@ class DetermineBasalSMB @Inject constructor(
                     return rT
                 } else {
                     rT.reason.append("; setting current basal of ${round(basal, 2)} as temp. ")
-                    return setTempBasal(basal, 30, profile, rT, currenttemp)
+                    return setTempBasal(basal, 30, profile, rT, currenttemp, bg)
                 }
             }
         }
@@ -1025,7 +1038,7 @@ class DetermineBasalSMB @Inject constructor(
                 return rT
             } else {
                 rT.reason.append("; setting current basal of ${round(basal, 2)} as temp. ")
-                return setTempBasal(basal, 30, profile, rT, currenttemp)
+                return setTempBasal(basal, 30, profile, rT, currenttemp, bg)
             }
         } else { // otherwise, calculate 30m high-temp required to get projected BG down to target
             // insulinReq is the additional insulin required to get minPredBG down to target_bg
@@ -1133,12 +1146,12 @@ class DetermineBasalSMB @Inject constructor(
             val insulinScheduled = currenttemp.duration * (currenttemp.rate - basal) / 60
             if (insulinScheduled >= insulinReq * 2) { // if current temp would deliver >2x more than the required insulin, lower the rate
                 rT.reason.append("${currenttemp.duration}m@${(currenttemp.rate).toFixed2()} > 2 * insulinReq. Setting temp basal of ${round(rate, 2)}U/hr. ")
-                return setTempBasal(rate, 30, profile, rT, currenttemp)
+                return setTempBasal(rate, 30, profile, rT, currenttemp, bg)
             }
 
             if (currenttemp.duration == 0) { // no temp is set
                 rT.reason.append("no temp, setting " + round(rate, 2).withoutZeros() + "U/hr. ")
-                return setTempBasal(rate, 30, profile, rT, currenttemp)
+                return setTempBasal(rate, 30, profile, rT, currenttemp, bg)
             }
 
             if (currenttemp.duration > 5 && (round_basal(rate) <= round_basal(currenttemp.rate))) { // if required temp <~ existing temp basal
@@ -1148,7 +1161,7 @@ class DetermineBasalSMB @Inject constructor(
 
             // required temp > existing temp basal
             rT.reason.append("temp ${currenttemp.rate.toFixed2()} < ${round(rate, 2).withoutZeros()}U/hr. ")
-            return setTempBasal(rate, 30, profile, rT, currenttemp)
+            return setTempBasal(rate, 30, profile, rT, currenttemp, bg)
         }
     }
 }

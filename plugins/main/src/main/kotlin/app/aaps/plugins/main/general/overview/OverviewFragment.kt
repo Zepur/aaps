@@ -68,6 +68,7 @@ import app.aaps.core.interfaces.rx.events.EventPreferenceChange
 import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
 import app.aaps.core.interfaces.rx.events.EventRefreshOverview
 import app.aaps.core.interfaces.rx.events.EventScale
+import app.aaps.core.interfaces.rx.events.EventSpecialApsReason
 import app.aaps.core.interfaces.rx.events.EventTempBasalChange
 import app.aaps.core.interfaces.rx.events.EventTempTargetChange
 import app.aaps.core.interfaces.rx.events.EventUpdateOverviewCalcProgress
@@ -353,6 +354,18 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             .toObservable(EventTempBasalChange::class.java)
             .observeOn(aapsSchedulers.io)
             .subscribe({ updateTemporaryBasal() }, fabricPrivacy::logException)
+        disposable += rxBus
+            .toObservable(EventSpecialApsReason::class.java)
+            .observeOn(aapsSchedulers.main)
+            .subscribe({
+                event ->
+                binding.apsReasonText.text = event.reason
+                binding.apsReasonText.visibility = View.VISIBLE
+
+                binding.apsReasonText.postDelayed({
+                    binding.apsReasonText.visibility = View.GONE
+                                                  }, 300000)
+            }, fabricPrivacy::logException)
 
         refreshLoop = Runnable {
             refreshAll()

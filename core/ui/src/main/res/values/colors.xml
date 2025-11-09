@@ -121,6 +121,7 @@
 <!--    <color name="inRange">#00FF00</color>-->
 <!--    <color name="low">#FF0000</color>-->
 <!--    <color name="high">#FFFB8C00</color>-->
+    <color name="inRangeAlpha">#990080FF</color>
     <color name="inRange">@color/pink</color>
     <color name="low">#E1786A</color>
     <color name="high">#A4506F</color>
