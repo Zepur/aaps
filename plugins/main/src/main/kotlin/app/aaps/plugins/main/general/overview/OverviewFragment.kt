@@ -397,7 +397,13 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     }
 
     fun createSentence(): String {
-        return "${getAdjective()} ${getNoun()} ${getVerb()} ${getNoun()} ${getAdverb()}"
+        return "${getAdjective()} ${getNoun()} ${getVerb()} ${getAdjective()} ${getNoun()} ${getAdverb()}, ${getInterimWord()} ${getNoun()} ${getVerb()}"
+    }
+
+    fun getInterimWord(): String {
+        val wordList: List<String> = listOf(
+            "so", "but", "and", "therefore", "hence", "how", "yet", "unfortunately", "however")
+        return wordList.random()
     }
 
     fun getNoun(): String {
@@ -426,22 +432,21 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "additionally",
             "also",
             "anyway",
-            "besides",
+            "while high",
             "certainly",
             "conversely",
             "finally",
-            "hence",
-            "however",
-            "instead",
-            "in conclusion",
+            "well",
+            "slowly",
+            "tonight",
+            "badly",
             "lately",
-            "likewise",
-            "moreover",
-            "namely",
+            "sweetly",
+            "finally",
+            "every Friday",
+            "soon",
             "nevertheless",
-            "so",
-            "then",
-            "yet"
+            "passionately"
         )
         return wordList.random()
     }

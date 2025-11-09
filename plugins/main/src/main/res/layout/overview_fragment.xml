@@ -140,30 +140,9 @@
                 app:cardUseCompatPadding="false"
                 android:layout_gravity="center">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                <TextView
-                    android:id="@+id/aps_reason_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginTop="8dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:background="@color/gradient_dark"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/gradient_light"
-                    android:textSize="14sp"
-                    android:alpha="0.7"
-                    tools:text="Reason: SMB enabled for COB of 20. Setting temp basal." />
-
                 <include
                     android:id="@+id/status_lights_layout"
                     layout="@layout/overview_statuslights_layout" />
-                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -256,6 +235,24 @@
                     layout="@layout/overview_graphs_layout" />
 
             </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/aps_reason_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:background="@color/transparent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/gradient_light"
+                android:textSize="15sp"
+                android:alpha="0.7"
+                tools:text="Reason: SMB enabled for COB of 20. Setting temp basal." />
 
         </LinearLayout>
 
