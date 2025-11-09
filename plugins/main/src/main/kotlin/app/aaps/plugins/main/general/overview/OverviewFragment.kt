@@ -243,6 +243,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
         binding.graphsLayout.chartMenuButton.visibility = preferences.simpleMode.not().toVisibility()
 
+        updateFunText()
+
         binding.activeProfile.setOnClickListener(this)
         binding.activeProfile.setOnLongClickListener(this)
         binding.tempTarget.setOnClickListener(this)
@@ -358,12 +360,11 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             .toObservable(EventSpecialApsReason::class.java)
             .observeOn(aapsSchedulers.main)
             .subscribe({ event ->
-                           binding.apsReasonText.text = event.reason
-                           binding.apsReasonText.visibility = View.VISIBLE
-                           lastBgData.lastBg()
-                           binding.apsReasonText.postDelayed({
-                                                                 binding.apsReasonText.text = createSentence()
-                                                             }, 30000)
+                           if (event.reason.startsWith("BG too low")) {
+                               binding.apsReasonText.text = event.reason
+                               binding.apsReasonText.visibility = View.VISIBLE
+                               lastBgData.lastBg()
+                           }
                        }, fabricPrivacy::logException)
 
         refreshLoop = Runnable {
@@ -396,31 +397,38 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         updateTemporaryTarget()
     }
 
+    fun updateFunText() {
+        binding.apsReasonText.text = createSentence()
+    }
+
     fun createSentence(): String {
-        return "${getAdjective()} ${getNoun()} ${getVerb()} ${getAdjective()} ${getNoun()} ${getAdverb()}, ${getInterimWord()} ${getNoun()} ${getVerb()}"
+        return "${getStarterWord()} ${getAdjective()} ${getNoun()} ${getVerb()} ${getAdjective()} ${getNoun()} ${getAdverb()}, ${getInterimWord()} ${getNoun()} ${getVerb()}"
+    }
+
+    fun getStarterWord(): String {
+        val wordList: List<String> = listOf(
+            "Breaking news!", "This just in:", "Did you know", "For the first time ever", "And now", "Well...", ""
+        )
+        return wordList.random()
     }
 
     fun getInterimWord(): String {
         val wordList: List<String> = listOf(
-            "so", "but", "and", "therefore", "hence", "how", "yet", "unfortunately", "however")
+            "so", "but", "and", "therefore", "hence", "how", "yet", "unfortunately", "however"
+        )
         return wordList.random()
     }
 
     fun getNoun(): String {
         val wordList: List<String> = listOf(
-            "bears",
-            "fish",
-            "freaks",
-            "humans", "girls", "men", "boys", "developers"
+            "bears", "fish", "freaks", "humans", "girls", "men", "boys", "developers", "birds", "everyone in Belgium"
         )
         return wordList.random()
     }
 
     fun getVerb(): String {
         val wordList: List<String> = listOf(
-            "slay",
-            "dwell",
-            "abide", "frolic", "jump around", "fart", "contemplate"
+            "slay", "dwell", "abide", "frolic", "jump around", "fart on", "contemplate", "try to kiss", "kidnap", "eat", "dream about"
         )
         return wordList.random()
     }
@@ -1021,6 +1029,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                 binding.infoLayout.bgQuality.visibility = View.GONE
             }
             binding.infoLayout.simpleMode.visibility = preferences.simpleMode.toVisibility()
+
+            updateFunText()
         }
     }
 
