@@ -20,14 +20,18 @@
     android:background="@android:color/transparent"
     android:gravity="end"
     android:orientation="horizontal"
-    android:paddingBottom="8dp">
+    android:paddingBottom="3dp">
 
     <Button
         android:id="@+id/cancel"
-        style="@style/OkCancelButton.Text"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
         android:layout_marginEnd="8dp"
+        style="@style/OkCancelButton.Text"
         android:text="@string/cancel" />
 
     <View
@@ -38,13 +42,17 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/white" />
+        android:background="@color/gradient_light" />
 
     <Button
         android:id="@+id/ok"
-        style="@style/OkCancelButton.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        style="@style/OkCancelButton.Text"
         android:text="@string/ok" />
 </LinearLayout>

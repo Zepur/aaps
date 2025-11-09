@@ -1038,7 +1038,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     } else {
                         setRibbon(
                             binding.tempTarget,
-                            app.aaps.core.ui.R.attr.yellowColor,
+                            app.aaps.core.ui.R.attr.candyTextColor,
                             app.aaps.core.ui.R.attr.transparentColor,
                             profileUtil.toTargetRangeString(profile.getTargetLowMgdl(), profile.getTargetHighMgdl(), GlucoseUnit.MGDL, units)
                         )
