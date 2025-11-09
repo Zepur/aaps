@@ -41,6 +41,7 @@ import app.aaps.core.interfaces.profiling.Profiler
 import app.aaps.core.interfaces.resources.ResourceHelper
 import app.aaps.core.interfaces.rx.bus.RxBus
 import app.aaps.core.interfaces.rx.events.EventAPSCalculationFinished
+import app.aaps.core.interfaces.rx.events.EventSpecialApsReason
 import app.aaps.core.interfaces.stats.TddCalculator
 import app.aaps.core.interfaces.ui.UiInteraction
 import app.aaps.core.interfaces.utils.DateUtil
@@ -496,6 +497,7 @@ open class OpenAPSSMBPlugin @Inject constructor(
             lastAPSRun = now
             aapsLogger.debug(LTag.APS, "Result: $it")
             rxBus.send(EventAPSCalculationFinished())
+            rxBus.send(EventSpecialApsReason(it.reason.toString()))
         }
 
         rxBus.send(EventOpenAPSUpdateGui())

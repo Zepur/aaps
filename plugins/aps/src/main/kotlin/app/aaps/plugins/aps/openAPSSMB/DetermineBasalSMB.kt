@@ -121,7 +121,7 @@ class DetermineBasalSMB @Inject constructor(
         var rate = _rate
 
         // experimental
-        if (currentBG > 8.1 && rate != 0.0) {
+        if (currentBG > 4.8 && rate != 0.0) {
             val reasonString = "BG too low for correction, ignoring $rate at bg $currentBG"
             reason(rT,reasonString)
             rxBus.send(EventSpecialApsReason(reasonString))
