@@ -194,7 +194,7 @@
                         android:textSize="14sp"
                         android:alpha="0.7"
                         tools:text="Reason: SMB enabled for COB of 20. Setting temp basal." />
-<!--
+
                     <TextView
                         android:id="@+id/pump"
                         android:layout_width="wrap_content"
@@ -203,6 +203,7 @@
                         android:paddingEnd="4sp"
                         tools:text="Pump: running"
                         android:textSize="16sp"
+                        android:visibility="gone"
                         tools:ignore="HardcodedText" />
 
                     <TextView
@@ -214,6 +215,7 @@
                         android:paddingEnd="4sp"
                         tools:text="OpenAPS: 3 min ago"
                         android:textSize="16sp"
+                        android:visibility="gone"
                         tools:ignore="HardcodedText" />
 
                     <TextView
@@ -225,8 +227,8 @@
                         android:paddingEnd="4sp"
                         tools:text="Uploader: 84%"
                         android:textSize="16sp"
+                        android:visibility="gone"
                         tools:ignore="HardcodedText" />
-                        -->
 
                 </com.google.android.flexbox.FlexboxLayout>
 
