@@ -57,7 +57,7 @@
     <color name="pod_icon_stroke">@color/gradient_light</color>
 
     <color name="defaultBackground">@color/dark_blue</color>
-    <color name="defaultTextColor">#B3FFFFFF</color>
+    <color name="defaultTextColor">@color/gradient_light</color>
 
     <!---Android Dark ans Light Theme Base colors-->
     <color name="background_dark">@color/dark_blue</color>

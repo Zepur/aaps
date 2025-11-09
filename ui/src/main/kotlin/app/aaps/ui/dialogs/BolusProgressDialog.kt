@@ -78,29 +78,12 @@ class BolusProgressDialog : DaggerDialogFragment() {
         return binding.root
     }
 
-    fun createBackground(): GradientDrawable {
-        val backgroundColors =
-            intArrayOf(
-                app.aaps.core.ui.R.color.gradient_dark,
-                app.aaps.core.ui.R.color.gradient_mid_dark,
-                app.aaps.core.ui.R.color.gradient_mid_light
-            )
-
-        val positions = floatArrayOf(0.0f, 0.43f, 1.0f)
-
-        val linearGradient = GradientDrawable()
-        linearGradient.orientation = GradientDrawable.Orientation.TOP_BOTTOM
-        linearGradient.setColors(backgroundColors, positions)
-        return linearGradient
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         savedInstanceState?.let {
             amount = it.getDouble("amount")
             id = it.getLong("id")
             state = it.getString("state") ?: rh.gs(app.aaps.core.ui.R.string.waitingforpump)
         }
-        binding.root.background = createBackground()
         binding.title.text = rh.gs(app.aaps.core.ui.R.string.goingtodeliver, amount)
         binding.stop.setOnClickListener {
             aapsLogger.debug(LTag.UI, "Stop bolus delivery button pressed")
