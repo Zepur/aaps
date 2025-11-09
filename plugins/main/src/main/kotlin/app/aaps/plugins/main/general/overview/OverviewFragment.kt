@@ -354,7 +354,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             .toObservable(EventTempBasalChange::class.java)
             .observeOn(aapsSchedulers.io)
             .subscribe({ updateTemporaryBasal() }, fabricPrivacy::logException)
-        disposable += rxBus
+        disposable += activePlugin.activeOverview.overviewBus
             .toObservable(EventSpecialApsReason::class.java)
             .observeOn(aapsSchedulers.main)
             .subscribe({
