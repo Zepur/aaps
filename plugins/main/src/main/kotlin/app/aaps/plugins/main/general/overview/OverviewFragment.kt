@@ -243,8 +243,6 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
         binding.graphsLayout.chartMenuButton.visibility = preferences.simpleMode.not().toVisibility()
 
-        updateFunText()
-
         binding.activeProfile.setOnClickListener(this)
         binding.activeProfile.setOnLongClickListener(this)
         binding.tempTarget.setOnClickListener(this)
@@ -396,15 +394,45 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     fun createSentence(): String {
         val (verb, noun) = getVerb()
         val (verb2, noun2) = getVerb()
+        val (article, nounSingle) = getNounSingleton()
         val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} $verb2$noun2"
-        val setup2 = "${getStarterWord()} ${getAdjective()} ${getAdverb()} ${getNoun()} $verb$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
+        val setup2 = "${getStarterWord()} $article ${getAdjective()} $nounSingle ${getAdverb()} ${verb.trim() + "s "}$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
         val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
-        return listOf(setup1, setup2, setup3).random()
+        val setup4 = "$nounSingle can put ${getNoun()} into ${getNoun()}"
+        val setup5 = "$article $nounSingle is what ${getNoun()} need to ${getVerb()}"
+        return listOf(setup1, setup2, setup3, setup4, setup5).random()
+    }
+
+    fun getNounSingleton(): Pair<String, String> {
+        val wordList: List<Pair<String, String>> = listOf(
+            Pair("a", "man"),
+            Pair("a", "perspective"),
+            Pair("an", "elephant"),
+            Pair("a", "government"),
+            Pair("a", "thing"),
+            Pair("a", "femininity"),
+            Pair("a", "perversion"),
+            Pair("a", "kick"),
+            Pair("some", "cocaine"),
+            Pair("a","cruelty"),
+            Pair("an", "armageddon"),
+            Pair("a", "gamble"),
+            Pair("a", "bear"),
+            Pair("a", "lesbian"),
+            Pair("a", "journalist"),
+            Pair("a", "liar"),
+            Pair("a", "nerd"),
+            Pair("an", "opinion"),
+            Pair("an", "onion"),
+            Pair("a", "plate"),
+            Pair("an", "opposition")
+        )
+        return wordList.random()
     }
 
     fun getDojective(): String {
         val wordList: List<String> = listOf(
-            "jolly", "joyous", "happy", "concerned", "fearful", "angry", "upset", "outraged"
+            "jolly", "joyous", "happy", "concerned", "fearful", "angry", "upset", "outraged", "resourceful"
         )
         return wordList.random()
     }
@@ -487,6 +515,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "inbred",
             "chubby",
             "clean",
+            "complex",
             "dazzling",
             "drab",
             "elegant",
@@ -507,6 +536,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "quaint",
             "scruffy",
             "shapely",
+            "resourceful",
             "short",
             "skinny",
             "stocky",
