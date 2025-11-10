@@ -396,8 +396,9 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         val (verb2, noun2) = getVerb()
         var (article, nounSingle) = getNounSingleton()
         article = listOf(article, "the").random()
+        val (verbSingle, nounMulti) = getVerbSingle()
         val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
-        val setup2 = "${getStarterWord()} $article ${getAdjective()} $nounSingle ${getAdverb()} ${verb.trim() + "s "}$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
+        val setup2 = "${getStarterWord()} $article ${getAdjective()} $nounSingle ${getAdverb()} $verbSingle$nounMulti, ${getInterimWord()} ${getNoun()} $verb2$noun2"
         val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
         val setup4 = "$article $nounSingle can put ${getNoun()} into ${getNoun()}"
         val setup5 = "$article $nounSingle is what ${getNoun()} need to $verb2"
@@ -475,6 +476,26 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             Pair("kidnap ", getNoun()),
             Pair("eat ", getAdjective() + " " + getNoun()),
             Pair("dream about ", getNoun())
+        )
+        return wordList.random()
+    }
+
+    fun getVerbSingle(): Pair<String, String> {
+        val wordList: List<Pair<String, String>> = listOf(
+            Pair("slays ", getAdjective() + " " + getNoun()),
+            Pair("dwells on ", getAdjective() + " " + getNoun()),
+            Pair("listens to ", getAdjective() + " " + getNoun()),
+            Pair("frolics", ""),
+            Pair("jumps around ", getNoun()),
+            Pair("belittles ", getAdjective() + " " + getNoun()),
+            Pair("applauds ", getAdjective() + " " + getNoun()),
+            Pair("dates ", getNoun()),
+            Pair("runs", ""),
+            Pair("contemplates", ""),
+            Pair("tries to kiss ", getAdjective() + " " + getNoun()),
+            Pair("kidnaps ", getNoun()),
+            Pair("eats ", getAdjective() + " " + getNoun()),
+            Pair("dreams about ", getNoun())
         )
         return wordList.random()
     }
