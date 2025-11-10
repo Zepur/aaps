@@ -403,7 +403,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         val setup4 = "$article $nounSingle can put ${getNoun()} into ${getNoun()}"
         val setup5 = "$article $nounSingle is what ${getNoun()} need to $verb2"
         val setup6 = "$nounSingle ${verbSingle.trim()} no ${getNounSingleton().second}, ${getNounSingleton().second} ${verbSingle.trim()} no ${getNounSingleton().second}"
-        return listOf(setup6).random()
+        return listOf(setup1, setup2, setup3, setup4, setup5, setup6).random()
     }
 
     fun getNounSingleton(): Pair<String, String> {
