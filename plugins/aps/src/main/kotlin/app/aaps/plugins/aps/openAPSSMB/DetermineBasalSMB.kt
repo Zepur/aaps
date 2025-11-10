@@ -10,8 +10,6 @@ import app.aaps.core.interfaces.aps.OapsProfile
 import app.aaps.core.interfaces.aps.Predictions
 import app.aaps.core.interfaces.aps.RT
 import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventSpecialApsReason
 import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
 import java.text.DecimalFormat
 import java.time.Instant
@@ -27,8 +25,7 @@ import kotlin.math.roundToInt
 @Singleton
 class DetermineBasalSMB @Inject constructor(
     private val profileUtil: ProfileUtil,
-    private val fabricPrivacy: FabricPrivacy,
-    private val rxBus: RxBus
+    private val fabricPrivacy: FabricPrivacy
 ) {
 
     private val consoleError = mutableListOf<String>()
@@ -124,7 +121,6 @@ class DetermineBasalSMB @Inject constructor(
         if (currentBG < 83.1 && rate != 0.0) {
             val reasonString = "BG too low for correction, ignoring $rate at bg ${convert_bg(currentBG)}"
             reason(rT,reasonString)
-            rxBus.send(EventSpecialApsReason(reasonString))
             return rT
         }
 

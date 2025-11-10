@@ -260,6 +260,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.buttonsLayout.quickWizardButton.setOnLongClickListener(this)
         binding.infoLayout.apsMode.setOnClickListener(this)
         binding.infoLayout.apsMode.setOnLongClickListener(this)
+        binding.apsReasonText.setOnClickListener(this)
     }
 
     @Synchronized
@@ -356,16 +357,6 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             .toObservable(EventTempBasalChange::class.java)
             .observeOn(aapsSchedulers.io)
             .subscribe({ updateTemporaryBasal() }, fabricPrivacy::logException)
-        disposable += activePlugin.activeOverview.overviewBus
-            .toObservable(EventSpecialApsReason::class.java)
-            .observeOn(aapsSchedulers.main)
-            .subscribe({ event ->
-                           if (event.reason.startsWith("BG too low")) {
-                               binding.apsReasonText.text = event.reason
-                               binding.apsReasonText.visibility = View.VISIBLE
-                               lastBgData.lastBg()
-                           }
-                       }, fabricPrivacy::logException)
 
         refreshLoop = Runnable {
             refreshAll()
@@ -401,7 +392,6 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.apsReasonText.text = createSentence()
     }
 
-
     // And now, alive developers eat unimportant girls finally, hence bogans belittle sussy girls
     fun createSentence(): String {
         val (verb, noun) = getVerb()
@@ -414,7 +404,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
     fun getDojective(): String {
         val wordList: List<String> = listOf(
-            "jolly", "joyous", "happy", "concerned", "fearful", "angry", "upset", "outraged")
+            "jolly", "joyous", "happy", "concerned", "fearful", "angry", "upset", "outraged"
+        )
         return wordList.random()
     }
 
@@ -642,6 +633,10 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     protectionCheck.queryProtection(activity, ProtectionCheck.Protection.BOLUS, UIRunnable {
                         if (isAdded) uiInteraction.runLoopDialog(childFragmentManager, 1)
                     })
+                }
+
+                R.id.aps_reason_text     -> {
+                    updateFunText()
                 }
             }
         }
@@ -1053,8 +1048,6 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                 binding.infoLayout.bgQuality.visibility = View.GONE
             }
             binding.infoLayout.simpleMode.visibility = preferences.simpleMode.toVisibility()
-
-            updateFunText()
         }
     }
 
