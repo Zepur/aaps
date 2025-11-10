@@ -401,8 +401,10 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.apsReasonText.text = createSentence()
     }
 
+
     fun createSentence(): String {
-        return "${getStarterWord()} ${getAdjective()} ${getNoun()} ${getVerb()} ${getAdverb()}, ${getInterimWord()} ${getNoun()} ${getVerb()}"
+        val (verb, noun) = getVerb()
+        return "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb $noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} ${getVerb()}"
     }
 
     fun getStarterWord(): String {
@@ -421,7 +423,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
     fun getNoun(): String {
         val wordList: List<String> = listOf(
-            "bears", "fish", "freaks", "humans", "girls", "men", "boys", "developers", "birds", "everyone in Belgium"
+            "bears", "fish", "freaks", "humans", "girls", "men", "boys", "developers", "birds", "people from Belgium", "milfs", "aliens", "ladies", "cats", "bogans"
         )
         return wordList.random()
     }
