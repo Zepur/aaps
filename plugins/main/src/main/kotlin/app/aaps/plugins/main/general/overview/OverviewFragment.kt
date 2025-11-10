@@ -402,7 +402,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
         val setup4 = "$article $nounSingle can put ${getNoun()} into ${getNoun()}"
         val setup5 = "$article $nounSingle is what ${getNoun()} need to $verb2"
-        val setup6 = "$nounSingle $verbSingle no ${getNounSingleton().first}, ${getNounSingleton().second} $verbSingle no ${getNounSingleton().second}"
+        val setup6 = "$nounSingle $verbSingle no ${getNounSingleton().second}, ${getNounSingleton().second} $verbSingle no ${getNounSingleton().second}"
         return listOf(setup6).random()
     }
 
@@ -472,7 +472,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             Pair("applaud ", getAdjective() + " " + getNoun()),
             Pair("date ", getNoun()),
             Pair("run", ""),
-            Pair("contemplate", ""),
+            Pair("move ", ""),
             Pair("try to kiss ", getAdjective() + " " + getNoun()),
             Pair("kidnap ", getNoun()),
             Pair("eat ", getAdjective() + " " + getNoun()),
@@ -492,7 +492,10 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             Pair("applauds ", getAdjective() + " " + getNoun()),
             Pair("dates ", getNoun()),
             Pair("runs", ""),
-            Pair("contemplates", ""),
+            Pair("moves", ""),
+            Pair("leaves", ""),
+            Pair("shoves", ""),
+            Pair("helps", ""),
             Pair("tries to kiss ", getAdjective() + " " + getNoun()),
             Pair("kidnaps ", getNoun()),
             Pair("eats ", getAdjective() + " " + getNoun()),
