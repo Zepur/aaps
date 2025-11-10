@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
-
+            app:tabIndicatorColor="@color/gradient_mid_light"
             app:tabMode="scrollable" />
 
         <com.google.android.material.tabs.TabLayout
@@ -60,7 +60,7 @@
             android:background="@android:color/transparent"
             app:tabMinWidth="0dp"
             app:tabMode="scrollable"
-
+            app:tabIndicatorColor="@color/gradient_mid_light"
             app:tabPadding="0dp" />
 
     </com.google.android.material.appbar.MaterialToolbar>
