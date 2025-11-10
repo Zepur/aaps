@@ -402,10 +402,13 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     }
 
 
+    // And now, alive developers eat unimportant girls finally, hence bogans belittle sussy girls
     fun createSentence(): String {
         val (verb, noun) = getVerb()
         val (verb2, noun2) = getVerb()
-        return "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} $verb2$noun2"
+        val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} $verb2$noun2"
+        val setup2 = "${getStarterWord()} ${getAdjective()} ${getAdverb()} ${getNoun()} $verb$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
+        return listOf(setup1, setup2).random()
     }
 
     fun getStarterWord(): String {
