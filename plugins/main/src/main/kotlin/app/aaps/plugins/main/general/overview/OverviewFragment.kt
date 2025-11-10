@@ -404,12 +404,13 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
     fun createSentence(): String {
         val (verb, noun) = getVerb()
-        return "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb $noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} ${getVerb()}"
+        val (verb2, noun2) = getVerb()
+        return "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} $verb2$noun2"
     }
 
     fun getStarterWord(): String {
         val wordList: List<String> = listOf(
-            "Breaking news!", "This just in:", "Did you know", "For the first time ever", "And now", "Well...", ""
+            "Breaking news!", "This just in:", "Did you know", "For the first time ever", "And now,", "Well...", ""
         )
         return wordList.random()
     }
@@ -423,27 +424,27 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
     fun getNoun(): String {
         val wordList: List<String> = listOf(
-            "bears", "fish", "freaks", "humans", "girls", "men", "boys", "developers", "birds", "people from Belgium", "milfs", "aliens", "ladies", "cats", "bogans"
+            "bears", "fish", "freaks", "humans", "girls", "men", "boys", "developers", "birds", "people from Belgium", "milfs", "aliens", "ladies", "cats", "bogans", "bussy", "lemonussy", "tigers", "fuckers", "rejects"
         )
         return wordList.random()
     }
 
     fun getVerb(): Pair<String, String> {
         val wordList: List<Pair<String, String>> = listOf(
-            Pair("slay", getAdjective() + " " + getNoun()),
-            Pair("dwell on", getAdjective() + " " + getNoun()),
-            Pair("abide", getAdjective() + " " + getNoun()),
+            Pair("slay ", getAdjective() + " " + getNoun()),
+            Pair("dwell on ", getAdjective() + " " + getNoun()),
+            Pair("abide ", getAdjective() + " " + getNoun()),
             Pair("frolic", ""),
-            Pair("jump around", getNoun()),
-            Pair("belittle", getAdjective() + " " + getNoun()),
-            Pair("applaud", getAdjective() + " " + getNoun()),
-            Pair("date", getNoun()),
+            Pair("jump around ", getNoun()),
+            Pair("belittle ", getAdjective() + " " + getNoun()),
+            Pair("applaud ", getAdjective() + " " + getNoun()),
+            Pair("date ", getNoun()),
             Pair("run", ""),
             Pair("contemplate", ""),
-            Pair("try to kiss", getAdjective() + " " + getNoun()),
-            Pair("kidnap", getNoun()),
-            Pair("eat", getAdjective() + " " + getNoun()),
-            Pair("dream about", getNoun())
+            Pair("try to kiss ", getAdjective() + " " + getNoun()),
+            Pair("kidnap ", getNoun()),
+            Pair("eat ", getAdjective() + " " + getNoun()),
+            Pair("dream about ", getNoun())
         )
         return wordList.random()
     }
@@ -486,6 +487,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "elegant",
             "fancy",
             "fit",
+            "sussy",
             "flabby",
             "glamorous",
             "gorgeous",
@@ -505,19 +507,15 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "unkempt",
             "unsightly",
             "ashy",
-            "black",
             "blue",
-            "gray",
             "green",
             "icy",
-            "lemon",
-            "mango",
+            "mango-colored",
             "orange",
             "purple",
             "red",
-            "salmon",
+            "fish-textured",
             "white",
-            "yellow",
             "alive",
             "better",
             "careful",
