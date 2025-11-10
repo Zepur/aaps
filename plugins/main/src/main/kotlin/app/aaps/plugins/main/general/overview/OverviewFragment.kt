@@ -402,7 +402,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     }
 
     fun createSentence(): String {
-        return "${getStarterWord()} ${getAdjective()} ${getNoun()} ${getVerb()} ${getAdjective()} ${getNoun()} ${getAdverb()}, ${getInterimWord()} ${getNoun()} ${getVerb()}"
+        return "${getStarterWord()} ${getAdjective()} ${getNoun()} ${getVerb()} ${getAdverb()}, ${getInterimWord()} ${getNoun()} ${getVerb()}"
     }
 
     fun getStarterWord(): String {
@@ -426,9 +426,22 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         return wordList.random()
     }
 
-    fun getVerb(): String {
-        val wordList: List<String> = listOf(
-            "slay", "dwell", "abide", "frolic", "jump around", "fart on", "contemplate", "try to kiss", "kidnap", "eat", "dream about"
+    fun getVerb(): Pair<String, String> {
+        val wordList: List<Pair<String, String>> = listOf(
+            Pair("slay", getAdjective() + " " + getNoun()),
+            Pair("dwell on", getAdjective() + " " + getNoun()),
+            Pair("abide", getAdjective() + " " + getNoun()),
+            Pair("frolic", ""),
+            Pair("jump around", getNoun()),
+            Pair("belittle", getAdjective() + " " + getNoun()),
+            Pair("applaud", getAdjective() + " " + getNoun()),
+            Pair("date", getNoun()),
+            Pair("run", ""),
+            Pair("contemplate", ""),
+            Pair("try to kiss", getAdjective() + " " + getNoun()),
+            Pair("kidnap", getNoun()),
+            Pair("eat", getAdjective() + " " + getNoun()),
+            Pair("dream about", getNoun())
         )
         return wordList.random()
     }
@@ -453,7 +466,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "finally",
             "every Friday",
             "soon",
-            "nevertheless",
+            "so damn fast",
             "passionately"
         )
         return wordList.random()
