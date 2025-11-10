@@ -394,12 +394,13 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     fun createSentence(): String {
         val (verb, noun) = getVerb()
         val (verb2, noun2) = getVerb()
-        val (article, nounSingle) = getNounSingleton()
+        var (article, nounSingle) = getNounSingleton()
+        article = listOf(article, "the").random()
         val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} $verb2$noun2"
         val setup2 = "${getStarterWord()} $article ${getAdjective()} $nounSingle ${getAdverb()} ${verb.trim() + "s "}$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
         val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
-        val setup4 = "$nounSingle can put ${getNoun()} into ${getNoun()}"
-        val setup5 = "$article $nounSingle is what ${getNoun()} need to ${getVerb()}"
+        val setup4 = "$article $nounSingle can put ${getNoun()} into ${getNoun()}"
+        val setup5 = "$article $nounSingle is what ${getNoun()} need to $verb2"
         return listOf(setup1, setup2, setup3, setup4, setup5).random()
     }
 
