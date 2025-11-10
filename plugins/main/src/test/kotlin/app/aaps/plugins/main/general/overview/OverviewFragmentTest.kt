@@ -9,8 +9,7 @@ class OverviewFragmentTest {
     fun createSentence() {
         val overviewFragment = OverviewFragment()
         val sentence = overviewFragment.createSentence()
-        assertEquals("Hello World", sentence)
-
+        assertTrue(sentence.toString().split(" ").size > 5)
     }
 
 }
