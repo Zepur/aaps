@@ -396,7 +396,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         val (verb2, noun2) = getVerb()
         var (article, nounSingle) = getNounSingleton()
         article = listOf(article, "the").random()
-        val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} $verb2$noun2"
+        val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
         val setup2 = "${getStarterWord()} $article ${getAdjective()} $nounSingle ${getAdverb()} ${verb.trim() + "s "}$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
         val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
         val setup4 = "$article $nounSingle can put ${getNoun()} into ${getNoun()}"
@@ -463,7 +463,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         val wordList: List<Pair<String, String>> = listOf(
             Pair("slay ", getAdjective() + " " + getNoun()),
             Pair("dwell on ", getAdjective() + " " + getNoun()),
-            Pair("abide ", getAdjective() + " " + getNoun()),
+            Pair("listen to ", getAdjective() + " " + getNoun()),
             Pair("frolic", ""),
             Pair("jump around ", getNoun()),
             Pair("belittle ", getAdjective() + " " + getNoun()),
