@@ -408,7 +408,14 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         val (verb2, noun2) = getVerb()
         val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun ${getAdverb()}, ${getInterimWord()} ${getNoun()} $verb2$noun2"
         val setup2 = "${getStarterWord()} ${getAdjective()} ${getAdverb()} ${getNoun()} $verb$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
-        return listOf(setup1, setup2).random()
+        val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
+        return listOf(setup1, setup2, setup3).random()
+    }
+
+    fun getDojective(): String {
+        val wordList: List<String> = listOf(
+            "jolly", "joyous", "happy", "concerned", "fearful", "angry", "upset", "outraged")
+        return wordList.random()
     }
 
     fun getStarterWord(): String {
@@ -484,6 +491,9 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "attractive",
             "bald",
             "beautiful",
+            "retarded",
+            "gay",
+            "inbred",
             "chubby",
             "clean",
             "dazzling",
@@ -496,6 +506,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "glamorous",
             "gorgeous",
             "handsome",
+            "unlucky",
+            "homeless",
             "long",
             "magnificent",
             "muscular",
@@ -511,13 +523,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             "unkempt",
             "unsightly",
             "ashy",
-            "blue",
-            "green",
             "icy",
             "mango-colored",
-            "orange",
-            "purple",
-            "red",
             "fish-textured",
             "white",
             "alive",
