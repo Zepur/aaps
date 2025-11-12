@@ -17,9 +17,16 @@ class WordPlay {
             val setup4 = "$articleRandom $nounSingle can turn ${getNoun()} into ${getNoun()}"
             val setup5 = "$articleRandom $nounSingle is what ${getNoun()} need in order to $transVerb2"
             val setup6 = "$nounSingle ${verbSingle.trim()} no ${getNounSingleton().second}, ${getNounSingleton().second} ${verbSingle.trim()} no ${getNounSingleton().second}"
-            val setup7 = "everything turns ${getAdjective()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
+            val setup7 = "${getReciprStart()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             return listOf(setup7).random()
         }
+
+    fun getReciprStart(): String {
+        val wordList: List<String> = listOf(
+            "everything turns ${getAdjective()}", "nothing works", "no one cares about being ${getAdjective()}", "no one is safe", "i hate it", "i love it", "${getNoun()} cry", "only birds notice"
+        )
+        return wordList.random()
+    }
 
     fun getRecipVerb(): String {
         val wordList: List<String> = listOf(
