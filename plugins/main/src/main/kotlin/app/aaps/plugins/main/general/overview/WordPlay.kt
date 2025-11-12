@@ -11,18 +11,26 @@ class WordPlay {
             val (article2, nounSingle2) = getNounSingleton()
             val articleRandom = listOf(article, "the").random()
             val (verbSingle, nounMulti) = getVerbSingle()
+            val linkingVerb = getLinkingVerb()
             val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $transVerb, ${getInterimWord()} ${getNoun()} $transVerb2"
             val setup2 = "${getStarterWord()} $articleRandom ${getAdjective()} $nounSingle ${getAdverb()} $verbSingle$nounMulti, ${getInterimWord()} ${getNoun()} $transVerb2"
-            val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
+            val setup3 = "$linkingVerb ${getDojective()} about ${getAdjective()} ${getNoun()}"
             val setup4 = "$articleRandom $nounSingle can turn ${getNoun()} into ${getNoun()}"
             val setup5 = "$articleRandom $nounSingle is what ${getNoun()} need in order to $transVerb2"
             val setup6 = "$nounSingle ${verbSingle.trim()} no ${getNounSingleton().second}, ${getNounSingleton().second} ${verbSingle.trim()} no ${getNounSingleton().second}"
             val setup7 = "${getReciprStart()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup8 = "${getReciprStart()} when ${getNounAmount()} ${getNoun()} and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
-            val setup9 = "if you don't want to be ${getBadVerb()}, it ${getModalVerb()} help if you are ${getGoodVerb()}"
-            val setup10 = "just because it's $badAdj to be $goodAdj does not mean it is $goodAdj ot be $badAdj"
+            val setup9 = "if you don't want to $linkingVerb ${getBadVerb()}, it ${getModalVerb()} help if you are ${getGoodVerb()}"
+            val setup10 = "just because it's $badAdj to $linkingVerb $goodAdj does not mean it's $goodAdj ot $linkingVerb $badAdj"
             return listOf(setup1, setup2, setup3, setup4, setup5, setup6, setup7, setup8, setup9, setup10).random()
         }
+
+    fun getLinkingVerb(): String {
+        val wordList: List<String> = listOf(
+            "be", "feel", "pretend to be", "look", "appear", "become", "stay", "turn", "seem"
+        )
+        return wordList.random()
+    }
 
     fun getBadAdj(): String {
         val wordList: List<String> = listOf(
@@ -271,7 +279,29 @@ class WordPlay {
             Pair("a", "house"),
             Pair("a", "stone"),
             Pair("a", "rock"),
-            Pair("a", "diamond")
+            Pair("a", "diamond"),
+            Pair("an", "elbow"),
+            Pair("a", "caterpillar"),
+            Pair("a", "thunderstorm"),
+            Pair("a", "monk"),
+            Pair("a", "sandcastle"),
+            Pair("a", "toothbrush"),
+            Pair("a", "piano"),
+            Pair("an", "eyebrow"),
+            Pair("a", "volcano"),
+            Pair("a", "refrigerator"),
+            Pair("an", "experiment"),
+            Pair("an", "otter"),
+            Pair("a", "shadow"),
+            Pair("a", "moonlight"),
+            Pair("a", "breast"),
+            Pair("a", "chest"),
+            Pair("a", "breasticle"),
+            Pair("a", "testicle"),
+            Pair("a", "nail"),
+            Pair("an", "inner monologue"),
+            Pair("a", "freak"),
+            Pair("a", "bubble-butt")
         )
         return wordList.random()
     }
@@ -355,7 +385,29 @@ class WordPlay {
             "walls",
             "houses",
             "stones",
-            "rocks"
+            "rocks",
+            "elbows",
+            "caterpillars",
+            "thunderstorms",
+            "monks",
+            "sandcastles",
+            "toothbrushes",
+            "pianos",
+            "eyebrows",
+            "volcanoes",
+            "refrigerators",
+            "experiments",
+            "otters",
+            "shadows",
+            "moonlights",
+            "breasts",
+            "chests",
+            "breasticles",
+            "testicles",
+            "nails",
+            "inner monologues",
+            "freaks",
+            "bubble-butts"
         )
         return wordList.random()
     }
