@@ -21,11 +21,6 @@ class WordPlay {
             return listOf(setup7).random()
         }
 
-    fun main() {
-        for (i in 1..10)
-            println(createSentence())
-    }
-
     fun getRecipVerb(): String {
         val wordList: List<String> = listOf(
             "argue",

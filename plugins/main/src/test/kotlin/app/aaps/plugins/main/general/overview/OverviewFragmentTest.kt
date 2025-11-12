@@ -9,6 +9,8 @@ class OverviewFragmentTest {
     fun createSentence() {
         val wp = WordPlay()
         val sentence = wp.createSentence()
+        for (i in 1..10)
+            println(wp.createSentence())
         assertTrue(sentence.toString().split(" ").size > 5)
     }
 
