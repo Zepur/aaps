@@ -1,7 +1,5 @@
 package app.aaps.plugins.main.general.overview
 
-import android.R
-
 class WordPlay {
 
         fun createSentence(): String {
@@ -19,8 +17,85 @@ class WordPlay {
             val setup6 = "$nounSingle ${verbSingle.trim()} no ${getNounSingleton().second}, ${getNounSingleton().second} ${verbSingle.trim()} no ${getNounSingleton().second}"
             val setup7 = "${getReciprStart()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup8 = "${getReciprStart()} when ${getNounAmount()} ${getNoun()} and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
-            return listOf(setup8).random()
+            val setup9 = "if you don't want to be ${getBadVerb()}, it ${getModalVerb()} help if you are ${getGoodVerb()}"
+            return listOf(setup9).random()
         }
+
+    fun getBadVerb(): String {
+        val wordList: List<String> = listOf(
+            "sodomized",
+            "abused",
+            "taken advantage of",
+            "kidnapped",
+            "assaulted",
+            "beaten",
+            "thrown out of a window",
+            "murdered",
+            "stabbed",
+            "hit with a bat",
+            "run over",
+            "homeless",
+            "poor",
+            "ugly",
+            "ignored",
+            "downvoted",
+            "overlooked",
+            "picked last",
+            "eating alone"
+        )
+        return wordList.random()
+    }
+
+    fun getGoodVerb(): String {
+        val wordList: List<String> = listOf(
+            "funny",
+            "friendly",
+            "generous",
+            "rich",
+            "kind",
+            "intelligent",
+            "Norwegian",
+            "not Swedish",
+            "charming",
+            "fast",
+            "agile",
+            "prosperous",
+            "polite",
+            "powerful",
+            "really angry",
+            "clever",
+            "open minded",
+            "a virgin",
+            "in a helicopter",
+            "modest",
+            "loyal",
+            "loving",
+            "#winning",
+            "thoughtful",
+            "a man",
+            "breedable",
+            "polyamorous",
+            "not on reddit",
+            "fertile"
+        )
+        return wordList.random()
+    }
+
+    fun getModalVerb(): String {
+        val wordList: List<String> = listOf(
+            "can",
+            "may",
+            "must",
+            "shall",
+            "will",
+            "could",
+            "might",
+            "should",
+            "would",
+            "have to"
+        )
+        return wordList.random()
+    }
 
     fun getNounAmount(): String {
         val wordList: List<String> = listOf("two", "three", "five thousand", "too many", "a lot of", "a few", "some", "all of the")
