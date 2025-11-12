@@ -18,7 +18,7 @@ class WordPlay {
             val setup5 = "$articleRandom $nounSingle is what ${getNoun()} need in order to $transVerb2"
             val setup6 = "$nounSingle ${verbSingle.trim()} no ${getNounSingleton().second}, ${getNounSingleton().second} ${verbSingle.trim()} no ${getNounSingleton().second}"
             val setup7 = "${getReciprStart()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
-            val setup8 = "${getReciprStart()} when ${getNounAmount()} $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
+            val setup8 = "${getReciprStart()} when ${getNounAmount()} ${getNoun()} and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             return listOf(setup8).random()
         }
 
