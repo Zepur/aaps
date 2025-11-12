@@ -12,6 +12,7 @@ import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.Handler
+import app.aaps.plugins.main.general.overview.WordPlay
 import android.os.HandlerThread
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -68,7 +69,6 @@ import app.aaps.core.interfaces.rx.events.EventPreferenceChange
 import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
 import app.aaps.core.interfaces.rx.events.EventRefreshOverview
 import app.aaps.core.interfaces.rx.events.EventScale
-import app.aaps.core.interfaces.rx.events.EventSpecialApsReason
 import app.aaps.core.interfaces.rx.events.EventTempBasalChange
 import app.aaps.core.interfaces.rx.events.EventTempTargetChange
 import app.aaps.core.interfaces.rx.events.EventUpdateOverviewCalcProgress
@@ -387,219 +387,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
     }
 
     fun updateFunText() {
-        binding.apsReasonText.text = createSentence()
-    }
-
-    // And now, alive developers eat unimportant girls finally, hence bogans belittle sussy girls
-    fun createSentence(): String {
-        val (verb, noun) = getVerb()
-        val (verb2, noun2) = getVerb()
-        var (article, nounSingle) = getNounSingleton()
-        article = listOf(article, "the").random()
-        val (verbSingle, nounMulti) = getVerbSingle()
-        val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $verb$noun, ${getInterimWord()} ${getNoun()} $verb2$noun2"
-        val setup2 = "${getStarterWord()} $article ${getAdjective()} $nounSingle ${getAdverb()} $verbSingle$nounMulti, ${getInterimWord()} ${getNoun()} $verb2$noun2"
-        val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
-        val setup4 = "$article $nounSingle can put ${getNoun()} into ${getNoun()}"
-        val setup5 = "$article $nounSingle is what ${getNoun()} need to $verb2"
-        val setup6 = "$nounSingle ${verbSingle.trim()} no ${getNounSingleton().second}, ${getNounSingleton().second} ${verbSingle.trim()} no ${getNounSingleton().second}"
-        return listOf(setup1, setup2, setup3, setup4, setup5, setup6).random()
-    }
-
-    fun getNounSingleton(): Pair<String, String> {
-        val wordList: List<Pair<String, String>> = listOf(
-            Pair("a", "man"),
-            Pair("a", "perspective"),
-            Pair("an", "elephant"),
-            Pair("a", "government"),
-            Pair("a", "thing"),
-            Pair("a", "femininity"),
-            Pair("a", "perversion"),
-            Pair("a", "kick"),
-            Pair("some", "cocaine"),
-            Pair("a","cruelty"),
-            Pair("an", "armageddon"),
-            Pair("a", "gamble"),
-            Pair("a", "bear"),
-            Pair("a", "lesbian"),
-            Pair("a", "journalist"),
-            Pair("a", "liar"),
-            Pair("a", "nerd"),
-            Pair("an", "opinion"),
-            Pair("an", "onion"),
-            Pair("a", "plate"),
-            Pair("an", "opposition")
-        )
-        return wordList.random()
-    }
-
-    fun getDojective(): String {
-        val wordList: List<String> = listOf(
-            "jolly", "joyous", "happy", "concerned", "fearful", "angry", "upset", "outraged", "resourceful"
-        )
-        return wordList.random()
-    }
-
-    fun getStarterWord(): String {
-        val wordList: List<String> = listOf(
-            "Breaking news!", "This just in:", "Did you know", "For the first time ever", "And now,", "Well...", ""
-        )
-        return wordList.random()
-    }
-
-    fun getInterimWord(): String {
-        val wordList: List<String> = listOf(
-            "so", "but", "and", "therefore", "hence", "how", "yet", "unfortunately", "however"
-        )
-        return wordList.random()
-    }
-
-    fun getNoun(): String {
-        val wordList: List<String> = listOf(
-            "bears", "fish", "freaks", "humans", "girls", "men", "boys", "developers", "birds", "people from Belgium", "milfs", "aliens", "ladies", "cats", "bogans", "bussy", "lemonussy", "tigers", "fuckers", "rejects"
-        )
-        return wordList.random()
-    }
-
-    fun getVerb(): Pair<String, String> {
-        val wordList: List<Pair<String, String>> = listOf(
-            Pair("slay ", getAdjective() + " " + getNoun()),
-            Pair("dwell on ", getAdjective() + " " + getNoun()),
-            Pair("listen to ", getAdjective() + " " + getNoun()),
-            Pair("frolic", ""),
-            Pair("jump around ", getNoun()),
-            Pair("belittle ", getAdjective() + " " + getNoun()),
-            Pair("applaud ", getAdjective() + " " + getNoun()),
-            Pair("date ", getNoun()),
-            Pair("run", ""),
-            Pair("move ", ""),
-            Pair("try to kiss ", getAdjective() + " " + getNoun()),
-            Pair("kidnap ", getNoun()),
-            Pair("eat ", getAdjective() + " " + getNoun()),
-            Pair("dream about ", getNoun())
-        )
-        return wordList.random()
-    }
-
-    fun getVerbSingle(): Pair<String, String> {
-        val wordList: List<Pair<String, String>> = listOf(
-            Pair("slays ", getAdjective() + " " + getNoun()),
-            Pair("dwells on ", getAdjective() + " " + getNoun()),
-            Pair("listens to ", getAdjective() + " " + getNoun()),
-            Pair("frolics", ""),
-            Pair("jumps around ", getNoun()),
-            Pair("belittles ", getAdjective() + " " + getNoun()),
-            Pair("applauds ", getAdjective() + " " + getNoun()),
-            Pair("dates ", getNoun()),
-            Pair("runs", ""),
-            Pair("moves", ""),
-            Pair("leaves", ""),
-            Pair("shoves", ""),
-            Pair("helps", ""),
-            Pair("tries to kiss ", getAdjective() + " " + getNoun()),
-            Pair("kidnaps ", getNoun()),
-            Pair("eats ", getAdjective() + " " + getNoun()),
-            Pair("dreams about ", getNoun())
-        )
-        return wordList.random()
-    }
-
-    fun getAdverb(): String {
-        val wordList: List<String> = listOf(
-            "abruptly",
-            "angrily", "accordingly",
-            "additionally",
-            "begrudgingly",
-            "briefly",
-            "sloppily",
-            "while high",
-            "certainly",
-            "conversely",
-            "finally",
-            "well",
-            "slowly",
-            "tonight",
-            "badly",
-            "lately",
-            "sweetly",
-            "finally",
-            "every Friday",
-            "soon",
-            "so damn fast",
-            "passionately"
-        )
-        return wordList.random()
-    }
-
-    fun getAdjective(): String {
-        val wordList: List<String> = listOf(
-            "attractive",
-            "bald",
-            "beautiful",
-            "retarded",
-            "gay",
-            "inbred",
-            "chubby",
-            "clean",
-            "complex",
-            "dazzling",
-            "drab",
-            "elegant",
-            "fancy",
-            "fit",
-            "sussy",
-            "flabby",
-            "glamorous",
-            "gorgeous",
-            "handsome",
-            "unlucky",
-            "homeless",
-            "long",
-            "magnificent",
-            "muscular",
-            "plain",
-            "plump",
-            "quaint",
-            "scruffy",
-            "shapely",
-            "resourceful",
-            "short",
-            "skinny",
-            "stocky",
-            "ugly",
-            "unkempt",
-            "unsightly",
-            "ashy",
-            "icy",
-            "mango-colored",
-            "fish-textured",
-            "white",
-            "alive",
-            "better",
-            "careful",
-            "clever",
-            "dead",
-            "easy",
-            "famous",
-            "gifted",
-            "hallowed",
-            "helpful",
-            "important",
-            "inexpensive",
-            "mealy",
-            "mushy",
-            "odd",
-            "poor",
-            "powerful",
-            "rich",
-            "shy",
-            "tender",
-            "unimportant",
-            "uninterested",
-            "vast",
-            "wrong"
-        )
-        return wordList.random()
+        val wp = WordPlay()
+        binding.apsReasonText.text = wp.createSentence()
     }
 
     @Synchronized
