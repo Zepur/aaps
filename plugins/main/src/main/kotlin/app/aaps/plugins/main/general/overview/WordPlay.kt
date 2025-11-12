@@ -7,8 +7,8 @@ class WordPlay {
             val transVerb2 = getTransitiveVerb()
             val badAdj = getBadAdj()
             val goodAdj = getGoodAdj()
-            var (article, nounSingle) = getNounSingleton()
-            var (article2, nounSingle2) = getNounSingleton()
+            val (article, nounSingle) = getNounSingleton()
+            val (article2, nounSingle2) = getNounSingleton()
             val articleRandom = listOf(article, "the").random()
             val (verbSingle, nounMulti) = getVerbSingle()
             val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $transVerb, ${getInterimWord()} ${getNoun()} $transVerb2"
@@ -21,7 +21,7 @@ class WordPlay {
             val setup8 = "${getReciprStart()} when ${getNounAmount()} ${getNoun()} and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup9 = "if you don't want to be ${getBadVerb()}, it ${getModalVerb()} help if you are ${getGoodVerb()}"
             val setup10 = "just because it's $badAdj to be $goodAdj does not mean it is $goodAdj ot be $badAdj"
-            return listOf(setup10).random()
+            return listOf(setup1, setup2, setup3, setup4, setup5, setup6, setup7, setup8, setup9, setup10).random()
         }
 
     fun getBadAdj(): String {
