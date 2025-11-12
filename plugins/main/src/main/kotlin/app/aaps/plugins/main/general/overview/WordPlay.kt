@@ -1,5 +1,7 @@
 package app.aaps.plugins.main.general.overview
 
+import android.R
+
 class WordPlay {
 
         fun createSentence(): String {
@@ -7,17 +9,22 @@ class WordPlay {
             val transVerb2 = getTransitiveVerb()
             var (article, nounSingle) = getNounSingleton()
             var (article2, nounSingle2) = getNounSingleton()
-            article = listOf(article, "the").random()
+            val articleRandom = listOf(article, "the").random()
             val (verbSingle, nounMulti) = getVerbSingle()
             val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $transVerb, ${getInterimWord()} ${getNoun()} $transVerb2"
-            val setup2 = "${getStarterWord()} $article ${getAdjective()} $nounSingle ${getAdverb()} $verbSingle$nounMulti, ${getInterimWord()} ${getNoun()} $transVerb2"
+            val setup2 = "${getStarterWord()} $articleRandom ${getAdjective()} $nounSingle ${getAdverb()} $verbSingle$nounMulti, ${getInterimWord()} ${getNoun()} $transVerb2"
             val setup3 = "be ${getDojective()} about ${getAdjective()} ${getNoun()}"
-            val setup4 = "$article $nounSingle can turn ${getNoun()} into ${getNoun()}"
-            val setup5 = "$article $nounSingle is what ${getNoun()} need in order to $transVerb2"
+            val setup4 = "$articleRandom $nounSingle can turn ${getNoun()} into ${getNoun()}"
+            val setup5 = "$articleRandom $nounSingle is what ${getNoun()} need in order to $transVerb2"
             val setup6 = "$nounSingle ${verbSingle.trim()} no ${getNounSingleton().second}, ${getNounSingleton().second} ${verbSingle.trim()} no ${getNounSingleton().second}"
             val setup7 = "everything turns ${getAdjective()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             return listOf(setup7).random()
         }
+
+    fun main() {
+        for (i in 1..10)
+            println(createSentence())
+    }
 
     fun getRecipVerb(): String {
         val wordList: List<String> = listOf(
