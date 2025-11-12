@@ -5,6 +5,8 @@ class WordPlay {
         fun createSentence(): String {
             val transVerb = getTransitiveVerb()
             val transVerb2 = getTransitiveVerb()
+            val badAdj = getBadAdj()
+            val goodAdj = getGoodAdj()
             var (article, nounSingle) = getNounSingleton()
             var (article2, nounSingle2) = getNounSingleton()
             val articleRandom = listOf(article, "the").random()
@@ -18,8 +20,69 @@ class WordPlay {
             val setup7 = "${getReciprStart()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup8 = "${getReciprStart()} when ${getNounAmount()} ${getNoun()} and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup9 = "if you don't want to be ${getBadVerb()}, it ${getModalVerb()} help if you are ${getGoodVerb()}"
-            return listOf(setup9).random()
+            val setup10 = "just because it's $badAdj to be $goodAdj does not mean it is $goodAdj ot be $badAdj"
+            return listOf(setup10).random()
         }
+
+    fun getBadAdj(): String {
+        val wordList: List<String> = listOf(
+            "unfriendly",
+            "distant",
+            "weak",
+            "pathetic",
+            "cringe",
+            "disgusting",
+            "rude",
+            "awful",
+            "complicated",
+            "stupid",
+            "dumb",
+            "nasty",
+            "bad",
+            "dreadful",
+            "pointless",
+            "awkward",
+            "deceitful",
+            "hypocritical",
+            "irritating",
+            "reckless",
+            "pessimistic",
+            "unreliable",
+            "vain",
+            "spiteful",
+            "mean",
+            "selfish",
+            "rash"
+        )
+        return wordList.random()
+    }
+    fun getGoodAdj(): String {
+        val wordList: List<String> = listOf(
+            "nice",
+            "okay",
+            "cool",
+            "friendly",
+            "elegant",
+            "stylish",
+            "amusing",
+            "fun",
+            "clever",
+            "smart",
+            "brave",
+            "tactful",
+            "regular",
+            "polite",
+            "ordinary",
+            "wise",
+            "wise",
+            "sensible",
+            "cordial",
+            "cute",
+            "charming",
+            "fair"
+        )
+        return wordList.random()
+    }
 
     fun getBadVerb(): String {
         val wordList: List<String> = listOf(
