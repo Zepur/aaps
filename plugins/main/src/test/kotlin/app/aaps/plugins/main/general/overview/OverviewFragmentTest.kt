@@ -7,8 +7,8 @@ class OverviewFragmentTest {
 
     @Test
     fun createSentence() {
-        val overviewFragment = OverviewFragment()
-        val sentence = overviewFragment.createSentence()
+        val wp = WordPlay()
+        val sentence = wp.createSentence()
         assertTrue(sentence.toString().split(" ").size > 5)
     }
 
