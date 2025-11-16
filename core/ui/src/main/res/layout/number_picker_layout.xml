@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="130dp"
+    android:layout_width="140dp"
     android:layout_height="40dp"
     android:orientation="horizontal"
     tools:context="app.aaps.core.ui.elements.NumberPicker">
@@ -25,7 +25,6 @@
         android:id="@+id/textInputLayout"
         style="@style/Widget.App.TextInputLayout.Square"
         android:layout_width="0dp"
-        android:maxWidth="62dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         app:hintEnabled="false">

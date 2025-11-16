@@ -118,10 +118,10 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
     fun createBackground(): GradientDrawable {
         val backgroundColors =
             intArrayOf(
-                getColor(app.aaps.core.ui.R.color.gradient_dark),
-                getColor(app.aaps.core.ui.R.color.gradient_mid_dark),
-                getColor(app.aaps.core.ui.R.color.gradient_mid_light),
-                getColor(app.aaps.core.ui.R.color.gradient_light)
+                getColor(app.aaps.core.ui.R.color.grad_blue_dark),
+                // getColor(app.aaps.core.ui.R.color.gradient_mid_dark),
+                // getColor(app.aaps.core.ui.R.color.gradient_mid_light),
+                getColor(app.aaps.core.ui.R.color.grad_blue_light)
             )
 
         val positions = floatArrayOf(0.0f, 0.36f, 0.78f, 1.0f)

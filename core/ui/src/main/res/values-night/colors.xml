@@ -7,6 +7,9 @@
     <color name="palette2">#57B8FF</color>
     <color name="palette1">#2176AE</color>
 
+    <color name="accent">#D7A31A</color>
+    <color name="progressbarColor">@color/accent</color>
+
     <color name="gradient_dark">@color/grad_blue_dark</color>
     <color name="gradient_mid_dark">#7303c0</color>
     <color name="gradient_mid_light">#EC38BC</color>
@@ -23,10 +26,14 @@
     <color name="cardColorBackground">@color/gradient_dark</color>
     <color name="gray">#BBBBBB</color>
     <color name="black">@color/gradient_dark</color>
-    <color name="white">#FFFFFADE</color>
-    <color name="yellow">#F9F871</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="coldBlueWhite">#E3F0FF</color>
+<!--    <color name="yellow">#F9F871</color>-->
+    <color name="yellow">#e3f0ff</color>
     <color name="brightYellow">#FFFF00</color>
     <color name="dropDownBlurple">#3C385B</color>
+    <color name="plusMinusButtonColor">@color/coldBlueWhite</color>
+    <color name="tabIndicatorColor">@color/coldBlueWhite</color>
 
     <color name="pink">#FAB0DB</color>
     <color name="pink_dark">#C790BD</color>
@@ -121,7 +128,8 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRangeAlpha">#B757AAFF</color>
+    <color name="inRangeAlpha">#B4C45E74</color>
+    <color name="inRange2Alpha">#B48B2A44</color>
     <color name="inRange">#0080FF</color>
     <color name="low">#FF4994</color>
     <color name="high">#FFBEBE</color>
