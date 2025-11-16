@@ -21,7 +21,7 @@ class WordPlay {
             val setup7 = "${getReciprStart()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup8 = "${getReciprStart()} when ${getNounAmount()} ${getNoun()} and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup9 = "if you don't want to $linkingVerb ${getBadVerb()}, it ${getModalVerb()} help if you are ${getGoodVerb()}"
-            val setup10 = "just because it's $badAdj to $linkingVerb $goodAdj does not mean it's $goodAdj ot $linkingVerb $badAdj"
+            val setup10 = "just because it's $badAdj to $linkingVerb $goodAdj does not mean it's $goodAdj to $linkingVerb $badAdj"
             return listOf(setup1, setup2, setup3, setup4, setup5, setup6, setup7, setup8, setup9, setup10).random()
         }
 
@@ -315,7 +315,7 @@ class WordPlay {
 
     fun getStarterWord(): String {
         val wordList: List<String> = listOf(
-            "Breaking news!", "This just in:", "Did you know", "For the first time ever", "And now,", "Well...", ""
+            "Breaking news!", "This just in:", "Did you know", "For the first time ever,", "And now,", "Well...", "", "Have you noticed that"
         )
         return wordList.random()
     }
