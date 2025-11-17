@@ -7,7 +7,7 @@
     <color name="palette2">#57B8FF</color>
     <color name="palette1">#2176AE</color>
 
-    <color name="accent">#D7A31A</color>
+    <color name="accent">#F34874</color>
     <color name="progressbarColor">@color/accent</color>
 
     <color name="gradient_dark">@color/grad_blue_dark</color>
@@ -128,8 +128,8 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRangeAlpha">#B4C45E74</color>
-    <color name="inRange2Alpha">#B48B2A44</color>
+    <color name="inRangeAlpha">#B452B2AC</color>
+    <color name="inRange2Alpha">#B4C3DFDD</color>
     <color name="inRange">#0080FF</color>
     <color name="low">#FF4994</color>
     <color name="high">#FFBEBE</color>

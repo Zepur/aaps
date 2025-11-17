@@ -55,12 +55,11 @@ object BackgroundProvider {
      */
     fun createDialogBackground(context: Context): GradientDrawable {
         val backgroundColors = intArrayOf(
-            ContextCompat.getColor(context, app.aaps.core.ui.R.color.gradient_mid_light),
             ContextCompat.getColor(context, app.aaps.core.ui.R.color.grad_blue_light),
             ContextCompat.getColor(context, app.aaps.core.ui.R.color.gradient_mid_dark),
             ContextCompat.getColor(context, app.aaps.core.ui.R.color.grad_blue_dark)
         )
-        val positions = floatArrayOf(0.0f, 0.22f, 0.64f, 1.0f) // Flipped positions
+        val positions = floatArrayOf(0.0f, 0.44f, 1.0f) // Flipped positions
         return GradientDrawable().apply {
             orientation = GradientDrawable.Orientation.TOP_BOTTOM
             setColors(backgroundColors, positions)
