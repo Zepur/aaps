@@ -125,7 +125,7 @@ class CarbsDialog : DialogFragmentWithDate() {
                 updateDateTime(newTime)
             }
         }
-        binding.root.background = BackgroundProvider().createBackground(requireContext(), true)
+        binding.root.background = BackgroundProvider.createDialogBackground(requireContext())
         return binding.root
     }
 

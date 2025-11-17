@@ -118,7 +118,7 @@ class InsulinDialog : DialogFragmentWithDate() {
     ): View {
         onCreateViewGeneral()
         _binding = DialogInsulinBinding.inflate(inflater, container, false)
-        binding.root.background = BackgroundProvider().createBackground(requireContext(), true)
+        binding.root.background = BackgroundProvider.createDialogBackground(requireContext())
         return binding.root
     }
 

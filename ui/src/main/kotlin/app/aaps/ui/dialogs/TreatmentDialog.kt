@@ -99,7 +99,7 @@ class TreatmentDialog : DialogFragmentWithDate() {
     ): View {
         onCreateViewGeneral()
         _binding = DialogTreatmentBinding.inflate(inflater, container, false)
-        binding.root.background = BackgroundProvider().createBackground(requireContext(), true)
+        binding.root.background = BackgroundProvider.createDialogBackground(requireContext())
         return binding.root
     }
 
