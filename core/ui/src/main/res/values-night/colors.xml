@@ -159,8 +159,8 @@
 
     <!-- Notification-->
     <color name="notificationAnnouncement">@color/orange</color>
-    <color name="notificationUrgent">@color/pink_dark</color>
-    <color name="notificationNormal">@color/pink_darker</color>
+    <color name="notificationUrgent">@color/accent</color>
+    <color name="notificationNormal">#B40044</color>
     <color name="notificationLow">@color/pink_darkest</color>
 
     <!-- Green Colors -->

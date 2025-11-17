@@ -16,6 +16,7 @@ import app.aaps.core.interfaces.sync.XDripBroadcast
 import app.aaps.core.ui.dialogs.OKDialog
 import app.aaps.core.utils.HtmlHelper
 import app.aaps.ui.databinding.DialogCalibrationBinding
+import app.aaps.ui.helpers.BackgroundProvider
 import com.google.common.base.Joiner
 import dagger.android.HasAndroidInjector
 import java.text.DecimalFormat
@@ -48,6 +49,7 @@ class CalibrationDialog : DialogFragmentWithDate() {
     ): View {
         onCreateViewGeneral()
         _binding = DialogCalibrationBinding.inflate(inflater, container, false)
+        binding.root.background = BackgroundProvider.createDialogBackground(requireContext())
         return binding.root
     }
 
