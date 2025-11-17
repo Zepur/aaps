@@ -119,10 +119,12 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         val backgroundColors =
             intArrayOf(
                 getColor(app.aaps.core.ui.R.color.grad_blue_dark),
-                getColor(app.aaps.core.ui.R.color.grad_blue_light)
+                getColor(app.aaps.core.ui.R.color.gradient_mid_dark),
+                getColor(app.aaps.core.ui.R.color.grad_blue_light),
+                getColor(app.aaps.core.ui.R.color.gradient_mid_light)
             )
 
-        val positions = floatArrayOf(0.0f, 1.0f)
+        val positions = floatArrayOf(0.0f, 0.36f, 0.78f, 1.0f)
 
         val linearGradient = GradientDrawable()
         linearGradient.orientation = GradientDrawable.Orientation.TOP_BOTTOM
@@ -136,7 +138,7 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         LocaleHelper.update(applicationContext)
         // val gradient = getRandomColors()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        // binding.root.background = createBackground()
+        binding.root.background = createBackground()
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)

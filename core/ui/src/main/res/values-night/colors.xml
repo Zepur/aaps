@@ -11,8 +11,8 @@
     <color name="progressbarColor">@color/accent</color>
 
     <color name="gradient_dark">@color/grad_blue_dark</color>
-    <color name="gradient_mid_dark">#7303c0</color>
-    <color name="gradient_mid_light">#EC38BC</color>
+    <color name="gradient_mid_dark">#002887</color>
+    <color name="gradient_mid_light">#B9D6FF</color>
     <color name="gradient_light">#FDEFF9</color>
     <color name="grad_blue_light">#0088FF</color>
     <color name="grad_blue_dark">#000428</color>
