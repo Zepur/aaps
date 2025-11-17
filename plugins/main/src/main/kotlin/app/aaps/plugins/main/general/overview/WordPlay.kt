@@ -15,14 +15,15 @@ class WordPlay {
             val setup1 = "${getStarterWord()} ${getAdjective()} ${getNoun()} $transVerb, ${getInterimWord()} ${getNoun()} $transVerb2"
             val setup2 = "${getStarterWord()} $articleRandom ${getAdjective()} $nounSingle ${getAdverb()} $verbSingle$nounMulti, ${getInterimWord()} ${getNoun()} $transVerb2"
             val setup3 = "$linkingVerb ${getDojective()} about ${getAdjective()} ${getNoun()}"
-            val setup4 = "$articleRandom $nounSingle can turn ${getNoun()} into ${getNoun()}"
-            val setup5 = "$articleRandom $nounSingle is what ${getNoun()} need in order to $transVerb2"
+            val setup4 = "$articleRandom $nounSingle can turn ${getNoun()} into ${getNounAmount()} ${getNoun()}"
+            val setup5 = "$articleRandom $nounSingle is what ${getNoun()} need in order to $transVerb2 ${getNounAmount()} ${getNoun()}"
             val setup6 = "$nounSingle ${verbSingle.trim()} no ${getNounSingleton().second}, ${getNounSingleton().second} ${verbSingle.trim()} no ${getNounSingleton().second}"
             val setup7 = "${getReciprStart()} when $article $nounSingle and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup8 = "${getReciprStart()} when ${getNounAmount()} ${getNoun()} and $article2 $nounSingle2 ${getRecipVerb()}. ${getReaction()}"
             val setup9 = "if you don't want to $linkingVerb ${getBadVerb()}, it ${getModalVerb()} help if you are ${getGoodVerb()}"
             val setup10 = "just because it's $badAdj to $linkingVerb $goodAdj does not mean it's $goodAdj to $linkingVerb $badAdj"
-            return listOf(setup1, setup2, setup3, setup4, setup5, setup6, setup7, setup8, setup9, setup10).random()
+            val setup11 = "$linkingVerb $badAdj, because a ${getNameableNounSingular()} named ${getFName()} is gonna $transVerb with ${getNounAmount().replace(" of", "")} of the $goodAdj ${getNoun()} from ${getPlace()}! ${getReaction()}"
+            return listOf(setup1, setup2, setup3, setup4, setup5, setup6, setup7, setup8, setup9, setup10, setup11).random()
         }
 
     fun getLinkingVerb(): String {
@@ -169,7 +170,7 @@ class WordPlay {
     }
 
     fun getNounAmount(): String {
-        val wordList: List<String> = listOf("two", "three", "five thousand", "too many", "a lot of", "a few", "some", "all of the")
+        val wordList: List<String> = listOf("two", "three", "five thousand", "too many", "a lot of", "a few", "some", "all")
         return wordList.random()
     }
 
@@ -217,7 +218,7 @@ class WordPlay {
 
     fun getReaction(): String {
         val wordlist: List<String> = listOf(
-            "disgusting", "whoop whoop", "that's racist", "super duper gay", "be warned", "frfr no cap brap brap on stack on dog", "shit that's so real", " - michael scott", "fun times", "well job"
+            "disgusting", "whoop whoop", "that's racist", "super duper gay", "be warned", "frfr no cap brap brap on stack on dog", "shit that's so real", " - michael scott", "fun times", "well job", "more at 18", "get it?!", "toodles", "tell your friends"
         )
         return wordlist.random()
     }
@@ -358,7 +359,7 @@ class WordPlay {
             "birds",
             "women",
             "freaks",
-            "people from Belgium",
+            "people",
             "milfs",
             "aliens",
             "ladies",
@@ -412,6 +413,83 @@ class WordPlay {
         return wordList.random()
     }
 
+    fun getPlace(): String {
+        val wordList: List<String> = listOf(
+            "the basement of an abandoned mall",
+            "rural Japan",
+            "New Orleans",
+            "chinatown",
+            "the center of a corn maze",
+            "a 1980s Toys'R'Us",
+            "the Titanic wreckage",
+            "the Australian outback",
+            "the foster care system",
+            "a haunted mansion",
+            "jail",
+            "prison",
+            "the royal casle",
+            "1700th century Mongolia",
+            "1984",
+            "La Paz",
+            "Konsul Lorcks gate 7"
+        )
+        return wordList.random()
+    }
+
+    fun getNameableNounSingular(): String {
+        val wordList: List<String> = listOf(
+            "pet gecko",
+            "elephant",
+            "thing",
+            "perversion",
+            "lesbian",
+            "journalist",
+            "liar",
+            "nerd",
+            "onion",
+            "bear",
+            "fish",
+            "human",
+            "girl",
+            "men",
+            "boy",
+            "developer",
+            "bird",
+            "women",
+            "freak",
+            "person",
+            "milf",
+            "alien",
+            "lady",
+            "cat",
+            "monster",
+            "tiger",
+            "fucker",
+            "reject",
+            "gym-bro",
+            "salmon",
+            "friend",
+            "enemy",
+            "turtle",
+            "caterpillar",
+            "monk",
+            "otter",
+            "shadow",
+            "freak",
+            "AI assistant",
+            "ghost",
+            "vampire",
+            "doll"
+        )
+        return wordList.random()
+    }
+
+    fun getFName(): String {
+        val wordList: List<String> = listOf(
+            "Lisa", "Amanda", "Angela", "Eustace", "Bryightnleigh", "Petrovka", "Haley", "Monica", "Annie", "Britta")
+        return wordList.random()
+    }
+
     fun getTransitiveVerb(): String {
         val wordList: List<String> = listOf(
             "shift",
@@ -447,17 +525,16 @@ class WordPlay {
             "activate",
             "draft",
             "heat",
-            "slay ",
-            "dwell on ",
-            "listen to ",
-            "jump around ",
-            "belittle ",
-            "applaud ",
-            "date ",
-            "try to kiss ",
-            "kidnap ",
-            "eat ",
-            "dream about "
+            "slay",
+            "listen to",
+            "jump around",
+            "belittle",
+            "applaud",
+            "date",
+            "try to kiss",
+            "kidnap",
+            "eat",
+            "dream about"
         )
         return wordList.random()
     }
@@ -494,7 +571,7 @@ class WordPlay {
             "briefly",
             "sloppily",
             "while high",
-            "certainly",
+            "certainly", "like a champ", "for the first time", "under duress", "willingly",
             "conversely",
             "finally",
             "well",
