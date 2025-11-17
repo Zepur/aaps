@@ -45,6 +45,7 @@ import app.aaps.core.utils.HtmlHelper
 import app.aaps.ui.R
 import app.aaps.ui.databinding.DialogInsulinBinding
 import app.aaps.ui.extensions.toSignedString
+import app.aaps.ui.helpers.BackgroundProvider
 import com.google.common.base.Joiner
 import dagger.android.HasAndroidInjector
 import io.reactivex.rxjava3.disposables.CompositeDisposable
@@ -117,6 +118,7 @@ class InsulinDialog : DialogFragmentWithDate() {
     ): View {
         onCreateViewGeneral()
         _binding = DialogInsulinBinding.inflate(inflater, container, false)
+        binding.root.background = BackgroundProvider().createBackground(requireContext(), true)
         return binding.root
     }
 

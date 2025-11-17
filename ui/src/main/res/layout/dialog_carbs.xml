@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     android:background="@drawable/gradback_card"
-    tools:context=".ui.dialogs.CarbsDialog">
+    tools:context=".dialogs.CarbsDialog">
 
     <LinearLayout
         android:layout_width="match_parent"

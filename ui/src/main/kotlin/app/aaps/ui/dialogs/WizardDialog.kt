@@ -54,6 +54,7 @@ import app.aaps.core.ui.toast.ToastUtils
 import app.aaps.core.utils.HtmlHelper
 import app.aaps.ui.R
 import app.aaps.ui.databinding.DialogWizardBinding
+import app.aaps.ui.helpers.BackgroundProvider
 import dagger.android.HasAndroidInjector
 import dagger.android.support.DaggerDialogFragment
 import io.reactivex.rxjava3.disposables.CompositeDisposable
@@ -147,6 +148,7 @@ class WizardDialog : DaggerDialogFragment() {
         dialog?.setCanceledOnTouchOutside(false)
 
         _binding = DialogWizardBinding.inflate(inflater, container, false)
+        binding.root.background = BackgroundProvider().createBackground(requireContext(), true)
         return binding.root
     }
 

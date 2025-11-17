@@ -73,6 +73,7 @@ import app.aaps.plugins.constraints.signatureVerifier.SignatureVerifierPlugin
 import app.aaps.ui.activities.ProfileHelperActivity
 import app.aaps.ui.activities.StatsActivity
 import app.aaps.ui.activities.TreatmentsActivity
+import app.aaps.ui.helpers.BackgroundProvider
 import app.aaps.ui.tabs.TabPageAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.tabs.TabLayoutMediator
@@ -115,30 +116,13 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
     private var isProtectionCheckActive = false
     private lateinit var binding: ActivityMainBinding
 
-    fun createBackground(): GradientDrawable {
-        val backgroundColors =
-            intArrayOf(
-                getColor(app.aaps.core.ui.R.color.grad_blue_dark),
-                getColor(app.aaps.core.ui.R.color.gradient_mid_dark),
-                getColor(app.aaps.core.ui.R.color.grad_blue_light),
-                getColor(app.aaps.core.ui.R.color.gradient_mid_light)
-            )
-
-        val positions = floatArrayOf(0.0f, 0.36f, 0.78f, 1.0f)
-
-        val linearGradient = GradientDrawable()
-        linearGradient.orientation = GradientDrawable.Orientation.TOP_BOTTOM
-        linearGradient.setColors(backgroundColors, positions)
-        return linearGradient
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Iconify.with(FontAwesomeModule())
         LocaleHelper.update(applicationContext)
         // val gradient = getRandomColors()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.root.background = createBackground()
+        binding.root.background = BackgroundProvider().createBackground(this, false)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
