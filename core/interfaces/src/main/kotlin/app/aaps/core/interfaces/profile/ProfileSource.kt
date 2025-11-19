@@ -15,6 +15,7 @@ interface ProfileSource {
         var ic: JSONArray,
         var isf: JSONArray,
         var basal: JSONArray,
+        var basalLimit: JSONArray,
         var targetLow: JSONArray,
         var targetHigh: JSONArray,
     ) {
@@ -27,6 +28,7 @@ interface ProfileSource {
                 ic = JSONArray(ic.toString()),
                 isf = JSONArray(isf.toString()),
                 basal = JSONArray(basal.toString()),
+                basalLimit = JSONArray(basalLimit.toString()),
                 targetLow = JSONArray(targetLow.toString()),
                 targetHigh = JSONArray(targetHigh.toString())
             )

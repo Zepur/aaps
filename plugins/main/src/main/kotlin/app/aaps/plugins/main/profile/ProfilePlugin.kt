@@ -160,6 +160,7 @@ class ProfilePlugin @Inject constructor(
             profile.put("carbratio", ic)
             profile.put("sens", isf)
             profile.put("basal", basal)
+            profile.put("basal_limit", basalLimit)
             profile.put("target_low", targetLow)
             profile.put("target_high", targetHigh)
             profile.put("units", if (mgdl) GlucoseUnit.MGDL.asText else GlucoseUnit.MMOL.asText)
@@ -180,6 +181,7 @@ class ProfilePlugin @Inject constructor(
                 sp.putString(localProfileNumbered + "ic", ic.toString())
                 sp.putString(localProfileNumbered + "isf", isf.toString())
                 sp.putString(localProfileNumbered + "basal", basal.toString())
+                sp.putString(localProfileNumbered + "basallimit", basalLimit.toString())
                 sp.putString(localProfileNumbered + "targetlow", targetLow.toString())
                 sp.putString(localProfileNumbered + "targethigh", targetHigh.toString())
             }
@@ -217,6 +219,7 @@ class ProfilePlugin @Inject constructor(
                         ic = JSONArray(sp.getString(localProfileNumbered + "ic", defaultArray)),
                         isf = JSONArray(sp.getString(localProfileNumbered + "isf", defaultArray)),
                         basal = JSONArray(sp.getString(localProfileNumbered + "basal", defaultArray)),
+                        basalLimit = JSONArray(sp.getString(localProfileNumbered + "basallimit", defaultArray)),
                         targetLow = JSONArray(sp.getString(localProfileNumbered + "targetlow", defaultArray)),
                         targetHigh = JSONArray(sp.getString(localProfileNumbered + "targethigh", defaultArray))
                     )
@@ -280,6 +283,7 @@ class ProfilePlugin @Inject constructor(
             ic = pureJson.getJSONArray("carbratio"),
             isf = pureJson.getJSONArray("sens"),
             basal = pureJson.getJSONArray("basal"),
+            basalLimit = pureJson.getJSONArray("basal_limit"),
             targetLow = pureJson.getJSONArray("target_low"),
             targetHigh = pureJson.getJSONArray("target_high")
         )
@@ -315,6 +319,7 @@ class ProfilePlugin @Inject constructor(
                         "time": "00:00",
                         "value": "0.1"
                     }],
+                    "basal_limit": "4.2",
                     "target_low": [{
                         "time": "00:00",
                         "value": "0"
@@ -350,6 +355,7 @@ class ProfilePlugin @Inject constructor(
                 ic = JSONArray(defaultArray),
                 isf = JSONArray(defaultArray),
                 basal = JSONArray(defaultArray),
+                basalLimit = JSONArray(defaultArray),
                 targetLow = JSONArray(defaultArray),
                 targetHigh = JSONArray(defaultArray)
             )
@@ -398,6 +404,7 @@ class ProfilePlugin @Inject constructor(
                     profile.put("carbratio", ic)
                     profile.put("sens", isf)
                     profile.put("basal", basal)
+                    profile.put("basal_limit", basalLimit)
                     profile.put("target_low", targetLow)
                     profile.put("target_high", targetHigh)
                     profile.put("units", if (mgdl) GlucoseUnit.MGDL.asText else GlucoseUnit.MMOL.asText)

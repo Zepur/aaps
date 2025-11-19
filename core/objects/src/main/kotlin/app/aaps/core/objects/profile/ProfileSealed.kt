@@ -39,6 +39,7 @@ sealed class ProfileSealed(
     val ids: IDs?,
     val timestamp: Long,
     var basalBlocks: List<Block>,
+    var basalLimitBlocks: List<Block>,
     var isfBlocks: List<Block>,
     var icBlocks: List<Block>,
     var targetBlocks: List<TargetBlock>,
@@ -62,6 +63,7 @@ sealed class ProfileSealed(
         value.ids,
         value.timestamp,
         value.basalBlocks,
+        value.basalLimitBlocks,
         value.isfBlocks,
         value.icBlocks,
         value.targetBlocks,
@@ -85,6 +87,7 @@ sealed class ProfileSealed(
         value.ids,
         value.timestamp,
         value.basalBlocks,
+        value.basalLimitBlocks,
         value.isfBlocks,
         value.icBlocks,
         value.targetBlocks,
@@ -108,6 +111,7 @@ sealed class ProfileSealed(
         null,
         0,
         value.basalBlocks,
+        value.basalLimitBlocks,
         value.isfBlocks,
         value.icBlocks,
         value.targetBlocks,
@@ -257,6 +261,9 @@ sealed class ProfileSealed(
 
     override fun getBasal(): Double = basalBlocks.blockValueBySeconds(MidnightUtils.secondsFromMidnight(), percentage / 100.0, timeshift)
     override fun getBasal(timestamp: Long): Double = basalBlocks.blockValueBySeconds(MidnightUtils.secondsFromMidnight(timestamp), percentage / 100.0, timeshift)
+    override fun getBasalLimit(): Double =
+        basalLimitBlocks.blockValueBySeconds(MidnightUtils.secondsFromMidnight(), 100.0 / percentage, timeshift)
+
     override fun getIc(): Double =
         if (aps?.supportsDynamicIc() ?: error("APS not defined"))
             aps.getIc(this) ?: icBlocks.blockValueBySeconds(MidnightUtils.secondsFromMidnight(), 100.0 / percentage, timeshift)
@@ -283,7 +290,6 @@ sealed class ProfileSealed(
                 aps.getAverageIsfMgdl(timestamp, caller) ?: toMgdl(isfBlocks.blockValueBySeconds(MidnightUtils.secondsFromMidnight(timestamp), 100.0 / percentage, timeshift), units)
             else toMgdl(isfBlocks.blockValueBySeconds(MidnightUtils.secondsFromMidnight(timestamp), 100.0 / percentage, timeshift), units)
         }
-
 
     override fun getTargetMgdl(): Double = toMgdl(targetBlocks.targetBlockValueBySeconds(MidnightUtils.secondsFromMidnight(), timeshift), units)
     override fun getTargetLowMgdl(): Double = toMgdl(targetBlocks.lowTargetBlockValueBySeconds(MidnightUtils.secondsFromMidnight(), timeshift), units)
@@ -314,6 +320,7 @@ sealed class ProfileSealed(
         PureProfile(
             jsonObject = toPureNsJson(dateUtil),
             basalBlocks = basalBlocks.shiftBlock(percentage / 100.0, timeshift),
+            basalLimitBlocks = basalLimitBlocks.shiftBlock(100.0 / percentage, timeshift),
             isfBlocks = isfBlocks.shiftBlock(100.0 / percentage, timeshift),
             icBlocks = icBlocks.shiftBlock(100.0 / percentage, timeshift),
             targetBlocks = targetBlocks.shiftTargetBlock(timeshift),

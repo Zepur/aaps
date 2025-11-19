@@ -107,6 +107,26 @@ import kotlin.math.max
         addSeries(overviewData.temporaryTargetSeries as LineGraphSeries<DataPoint>)
     }
 
+    fun addBasalLimitLine(yValue: Double) {
+        val minX = graph.viewport.getMinX(true)
+        val maxX = graph.viewport.getMaxX(true)
+
+        val linePoints = arrayOf(
+            DataPoint(minX, yValue),
+            DataPoint(maxX, yValue)
+        )
+
+        val lineSeries = LineGraphSeries(linePoints)
+
+        lineSeries.also {
+            it.isDrawDataPoints = false
+            it.color = rh.gac(graph.context, app.aaps.core.ui.R.attr.basalLimitColor)
+            it.thickness = 2
+        }
+
+        addSeries(lineSeries)
+    }
+
     fun addTreatments(context: Context?) {
         maxY = maxOf(maxY, overviewData.maxTreatmentsValue)
         addSeries(overviewData.treatmentsSeries as PointsWithLabelGraphSeries<DataPointWithLabelInterface>)

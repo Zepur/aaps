@@ -12,7 +12,6 @@ import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.Handler
-import app.aaps.plugins.main.general.overview.WordPlay
 import android.os.HandlerThread
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -1091,6 +1090,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             graphData.addBasals()
         graphData.addTargetLine()
         graphData.addNowLine(dateUtil.now())
+        val basalLimit = profileFunction.getProfile()?.getBasalLimit() ?: 4.0
+        graphData.addBasalLimitLine(basalLimit)
 
         // set manual x bounds to have nice steps
         graphData.setNumVerticalLabels()

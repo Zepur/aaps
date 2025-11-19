@@ -41,6 +41,7 @@ import com.google.android.material.tabs.TabLayout
 import dagger.android.support.DaggerFragment
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.kotlin.plusAssign
+import org.json.JSONArray
 import java.math.RoundingMode
 import java.text.DecimalFormat
 import javax.inject.Inject
@@ -249,6 +250,25 @@ class ProfileFragment : DaggerFragment() {
                 save
             )
         }
+
+        val range1 = doubleArrayOf(
+            roundUp(profileUtil.fromMgdlToUnits(HardLimits.LIMIT_MIN_BG[0], GlucoseUnit.MMOL)),
+            roundDown(profileUtil.fromMgdlToUnits(HardLimits.LIMIT_MIN_BG[1], GlucoseUnit.MMOL)))
+        TimeListEdit(
+            requireContext(),
+            aapsLogger,
+            dateUtil,
+            requireView(),
+            R.id.limit_bas_holder,
+            "BAS LIMIT",
+            "Basal low limit",
+            currentProfile.basalLimit,
+            null,
+            range1,
+            null,
+            0.1,
+            DecimalFormat("0.0"),
+            save)
 
         _binding?.let {
             try {
@@ -465,6 +485,7 @@ class ProfileFragment : DaggerFragment() {
         binding.isf.visibility = (position == 2).toVisibility()
         binding.basal.visibility = (position == 3).toVisibility()
         binding.target.visibility = (position == 4).toVisibility()
+        binding.target.visibility = (position == 5).toVisibility()
     }
 
     private fun updateProtectedUi() {

@@ -40,12 +40,14 @@ fun pureProfileFromJson(jsonObject: JSONObject, dateUtil: DateUtil, defaultUnits
             ?: return null
         val basalBlocks = blockFromJsonArray(jsonObject.getJSONArray("basal"), dateUtil)
             ?: return null
+        val basalLimitBlocks = blockFromJsonArray(jsonObject.getJSONArray("basal_limit"), dateUtil) ?: return null
         val targetBlocks = targetBlockFromJsonArray(jsonObject.getJSONArray("target_low"), jsonObject.getJSONArray("target_high"), dateUtil)
             ?: return null
 
         return PureProfile(
             jsonObject = jsonObject,
             basalBlocks = basalBlocks,
+            basalLimitBlocks = basalLimitBlocks,
             isfBlocks = isfBlocks,
             icBlocks = icBlocks,
             targetBlocks = targetBlocks,

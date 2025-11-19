@@ -151,6 +151,11 @@
                     android:layout_height="wrap_content"
                     android:text="@string/target_short" />
 
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIMB" />
+
             </com.google.android.material.tabs.TabLayout>
 
             <LinearLayout
@@ -324,6 +329,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dip"
                     android:layout_margin="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/limit_bas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/limit_bas_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/limit_bas_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginEnd="140dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:gravity="center"
+                    android:background="@color/coldBlueWhite"
+                    android:textColor="@color/grad_blue_dark"
+                    tools:text="111 - 888"/>
 
             </LinearLayout>
 

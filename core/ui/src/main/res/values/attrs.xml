@@ -220,6 +220,7 @@
     <attr name="yellowColor" format="reference|color" />
     <attr name="candyTextColor" format="reference|color" />
     <attr name="dotLineColor" format="reference|color" />
+    <attr name="basalLimitColor" format="reference|color" />
     <!---Popupmenu TextColor -->
     <attr name="menuTextColor" format="reference|color" />
     <attr name="menuTextColorInverse" format="reference|color" />

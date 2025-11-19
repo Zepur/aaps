@@ -56,6 +56,11 @@ interface Profile {
     fun getBasal(timestamp: Long): Double
 
     /**
+     * Basal limit under which no temp basal is allowed
+     */
+    fun getBasalLimit(): Double
+
+    /**
      * I:C value according to "now"
      */
     fun getIc(): Double

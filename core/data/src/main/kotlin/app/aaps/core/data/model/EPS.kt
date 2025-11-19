@@ -14,6 +14,7 @@ data class EPS(
     var timestamp: Long,
     var utcOffset: Long = TimeZone.getDefault().getOffset(timestamp).toLong(),
     var basalBlocks: List<Block>,
+    var basalLimitBlocks: List<Block>,
     var isfBlocks: List<Block>,
     var icBlocks: List<Block>,
     var targetBlocks: List<TargetBlock>,
@@ -33,6 +34,7 @@ data class EPS(
             timestamp == other.timestamp &&
             utcOffset == other.utcOffset &&
             basalBlocks == other.basalBlocks &&
+            basalLimitBlocks == other.basalLimitBlocks &&
             isfBlocks == other.isfBlocks &&
             icBlocks == other.icBlocks &&
             targetBlocks == other.targetBlocks &&
