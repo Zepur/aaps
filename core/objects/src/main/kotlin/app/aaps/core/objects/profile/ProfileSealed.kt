@@ -63,7 +63,7 @@ sealed class ProfileSealed(
         value.ids,
         value.timestamp,
         value.basalBlocks,
-        value.basalLimitBlocks,
+        listOf(Block((24 * 60 * 60), 3.6)),
         value.isfBlocks,
         value.icBlocks,
         value.targetBlocks,
