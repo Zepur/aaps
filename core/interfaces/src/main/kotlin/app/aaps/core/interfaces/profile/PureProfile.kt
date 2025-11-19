@@ -9,7 +9,7 @@ import java.util.TimeZone
 class PureProfile(
     var jsonObject: JSONObject, // source json data (must correspond to the rest of the profile)
     var basalBlocks: List<Block>,
-    var basalLimitBlocks: List<Block>,
+    var basalLimitBlocks: List<Block>? = null,
     var isfBlocks: List<Block>,
     var icBlocks: List<Block>,
     var targetBlocks: List<TargetBlock>,
