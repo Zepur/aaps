@@ -57,6 +57,7 @@ fun EPS.Companion.fromJson(jsonObject: JSONObject, dateUtil: DateUtil): EPS? {
     return EPS(
         timestamp = timestamp,
         basalBlocks = profileSealed.basalBlocks,
+        basalLimitBlocks = profileSealed.basalLimitBlocks,
         isfBlocks = profileSealed.isfBlocks,
         icBlocks = profileSealed.icBlocks,
         targetBlocks = profileSealed.targetBlocks,

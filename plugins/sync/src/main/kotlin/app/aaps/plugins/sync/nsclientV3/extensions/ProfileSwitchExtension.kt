@@ -26,6 +26,7 @@ fun NSProfileSwitch.toProfileSwitch(activePlugin: ActivePlugin, dateUtil: DateUt
         timestamp = date ?: throw InvalidParameterException(),
         utcOffset = T.mins(utcOffset ?: 0L).msecs(),
         basalBlocks = profileSealed.basalBlocks,
+        basalLimitBlocks = profileSealed.basalLimitBlocks,
         isfBlocks = profileSealed.isfBlocks,
         icBlocks = profileSealed.icBlocks,
         targetBlocks = profileSealed.targetBlocks,

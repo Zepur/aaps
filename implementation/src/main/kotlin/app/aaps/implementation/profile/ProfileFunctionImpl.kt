@@ -150,6 +150,7 @@ class ProfileFunctionImpl @Inject constructor(
         return PS(
             timestamp = timestamp,
             basalBlocks = pureProfile.basalBlocks,
+            basalLimitBlocks = pureProfile.basalLimitBlocks,
             isfBlocks = pureProfile.isfBlocks,
             icBlocks = pureProfile.icBlocks,
             targetBlocks = pureProfile.targetBlocks,

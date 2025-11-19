@@ -138,6 +138,7 @@ class CommandQueueImplementation @Inject constructor(
                                            EPS(
                                                timestamp = dateUtil.now(),
                                                basalBlocks = nonCustomized.basalBlocks,
+                                               basalLimitBlocks = nonCustomized.basalLimitBlocks,
                                                isfBlocks = nonCustomized.isfBlocks,
                                                icBlocks = nonCustomized.icBlocks,
                                                targetBlocks = nonCustomized.targetBlocks,
