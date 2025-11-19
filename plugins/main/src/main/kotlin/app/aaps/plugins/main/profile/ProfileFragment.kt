@@ -41,7 +41,6 @@ import com.google.android.material.tabs.TabLayout
 import dagger.android.support.DaggerFragment
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.kotlin.plusAssign
-import org.json.JSONArray
 import java.math.RoundingMode
 import java.text.DecimalFormat
 import javax.inject.Inject
