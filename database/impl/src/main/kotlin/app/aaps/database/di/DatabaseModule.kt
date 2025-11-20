@@ -181,7 +181,7 @@ open class DatabaseModule {
 
     internal val migration29to30 = object : Migration(29, 30) {
         override fun migrate(database: SupportSQLiteDatabase) {
-            database.execSQL("ALTER TABLE $TABLE_PROFILE_SWITCHES ADD COLUMN `basalLimitBlocks` TEXT NOT NULL DEFAULT '[]'")
+            database.execSQL("ALTER TABLE $TABLE_PROFILE_SWITCHES ADD COLUMN `basalLimitBlocks` TEXT DEFAULT '[]'")
         }
     }
 
