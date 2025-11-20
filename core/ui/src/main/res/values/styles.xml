@@ -117,6 +117,10 @@
         <item name="bgLow">@color/low</item>
         <item name="highColor">@color/high</item>
         <item name="bgInRange">@color/tempTargetConfirmation</item>
+        <!---BG WIDGET color-->
+        <item name="bgLowWidget">@color/bgLowWidget</item>
+        <item name="highColorWidget">@color/highColorWidget</item>
+        <item name="bgInRangeWidget">@color/bgInRangeWidget</item>
         <!---Profile Helper -->
         <item name="helperProfileColor">@color/helperProfile</item>
         <item name="examinedProfileColor">@color/examinedProfile</item>
@@ -167,7 +171,12 @@
         <!-- IOB -->
         <item name="iobColor">@color/iob</item>
         <!-- Basal -->
-        <item name="basal">@color/basal</item>
+        <item name="basalGraphOutlineColor">@color/basal</item>
+        <item name="basalTextColorHigh">@color/high</item>
+        <item name="basalTextColorNormal">@color/gradient_light</item>
+        <item name="basalTextColorLow">@color/low</item>
+        <item name="tempBasalGraphColor">@color/high</item>
+        <item name="baseBasalGraphColor">@color/gradient_dark</item>
         <!-- Carbs -->
         <item name="carbsColor">@color/carbs</item>
         <!-- Temp Target -->
@@ -222,7 +231,7 @@
         <item name="devSlopeNegColor">@color/devSlopeNeg</item>
         <item name="heartRateColor">@color/heartRate</item>
         <item name="stepsColor">@color/steps</item>
-        <item name="deviationGreyColor">@color/deviationGrey</item>
+        <item name="deviationGreyColor">@color/deviationGray</item>
         <item name="deviationBlackColor">@color/deviationBlack</item>
         <item name="deviationGreenColor">@color/deviationGreen</item>
         <item name="deviationRedColor">@color/deviationRed</item>
@@ -237,13 +246,13 @@
         <item name="menuTextColor">@color/black</item>
         <item name="menuTextColorInverse">@color/white</item>
         <!-- CardView specific colors  -->
-        <item name="strokeColor">@color/plastic_grey</item>
+        <item name="strokeColor">@color/plastic_gray</item>
         <item name="textAppearanceMediumColor">@color/textAppearanceMediumLight</item>
         <!-- Actionbar  -->
         <item name="actionBarStyle">@style/Aaps_ActionBarStyle</item>
         <!-- Objectives specific colors  -->
         <item name="isAccomplishedColor">@color/isAccomplished</item>
-        <item name="separatorColor">@color/sphere_plastic_grey</item>
+        <item name="separatorColor">@color/sphere_plastic_gray</item>
         <item name="isCompletedColor">@color/isCompleted</item>
         <item name="isNotCompletedColor">@color/isNotCompleted</item>
         <!---Nightscout client TitelColor -->
@@ -318,7 +327,7 @@
         <item name="android:padding">0dp</item>
         <item name="android:minWidth">300dp</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:background">@drawable/dialog</item>
+        <item name="android:background">@drawable/gradback_card_reverse</item>
     </style>
 
     <style name="StyleDialogHeader">
@@ -342,6 +351,7 @@
         <item name="android:paddingTop">7dp</item>
         <item name="android:textOn" />
         <item name="android:textOff" />
+        <item name="android:drawableTint">@color/toggle_icon_tint_selector</item>
         <item name="android:layout_marginEnd">2dp</item>
     </style>
 

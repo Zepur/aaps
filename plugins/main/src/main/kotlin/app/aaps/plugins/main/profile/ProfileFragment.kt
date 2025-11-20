@@ -18,6 +18,7 @@ import app.aaps.core.interfaces.logging.LTag
 import app.aaps.core.interfaces.logging.UserEntryLogger
 import app.aaps.core.interfaces.plugin.ActivePlugin
 import app.aaps.core.interfaces.profile.ProfileFunction
+import app.aaps.core.interfaces.profile.ProfileSource
 import app.aaps.core.interfaces.profile.ProfileUtil
 import app.aaps.core.interfaces.protection.ProtectionCheck
 import app.aaps.core.interfaces.resources.ResourceHelper
@@ -249,6 +250,26 @@ class ProfileFragment : DaggerFragment() {
             )
         }
 
+        _binding?.let {
+            try {
+                val targetLowMgdl = currentProfile.targetLow.getJSONObject(0).getDouble("value")
+                val targetHighMgdl = currentProfile.targetHigh.getJSONObject(0).getDouble("value")
+
+                val targetLowMmol = profileUtil.fromMgdlToUnits(targetLowMgdl, GlucoseUnit.MMOL)
+                val targetHighMmol = profileUtil.fromMgdlToUnits(targetHighMgdl, GlucoseUnit.MMOL)
+
+                val rangeString = "${roundUp(targetLowMmol)} - ${roundDown(targetHighMmol)}"
+
+                binding.targetAsMmol.text = rangeString
+                binding.targetAsMmol.visibility = View.VISIBLE
+            } catch (e: Exception) {
+                binding.targetAsMmol.visibility = View.GONE
+                aapsLogger.error(LTag.UI, "Could not display mmol target range", e)
+            }
+        }
+
+        setTargetMMolOnScreen(currentProfile)
+
         context?.let { context ->
             val profileList: ArrayList<CharSequence> = profilePlugin.profile?.getProfileList() ?: ArrayList()
             binding.profileList.setAdapter(ArrayAdapter(context, app.aaps.core.ui.R.layout.spinner_centered, profileList))
@@ -348,6 +369,26 @@ class ProfileFragment : DaggerFragment() {
         updateGUI()
     }
 
+    fun setTargetMMolOnScreen(currentProfile: ProfileSource.SingleProfile) {
+        _binding?.let {
+            try {
+                val targetLowMgdl = currentProfile.targetLow.getJSONObject(0).getDouble("value")
+                val targetHighMgdl = currentProfile.targetHigh.getJSONObject(0).getDouble("value")
+
+                val targetLowMmol = profileUtil.fromMgdlToUnits(targetLowMgdl, GlucoseUnit.MMOL)
+                val targetHighMmol = profileUtil.fromMgdlToUnits(targetHighMgdl, GlucoseUnit.MMOL)
+
+                val rangeString = "${roundUp(targetLowMmol)} - ${roundDown(targetHighMmol)}"
+
+                binding.targetAsMmol.text = rangeString
+                binding.targetAsMmol.visibility = View.VISIBLE
+            } catch (e: Exception) {
+                binding.targetAsMmol.visibility = View.GONE
+                aapsLogger.error(LTag.UI, "Could not display mmol target range", e)
+            }
+        }
+    }
+
     @Synchronized
     override fun onResume() {
         super.onResume()
@@ -406,6 +447,9 @@ class ProfileFragment : DaggerFragment() {
             binding.profileswitch.visibility = View.GONE
             binding.save.visibility = View.GONE //don't save an invalid profile
         }
+
+        val currentProfile = profilePlugin.currentProfile() ?: return
+        setTargetMMolOnScreen(currentProfile)
 
         //Show reset button if data was edited
         if (isEdited) {

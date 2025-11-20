@@ -40,6 +40,7 @@ import app.aaps.core.ui.toast.ToastUtils
 import app.aaps.core.utils.HtmlHelper
 import app.aaps.ui.R
 import app.aaps.ui.databinding.DialogCarbsBinding
+import app.aaps.ui.helpers.BackgroundProvider
 import com.google.common.base.Joiner
 import dagger.android.HasAndroidInjector
 import io.reactivex.rxjava3.disposables.CompositeDisposable
@@ -124,6 +125,7 @@ class CarbsDialog : DialogFragmentWithDate() {
                 updateDateTime(newTime)
             }
         }
+        binding.root.background = BackgroundProvider.createDialogBackground(requireContext())
         return binding.root
     }
 

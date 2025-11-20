@@ -46,8 +46,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_treatment_label"
-            android:textColor="?attr/icFadeColor"
-            android:background="@color/transparent"
+            android:drawableTint="@color/gradient_dark"
+            android:textColor="@color/gradient_dark"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -62,8 +62,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_insulin_label"
-            android:textColor="?attr/icFadeColor"
-            android:background="@color/transparent"
+            android:drawableTint="@color/gradient_dark"
+            android:textColor="@color/gradient_dark"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -77,8 +77,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/carbs"
-            android:textColor="?attr/icFadeColor"
-            android:background="@color/transparent"
+            android:drawableTint="@color/gradient_dark"
+            android:textColor="@color/gradient_dark"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -92,8 +92,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/calculator_label"
-            android:textColor="?attr/icFadeColor"
-            android:background="@color/transparent"
+            android:drawableTint="@color/gradient_dark"
+            android:textColor="@color/gradient_dark"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -108,8 +108,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/calibration"
-            android:textColor="?attr/icFadeColor"
-            android:background="@color/transparent"
+            android:drawableTint="@color/gradient_dark"
+            android:textColor="@color/gradient_dark"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -125,8 +125,8 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_cgm"
-            android:textColor="?attr/icFadeColor"
-            android:background="@color/transparent"
+            android:drawableTint="@color/gradient_dark"
+            android:textColor="@color/gradient_dark"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -141,8 +141,8 @@
             android:drawableTop="@drawable/ic_quick_wizard"
             android:hint="@string/quickwizard"
             android:text="@string/quickwizard"
-            android:textColor="?attr/icFadeColor"
-            android:backgroundTint="@color/transparent"
+            android:drawableTint="@color/gradient_dark"
+            android:textColor="@color/gradient_dark"
             app:iconPadding="-4dp" />
 
     </LinearLayout>

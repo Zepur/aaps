@@ -1,5 +1,6 @@
 package app.aaps.ui.dialogs
 
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.os.SystemClock
 import android.view.LayoutInflater

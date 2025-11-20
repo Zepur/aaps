@@ -59,7 +59,7 @@ class OverviewMenusImpl @Inject constructor(
 
         PRE(R.string.overview_show_predictions, app.aaps.core.ui.R.attr.predictionColor, app.aaps.core.ui.R.attr.menuTextColor, primary = true, secondary = false, shortnameId = R.string.prediction_shortname, enabledByDefault = true),
         TREAT(R.string.overview_show_treatments, app.aaps.core.ui.R.attr.cobColor, app.aaps.core.ui.R.attr.menuTextColor, primary = true, secondary = false, shortnameId = R.string.treatments_shortname, enabledByDefault = true),
-        BAS(R.string.overview_show_basals, app.aaps.core.ui.R.attr.basal, app.aaps.core.ui.R.attr.menuTextColor, primary = true, secondary = false, shortnameId = R.string.basal_shortname, enabledByDefault = true),
+        BAS(R.string.overview_show_basals, app.aaps.core.ui.R.attr.basalGraphOutlineColor, app.aaps.core.ui.R.attr.menuTextColor, primary = true, secondary = false, shortnameId = R.string.basal_shortname, enabledByDefault = true),
         ABS(R.string.overview_show_abs_insulin, app.aaps.core.ui.R.attr.iobColor, app.aaps.core.ui.R.attr.menuTextColor, primary = false, secondary = true, shortnameId = R.string.abs_insulin_shortname),
         IOB(R.string.overview_show_iob, app.aaps.core.ui.R.attr.iobColor, app.aaps.core.ui.R.attr.menuTextColor, primary = false, secondary = true, shortnameId = app.aaps.core.ui.R.string.iob),
         COB(R.string.overview_show_cob, app.aaps.core.ui.R.attr.cobColor, app.aaps.core.ui.R.attr.menuTextColor, primary = false, secondary = true, shortnameId = app.aaps.core.ui.R.string.cob),

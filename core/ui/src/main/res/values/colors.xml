@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="palette5">#4A5759</color>
+    <color name="palette4">#B0C4B1</color>
+    <color name="palette3">#DEDBD2</color>
+    <color name="palette2">#F7E1D7</color>
+    <color name="palette1">#EDAFB8</color>
+
+    <color name="accent">#D7A31A</color>
+    <color name="progressbarColor">@color/accent</color>
+
+    <color name="gradient_dark">#03001e</color>
+    <color name="gradient_mid_dark">#7303c0</color>
+    <color name="gradient_mid_light">#ec38bc</color>
+    <color name="gradient_light">#fdeff9</color>
+    <color name="grad_blue_light">#004e92</color>
+    <color name="grad_blue_dark">#000428</color>
+
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
     <color name="colorPrimary">#3378C5</color>
@@ -11,8 +28,12 @@
     <color name="gray">#BBBBBB</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="ok_cancel_yellow">#F9F871</color>
+    <color name="coldBlueWhite">#E3F0FF</color>
+    <color name="yellow">#F9F871</color>
+    <color name="brightYellow">#F0CE41</color>
     <color name="dropDownBlurple">#3C385B</color>
+    <color name="plusMinusButtonColor">@color/coldBlueWhite</color>
+    <color name="tabIndicatorColor">@color/coldBlueWhite</color>
 
     <color name="pink">#FAB0DB</color>
     <color name="pink_dark">#C790BD</color>
@@ -20,7 +41,16 @@
     <color name="pink_darkest">#95729E</color>
     <color name="dark_blue">#151E39</color>
     <color name="dark_red">#A4506F</color>
+    <color name="orange">#FFB35F</color>
     <color name="buttonTextDark">#151E39</color>
+
+    <color name="candydarkpink">#c03565</color>
+    <color name="candypink">#DD84A3</color>
+    <color name="candylightpink">#FFE3F3</color>
+    <color name="candyteal">#00C9C4</color>
+    <color name="candygreen">#C2FDBC</color>
+    <color name="candypurple">#E1C6FD</color>
+    <color name="candyorange">#FCAC6C</color>
 
     <color name="primaryColorDefault">#222222</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
@@ -32,6 +62,8 @@
     <color name="secondaryTextColorDefault">#000000</color>
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
+
+    <color name="pod_icon_stroke">@color/yellow</color>
 
     <color name="defaultBackground">#FFFFFF</color>
     <color name="defaultTextColor">#000000</color>
@@ -97,9 +129,16 @@
 <!--    <color name="inRange">#00FF00</color>-->
 <!--    <color name="low">#FF0000</color>-->
 <!--    <color name="high">#FFFB8C00</color>-->
+    <color name="inRangeAlpha">#990080FF</color>
+    <color name="inRange2Alpha">#B48B2A44</color>
     <color name="inRange">@color/pink</color>
     <color name="low">#E1786A</color>
     <color name="high">#A4506F</color>
+    <!---BG WIDGET color-->
+    <color name="bgLowWidget">@color/low</color>
+    <color name="highColorWidget">@color/high</color>
+    <color name="bgInRangeWidget">@color/gradient_dark</color>
+
     <color name="iob">#1e88e5</color>
     <color name="extendedBolus">#1e88e5</color>
     <color name="iobPredAS">#1ea3e5</color>
@@ -212,7 +251,7 @@
     <color name="colorScheduled">#de7550</color>
     <color name="colorActive">#25912e</color>
 
-    <color name="deviationGrey">#c8666666</color>
+    <color name="deviationGray">#c8666666</color>
     <color name="deviationGreen">#7200FF00</color>
     <color name="deviationRed">#72FF0000</color>
     <color name="deviationBlack">#72000000</color>
@@ -235,9 +274,9 @@
     <color name="darkGray">#323232</color>
     <color name="darkGrayVariant">#424242</color>
     <color name="objectivesBackground">#8C8C8C</color>
-    <color name="plastic_grey">#666666</color>
+    <color name="plastic_gray">#666666</color>
     <color name="byodaGray">#777777</color>
-    <color name="sphere_plastic_grey">#8c8c8c</color>
+    <color name="sphere_plastic_gray">#8c8c8c</color>
     <color name="lightSandGray">#72000000</color>
     <color name="sandGray">#c8666666</color>
     <color name="midGray">#B2B2B2</color>

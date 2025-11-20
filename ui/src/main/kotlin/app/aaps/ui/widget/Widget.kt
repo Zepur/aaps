@@ -149,9 +149,9 @@ class Widget : AppWidgetProvider() {
             lastBgData.lastBg()?.let { profileUtil.fromMgdlToStringInUnits(it.recalculated) } ?: rh.gs(app.aaps.core.ui.R.string.value_unavailable_short))
         views.setTextColor(
             R.id.bg, when {
-                lastBgData.isLow()  -> rh.gc(app.aaps.core.ui.R.color.widget_low)
-                lastBgData.isHigh() -> rh.gc(app.aaps.core.ui.R.color.widget_high)
-                else                -> rh.gc(app.aaps.core.ui.R.color.widget_inrange)
+                lastBgData.isLow()  -> rh.gc(app.aaps.core.ui.R.color.gradient_dark)
+                lastBgData.isHigh() -> rh.gc(app.aaps.core.ui.R.color.gradient_dark)
+                else                -> rh.gc(app.aaps.core.ui.R.color.gradient_dark)
             }
         )
         trendCalculator.getTrendArrow(iobCobCalculator.ads)?.let {
@@ -160,9 +160,9 @@ class Widget : AppWidgetProvider() {
         views.setViewVisibility(R.id.arrow, (trendCalculator.getTrendArrow(iobCobCalculator.ads) != null).toVisibilityKeepSpace())
         views.setInt(
             R.id.arrow, "setColorFilter", when {
-                lastBgData.isLow()  -> rh.gc(app.aaps.core.ui.R.color.widget_low)
-                lastBgData.isHigh() -> rh.gc(app.aaps.core.ui.R.color.widget_high)
-                else                -> rh.gc(app.aaps.core.ui.R.color.widget_inrange)
+                lastBgData.isLow()  -> rh.gc(app.aaps.core.ui.R.color.gradient_dark)
+                lastBgData.isHigh() -> rh.gc(app.aaps.core.ui.R.color.gradient_dark)
+                else                -> rh.gc(app.aaps.core.ui.R.color.gradient_dark)
             }
         )
 

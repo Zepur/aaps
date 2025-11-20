@@ -3,7 +3,7 @@
     android:shape="rectangle">
 
     <!-- This sets the fill color of the button's background -->
-    <solid android:color="#e1786a" />
+    <solid android:color="@color/plusMinusButtonColor" />
 
     <!-- This defines the corner radii -->
     <corners

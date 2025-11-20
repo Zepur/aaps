@@ -62,6 +62,7 @@ import app.aaps.core.interfaces.rx.events.EventLoopUpdateGui
 import app.aaps.core.interfaces.rx.events.EventMobileToWear
 import app.aaps.core.interfaces.rx.events.EventNewNotification
 import app.aaps.core.interfaces.rx.events.EventNewOpenLoopNotification
+import app.aaps.core.interfaces.rx.events.EventSpecialApsReason
 import app.aaps.core.interfaces.rx.events.EventTempTargetChange
 import app.aaps.core.interfaces.rx.weardata.EventData
 import app.aaps.core.interfaces.sharedPreferences.SP
@@ -151,6 +152,12 @@ class LoopPlugin @Inject constructor(
             // Skip db change of ending previous TT
             .debounce(10L, TimeUnit.SECONDS)
             .subscribe({ invoke("EventTempTargetChange", true) }, fabricPrivacy::logException)
+
+        disposable += rxBus
+            .toObservable(EventSpecialApsReason::class.java)
+            .subscribe({ event ->
+                           activePlugin.activeOverview.overviewBus.send(event)
+                       }, fabricPrivacy::logException)
     }
 
     private fun createNotificationChannel() {

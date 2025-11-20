@@ -13,6 +13,7 @@
         android:layout_weight="1"
         android:drawableTop="@drawable/ic_omnipod_overview_refresh_pod_status"
         android:drawablePadding="@dimen/omnipod_icon_button_drawable_padding"
+        android:textColor="@color/gradient_dark"
         android:text="@string/refresh" />
 
     <com.google.android.material.button.MaterialButton
@@ -23,6 +24,7 @@
         android:layout_weight="1"
         android:drawableTop="@drawable/ic_omnipod_overview_pod_management"
         android:drawablePadding="@dimen/omnipod_icon_button_drawable_padding"
+        android:textColor="@color/gradient_dark"
         android:text="@string/omnipod_common_overview_button_pod_management" />
 
     <com.google.android.material.button.MaterialButton
@@ -33,6 +35,7 @@
         android:layout_weight="1"
         android:drawableTop="@drawable/ic_omnipod_overview_silence_alerts"
         android:drawablePadding="@dimen/omnipod_icon_button_drawable_padding"
+        android:textColor="@color/gradient_dark"
         android:text="@string/omnipod_common_overview_button_silence_alerts" />
 
     <com.google.android.material.button.MaterialButton
@@ -43,6 +46,7 @@
         android:layout_weight="1"
         android:drawableTop="@drawable/ic_omnipod_overview_set_time"
         android:drawablePadding="@dimen/omnipod_icon_button_drawable_padding"
+        android:textColor="@color/gradient_dark"
         android:text="@string/omnipod_common_overview_button_set_time"
         android:visibility="gone" />
 
@@ -54,6 +58,7 @@
         android:layout_weight="1"
         android:drawableTop="@drawable/ic_pod_resume_delivery"
         android:drawablePadding="@dimen/omnipod_icon_button_drawable_padding"
+        android:textColor="@color/gradient_dark"
         android:text="@string/omnipod_common_overview_button_resume_delivery"
         android:visibility="gone" />
 
@@ -65,6 +70,7 @@
         android:layout_weight="1"
         android:drawableTop="@drawable/ic_omnipod_overview_suspend_delivery"
         android:drawablePadding="@dimen/omnipod_icon_button_drawable_padding"
+        android:textColor="@color/gradient_dark"
         android:text="@string/omnipod_common_overview_button_suspend_delivery"
         android:visibility="gone" />
 

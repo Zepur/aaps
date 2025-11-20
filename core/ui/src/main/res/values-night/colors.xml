@@ -1,26 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="palette5">#FE6847</color>
+    <color name="palette4">#FBB13C</color>
+    <color name="palette3">#B66D0D</color>
+    <color name="palette2">#57B8FF</color>
+    <color name="palette1">#2176AE</color>
+
+    <color name="accent">#F34874</color>
+    <color name="progressbarColor">@color/accent</color>
+
+    <color name="gradient_dark">@color/grad_blue_dark</color>
+    <color name="gradient_mid_dark">#002887</color>
+    <color name="gradient_mid_light">#B9D6FF</color>
+    <color name="gradient_light">#FDEFF9</color>
+    <color name="grad_blue_light">#0088FF</color>
+    <color name="grad_blue_dark">#000428</color>
     <!-- Default theme color -->
     <!-- This section describes the main theme colors -->
-    <color name="colorPrimary">@color/dark_blue</color>
-    <color name="colorPrimaryDark">@color/dark_blue</color>
-    <color name="colorAccent">@color/dark_blue</color>
-    <color name="mdtp_line_dark">@color/dark_blue</color>
+    <color name="colorPrimary">@color/gradient_dark</color>
+    <color name="colorPrimaryDark">@color/gradient_dark</color>
+    <color name="colorAccent">@color/gradient_dark</color>
+    <color name="mdtp_line_dark">@color/gradient_dark</color>
     <color name="colorLightGray">#d8d8d8</color>
-    <color name="cardColorBackground">@color/dark_blue</color>
+    <color name="cardColorBackground">@color/gradient_dark</color>
     <color name="gray">#BBBBBB</color>
-    <color name="black">#FF151E39</color>
-    <color name="white">#FFFFFADE</color>
-    <color name="ok_cancel_yellow">#F9F871</color>
+    <color name="black">@color/gradient_dark</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="coldBlueWhite">#E3F0FF</color>
+<!--    <color name="yellow">#F9F871</color>-->
+    <color name="yellow">#e3f0ff</color>
+    <color name="brightYellow">#FFFF00</color>
     <color name="dropDownBlurple">#3C385B</color>
+    <color name="plusMinusButtonColor">@color/coldBlueWhite</color>
+    <color name="tabIndicatorColor">@color/coldBlueWhite</color>
 
     <color name="pink">#FAB0DB</color>
     <color name="pink_dark">#C790BD</color>
     <color name="pink_darker">#95729E</color>
     <color name="pink_darkest">#67547D</color>
-    <color name="dark_blue">#151E39</color>
+    <color name="dark_blue">@color/gradient_dark</color>
     <color name="dark_red">#A4506F</color>
+    <color name="orange">#FFB35F</color>
     <color name="buttonTextDark">@color/dark_blue</color>
+
+    <color name="candydarkpink">#A4506F</color>
+    <color name="candypink">#c03565</color>
+    <color name="candylightpink">#FFE3F3</color>
+    <color name="candyteal">#00C9C4</color>
+    <color name="candygreen">#C2FDBC</color>
+    <color name="candypurple">#E1C6FD</color>
+    <color name="candyorange">#FCAC6C</color>
 
     <color name="primaryColorDefault">@color/dark_blue</color>
     <color name="primaryLightColorDefault">#bbb9bb</color>
@@ -33,8 +63,10 @@
     <color name="overviewPillColorDefault">#1c171c</color>
     <color name="colorOnPrimaryDefault">#FFFFFF</color>
 
+    <color name="pod_icon_stroke">@color/gradient_light</color>
+
     <color name="defaultBackground">@color/dark_blue</color>
-    <color name="defaultTextColor">#B3FFFFFF</color>
+    <color name="defaultTextColor">@color/gradient_light</color>
 
     <!---Android Dark ans Light Theme Base colors-->
     <color name="background_dark">@color/dark_blue</color>
@@ -45,7 +77,7 @@
     <color name="tabSelectedText">@color/white</color>
 
     <!--    Buttons-->
-    <color name="buttonBackground">@color/dark_blue</color>
+    <color name="buttonBackground">@color/gradient_dark</color>
     <color name="buttonText">#ffffff</color>
     <color name="okButtonText">@color/colorAccent</color>
     <color name="okButtonSelected">#33969696</color>
@@ -82,9 +114,11 @@
     <color name="dateTimePickerBackground">@color/buttonBackground</color>
 
     <!--    Treatment-->
-    <color name="tempbasal">#C803A9F4</color>
+    <!-- <color name="tempbasal">#C803A9F4</color> -->
+    <color name="tempbasal">#FF00FF20</color>
     <color name="list_delimiter">#505050</color>
-    <color name="basal">#00ffff</color>
+    <!-- <color name="basal">#00ffff</color> -->
+    <color name="basal">#FF004D</color>
 
     <!--    Loop     -->
     <color name="loopDisconnected">#939393</color>
@@ -94,9 +128,15 @@
     <color name="loopDisabled">#FF1313</color>
 
     <!--    BgReading-->
-    <color name="inRange">@color/pink</color>
-    <color name="low">#E1786A</color>
-    <color name="high">@color/dark_red</color>
+    <color name="inRangeAlpha">#B452B2AC</color>
+    <color name="inRange2Alpha">#B4C3DFDD</color>
+    <color name="inRange">#0080FF</color>
+    <color name="low">#FF4994</color>
+    <color name="high">#FFBEBE</color>
+    <!---BG WIDGET color-->
+    <color name="bgLowWidget">@color/low</color>
+    <color name="highColorWidget">@color/high</color>
+    <color name="bgInRangeWidget">@color/gradient_dark</color>
 <!--    <color name="inRange">#00FF4C</color>-->
 <!--    <color name="low">#FF007E</color>-->
 <!--    <color name="high">#FFE619</color>-->
@@ -118,9 +158,9 @@
     <color name="weekendOutline">#1e88e5</color>
 
     <!-- Notification-->
-    <color name="notificationAnnouncement">#FFB35F</color>
-    <color name="notificationUrgent">@color/pink_dark</color>
-    <color name="notificationNormal">@color/pink_darker</color>
+    <color name="notificationAnnouncement">@color/orange</color>
+    <color name="notificationUrgent">@color/accent</color>
+    <color name="notificationNormal">#B40044</color>
     <color name="notificationLow">@color/pink_darkest</color>
 
     <!-- Green Colors -->
@@ -159,7 +199,7 @@
     <color name="ribbonWarning">#99FAB0DB</color>
     <color name="ribbonCritical">#d17335</color>
     <color name="ribbonTextDefault">#FFFFFF</color>
-    <color name="ribbonTextWarning">#303030</color>
+    <color name="ribbonTextWarning">#CC6E00</color>
     <color name="tempTargetConfirmation">#77dd77</color>
 
     <color name="prediction">#ff00ff</color>
@@ -208,7 +248,7 @@
     <color name="colorScheduled">#de7550</color>
     <color name="colorActive">#25912e</color>
 
-    <color name="deviationGrey">#c8666666</color>
+    <color name="deviationGray">#c8666666</color>
     <color name="deviationGreen">#7200FF00</color>
     <color name="deviationRed">#72FF0000</color>
     <color name="deviationBlack">#72000000</color>
@@ -231,9 +271,9 @@
     <color name="darkGray">#323232</color>
     <color name="darkGrayVariant">#424242</color>
     <color name="objectivesBackground">@color/dark_blue</color>
-    <color name="plastic_grey">#666666</color>
+    <color name="plastic_gray">#666666</color>
     <color name="byodaGray">#999999</color>
-    <color name="sphere_plastic_grey">#8c8c8c</color>
+    <color name="sphere_plastic_gray">#8c8c8c</color>
     <color name="lightSandGray">#72000000</color>
     <color name="sandGray">#c8666666</color>
     <color name="midGray">#B2B2B2</color>
@@ -250,17 +290,17 @@
     <color name="omni_green">#00FF00</color>
 
     <!-- Button icons - general -->
-    <color name="pod_icon_outline">#9E9E9E</color>
+    <color name="pod_icon_outline">@color/gradient_dark</color>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#9E9E9E</color>
 
     <!-- Omnipod Wizard -->
-    <color name="omnipod_wizard_progress_bar">@color/pink</color>
+    <color name="omnipod_wizard_progress_bar">@color/gradient_dark</color>
     <color name="omnipod_wizard_finish_button">#ff669900</color>
     <color name="icon_omnipod_wizard_success">#77DD77</color>
 
     <!-- Omnipod tab - Button icons -->
-    <color name="ic_omnipod_overview_acknowledge_alerts">#FF4444</color>
+    <color name="ic_omnipod_overview_acknowledge_alerts">@color/brightYellow</color>
     <color name="ic_omnipod_overview_acknowledge_alerts_outline">@color/pod_icon_outline</color>
     <color name="ic_omnipod_overview_pod_management">#4CAF50</color>
     <color name="ic_omnipod_overview_pod_management_graph">@color/pod_icon_outline</color>

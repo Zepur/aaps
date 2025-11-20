@@ -12,6 +12,7 @@ import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.Handler
+import app.aaps.plugins.main.general.overview.WordPlay
 import android.os.HandlerThread
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -21,6 +22,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import androidx.core.text.toSpanned
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.aaps.core.data.configuration.Constants
@@ -106,6 +108,7 @@ import app.aaps.plugins.main.general.overview.notifications.NotificationStore
 import app.aaps.plugins.main.general.overview.notifications.events.EventUpdateOverviewNotification
 import app.aaps.plugins.main.general.overview.ui.StatusLightHandler
 import app.aaps.plugins.main.skins.SkinProvider
+import com.google.android.material.card.MaterialCardView
 import com.jjoe64.graphview.GraphView
 import dagger.android.HasAndroidInjector
 import dagger.android.support.DaggerFragment
@@ -220,7 +223,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.graphsLayout.bgGraph.gridLabelRenderer?.gridColor = rh.gac(context, app.aaps.core.ui.R.attr.graphGrid)
         binding.graphsLayout.bgGraph.gridLabelRenderer?.reloadStyles()
         binding.graphsLayout.bgGraph.gridLabelRenderer?.labelVerticalWidth = axisWidth
-        binding.graphsLayout.bgGraph.layoutParams?.height = rh.dpToPx(skinProvider.activeSkin().mainGraphHeight)
+        binding.graphsLayout.bgGraph.layoutParams?.height = rh.dpToPx(300)
 
         carbAnimation = binding.infoLayout.carbsIcon.background as AnimationDrawable?
         carbAnimation?.setEnterFadeDuration(1200)
@@ -255,6 +258,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.buttonsLayout.quickWizardButton.setOnLongClickListener(this)
         binding.infoLayout.apsMode.setOnClickListener(this)
         binding.infoLayout.apsMode.setOnLongClickListener(this)
+        binding.apsReasonText.setOnClickListener(this)
     }
 
     @Synchronized
@@ -382,6 +386,11 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         updateTemporaryTarget()
     }
 
+    fun updateFunText() {
+        val wp = WordPlay()
+        binding.apsReasonText.text = wp.createSentence()
+    }
+
     @Synchronized
     override fun onDestroyView() {
         super.onDestroyView()
@@ -449,14 +458,15 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                                 runOnUiThread {
                                     protectionCheck.queryProtection(activity, ProtectionCheck.Protection.BOLUS, UIRunnable {
                                         if (isAdded)
-                                            OKDialog.showConfirmation(activity, rh.gs(app.aaps.core.ui.R.string.tempbasal_label), lastRun.constraintsProcessed?.resultAsSpanned()
-                                                ?: "".toSpanned(), {
-                                                                          uel.log(Action.ACCEPTS_TEMP_BASAL, Sources.Overview)
-                                                                          (context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager?)?.cancel(Constants.notificationID)
-                                                                          rxBus.send(EventMobileToWear(EventData.CancelNotification(dateUtil.now())))
-                                                                          handler.post { loop.acceptChangeRequest() }
-                                                                          binding.buttonsLayout.acceptTempButton.visibility = View.GONE
-                                                                      })
+                                            OKDialog.showConfirmation(
+                                                activity, rh.gs(app.aaps.core.ui.R.string.tempbasal_label), lastRun.constraintsProcessed?.resultAsSpanned()
+                                                    ?: "".toSpanned(), {
+                                                    uel.log(Action.ACCEPTS_TEMP_BASAL, Sources.Overview)
+                                                    (context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager?)?.cancel(Constants.notificationID)
+                                                    rxBus.send(EventMobileToWear(EventData.CancelNotification(dateUtil.now())))
+                                                    handler.post { loop.acceptChangeRequest() }
+                                                    binding.buttonsLayout.acceptTempButton.visibility = View.GONE
+                                                })
                                     })
                                 }
                             }
@@ -468,6 +478,10 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     protectionCheck.queryProtection(activity, ProtectionCheck.Protection.BOLUS, UIRunnable {
                         if (isAdded) uiInteraction.runLoopDialog(childFragmentManager, 1)
                     })
+                }
+
+                R.id.aps_reason_text     -> {
+                    updateFunText()
                 }
             }
         }
@@ -764,7 +778,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
 
     private fun prepareGraphsIfNeeded(numOfGraphs: Int) {
         if (numOfGraphs != secondaryGraphs.size - 1) {
-            //aapsLogger.debug("New secondary graph count ${numOfGraphs-1}")
+            // aapsLogger.debug("New secondary graph count ${numOfGraphs-1}")
             // rebuild needed
             secondaryGraphs.clear()
             secondaryGraphsLabel.clear()
@@ -813,10 +827,21 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         task?.let { handler.postDelayed(it, 500) }
     }
 
+    @ColorInt
+    fun lastBgColorWidget(context: Context?): Int =
+        when {
+            lastBgData.isLow()  -> rh.gac(context, app.aaps.core.ui.R.attr.bgLowWidget)
+            lastBgData.isHigh() -> rh.gac(context, app.aaps.core.ui.R.attr.highColorWidget)
+            else                -> rh.gac(context, app.aaps.core.ui.R.attr.bgInRangeWidget)
+        }
+
     @SuppressLint("SetTextI18n")
     fun updateBg() {
         val lastBg = lastBgData.lastBg()
-        val lastBgColor = lastBgData.lastBgColor(context)
+
+        val isWidget = binding.root.findViewById<MaterialCardView>(R.id.infoCard) == null
+
+        val lastBgColor = if (isWidget) lastBgColorWidget(context) else lastBgData.lastBgColor(context)
         val isActualBg = lastBgData.isActualBg()
         val glucoseStatus = glucoseStatusProvider.glucoseStatusData
         val trendDescription = trendCalculator.getTrendDescription(iobCobCalculator.ads)
@@ -879,17 +904,17 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                 if (it is ProfileSealed.EPS) {
                     if (it.value.originalPercentage != 100 || it.value.originalTimeshift != 0L || it.value.originalDuration != 0L)
                         app.aaps.core.ui.R.attr.ribbonWarningColor
-                    else app.aaps.core.ui.R.attr.ribbonDefaultColor
-                } else app.aaps.core.ui.R.attr.ribbonDefaultColor
+                    else app.aaps.core.ui.R.attr.transparentColor
+                } else app.aaps.core.ui.R.attr.transparentColor
             } ?: app.aaps.core.ui.R.attr.ribbonCriticalColor
 
             val profileTextColor = profile?.let {
                 if (it is ProfileSealed.EPS) {
                     if (it.value.originalPercentage != 100 || it.value.originalTimeshift != 0L || it.value.originalDuration != 0L)
-                        app.aaps.core.ui.R.attr.ribbonTextWarningColor
-                    else app.aaps.core.ui.R.attr.ribbonTextDefaultColor
-                } else app.aaps.core.ui.R.attr.ribbonTextDefaultColor
-            } ?: app.aaps.core.ui.R.attr.ribbonTextDefaultColor
+                        app.aaps.core.ui.R.attr.candyTextColor
+                    else app.aaps.core.ui.R.attr.candyTextColor
+                } else app.aaps.core.ui.R.attr.candyTextColor
+            } ?: app.aaps.core.ui.R.attr.candyTextColor
             setRibbon(binding.activeProfile, profileTextColor, profileBackgroundColor, profileFunction.getProfileNameWithRemainingTime())
         }
     }
@@ -1024,8 +1049,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     } else {
                         setRibbon(
                             binding.tempTarget,
-                            app.aaps.core.ui.R.attr.ribbonTextDefaultColor,
-                            app.aaps.core.ui.R.attr.ribbonDefaultColor,
+                            app.aaps.core.ui.R.attr.candyTextColor,
+                            app.aaps.core.ui.R.attr.transparentColor,
                             profileUtil.toTargetRangeString(profile.getTargetLowMgdl(), profile.getTargetHighMgdl(), GlucoseUnit.MGDL, units)
                         )
                     }

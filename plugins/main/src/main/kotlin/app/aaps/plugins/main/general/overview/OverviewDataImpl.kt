@@ -159,10 +159,13 @@ class OverviewDataImpl @Inject constructor(
             }
         } ?: R.drawable.ic_cp_basal_no_tbr
 
+    /**
+     * here is where we set colors of graph text in main_page_info_layout
+     */
     @AttrRes override fun temporaryBasalColor(context: Context?): Int =
         processedTbrEbData.getTempBasalIncludingConvertedExtended(dateUtil.now())?.let {
-            rh.gac(context, app.aaps.core.ui.R.attr.basal)
-        } ?: rh.gac(context, app.aaps.core.ui.R.attr.defaultTextColor)
+            rh.gac(context, app.aaps.core.ui.R.attr.basalTextColorHigh)
+        } ?: rh.gac(context, app.aaps.core.ui.R.attr.basalTextColorNormal)
 
     /*
      * EXTENDED BOLUS

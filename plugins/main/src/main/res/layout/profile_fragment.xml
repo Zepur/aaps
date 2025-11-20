@@ -123,7 +123,8 @@
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/coldBlueWhite">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
@@ -183,7 +184,7 @@
 
                     <app.aaps.core.ui.elements.NumberPicker
                         android:id="@+id/dia"
-                        android:layout_width="130dp"
+                        android:layout_width="140dp"
                         android:layout_height="40dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
@@ -301,6 +302,22 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
                     android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/target_as_mmol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginEnd="140dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:gravity="center"
+                    android:background="@color/coldBlueWhite"
+                    android:textColor="@color/grad_blue_dark"
+                    tools:text="111 - 888"/>
 
                 <app.aaps.core.graph.TargetBgProfileGraph
                     android:id="@+id/target_graph"

@@ -285,6 +285,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/ic_bolus_pink"
+            app:tint="@color/gradient_light"
             android:contentDescription="@string/iob" />
 
         <TextView
@@ -318,6 +319,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/anim_carbs_pink"
+            app:tint="@color/gradient_light"
             android:contentDescription="@string/cob" />
 
         <TextView
@@ -350,6 +352,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/ic_cp_basal_no_tbr"
+            app:tint="@color/gradient_light"
             android:contentDescription="@string/basal" />
 
         <TextView

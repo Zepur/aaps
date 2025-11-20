@@ -2,7 +2,11 @@ package app.aaps
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.LinearGradient
+import android.graphics.Paint
 import android.graphics.Rect
+import android.graphics.Shader
+import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -69,6 +73,7 @@ import app.aaps.plugins.constraints.signatureVerifier.SignatureVerifierPlugin
 import app.aaps.ui.activities.ProfileHelperActivity
 import app.aaps.ui.activities.StatsActivity
 import app.aaps.ui.activities.TreatmentsActivity
+import app.aaps.ui.helpers.BackgroundProvider
 import app.aaps.ui.tabs.TabPageAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.tabs.TabLayoutMediator
@@ -115,7 +120,9 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         super.onCreate(savedInstanceState)
         Iconify.with(FontAwesomeModule())
         LocaleHelper.update(applicationContext)
+        // val gradient = getRandomColors()
         binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.root.background = BackgroundProvider.getAppBackground(this)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -348,9 +355,10 @@ class MainActivity : DaggerAppCompatActivityWithResult() {
         if (config.appInitialized) binding.splash.visibility = View.GONE
         if (!isProtectionCheckActive) {
             isProtectionCheckActive = true
-            protectionCheck.queryProtection(this, ProtectionCheck.Protection.APPLICATION, UIRunnable { isProtectionCheckActive = false },
-                                            UIRunnable { OKDialog.show(this, "", rh.gs(R.string.authorizationfailed), true) { isProtectionCheckActive = false; finish() } },
-                                            UIRunnable { OKDialog.show(this, "", rh.gs(R.string.authorizationfailed), true) { isProtectionCheckActive = false; finish() } }
+            protectionCheck.queryProtection(
+                this, ProtectionCheck.Protection.APPLICATION, UIRunnable { isProtectionCheckActive = false },
+                UIRunnable { OKDialog.show(this, "", rh.gs(R.string.authorizationfailed), true) { isProtectionCheckActive = false; finish() } },
+                UIRunnable { OKDialog.show(this, "", rh.gs(R.string.authorizationfailed), true) { isProtectionCheckActive = false; finish() } }
             )
         }
     }

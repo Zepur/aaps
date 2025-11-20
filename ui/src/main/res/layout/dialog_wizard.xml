@@ -24,6 +24,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
                 android:importantForAccessibility="no"
                 app:srcCompat="@drawable/ic_calculator_white" />
 
@@ -40,6 +41,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_gravity="center"
+            android:background="@color/white"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,7 +118,7 @@
 
                 <app.aaps.core.ui.elements.NumberPicker
                     android:id="@+id/bg_input"
-                    android:layout_width="130dp"
+                    android:layout_width="140dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="2dp"
                     app:customContentDescription="@string/a11y_current_bg" />
@@ -145,7 +154,7 @@
 
                 <app.aaps.core.ui.elements.NumberPicker
                     android:id="@+id/carbs_input"
-                    android:layout_width="130dp"
+                    android:layout_width="140dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="2dp"
@@ -204,7 +213,7 @@
 
                 <app.aaps.core.ui.elements.NumberPicker
                     android:id="@+id/correction_input"
-                    android:layout_width="130dp"
+                    android:layout_width="140dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
                     app:customContentDescription="@string/a11_correction_units" />
@@ -260,7 +269,7 @@
 
                 <app.aaps.core.ui.elements.NumberPicker
                     android:id="@+id/carb_time_input"
-                    android:layout_width="130dp"
+                    android:layout_width="140dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
                     app:contentDescription="carb time" />

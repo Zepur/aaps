@@ -16,15 +16,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="56dp"
-    android:orientation="horizontal"
+    android:layout_gravity="center_vertical"
     android:background="@android:color/transparent"
     android:gravity="end"
-    android:layout_gravity="center_vertical"
-    android:paddingBottom="8dp">
+    android:orientation="horizontal"
+    android:paddingBottom="3dp">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cancel"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:layout_marginEnd="8dp"
         style="@style/OkCancelButton.Text"
@@ -34,16 +34,21 @@
         android:id="@+id/divider"
         android:layout_width="1dp"
         android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
         android:layout_gravity="center"
-        android:background="@color/white"/>
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/gradient_light" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/ok"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
         style="@style/OkCancelButton.Text"
         android:text="@string/ok" />
 </LinearLayout>

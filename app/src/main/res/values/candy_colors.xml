@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="candy_colors">
+        <item>@color/candypurple</item>
+        <item>@color/candygreen</item>
+        <item>@color/candylightpink</item>
+        <item>@color/candyteal</item>
+        <item>@color/candyorange</item>
+        <item>@color/candypink</item>
+    </array>
+</resources>

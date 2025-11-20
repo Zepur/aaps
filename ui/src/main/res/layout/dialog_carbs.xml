@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     android:background="@drawable/gradback_card"
-    tools:context=".ui.dialogs.CarbsDialog">
+    tools:context=".dialogs.CarbsDialog">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +23,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:importantForAccessibility="no"
                 app:srcCompat="@drawable/ic_cp_bolus_white" />
 
@@ -141,7 +142,7 @@
 
                 <app.aaps.core.ui.elements.MinutesNumberPicker
                     android:id="@+id/time"
-                    android:layout_width="130dp"
+                    android:layout_width="140dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="2dp"
                     app:customContentDescription="@string/time_offset" />
@@ -178,7 +179,7 @@
 
                 <app.aaps.core.ui.elements.NumberPicker
                     android:id="@+id/duration"
-                    android:layout_width="130dp"
+                    android:layout_width="140dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="2dp"
@@ -218,7 +219,7 @@
 
                 <app.aaps.core.ui.elements.NumberPicker
                     android:id="@+id/carbs"
-                    android:layout_width="130dp"
+                    android:layout_width="140dp"
                     android:layout_height="40dp"
                     app:customContentDescription="@string/carbs" />
 
