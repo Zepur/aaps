@@ -23,7 +23,8 @@ class WordPlay {
             val setup9 = "if you don't want to $linkingVerb ${getBadVerb()}, it ${getModalVerb()} help if you are ${getGoodVerb()}"
             val setup10 = "just because it's $badAdj to $linkingVerb $goodAdj does not mean it's $goodAdj to $linkingVerb $badAdj"
             val setup11 = "$linkingVerb $badAdj, because a ${getNameableNounSingular()} named ${getFName()} is gonna $transVerb with ${getNounAmount().replace(" of", "")} of the $goodAdj ${getNoun()} from ${getPlace()}! ${getReaction()}"
-            return listOf(setup1, setup2, setup3, setup4, setup5, setup6, setup7, setup8, setup9, setup10, setup11).random()
+            val setup12 = ""
+            return listOf(setup1, setup2, setup3, setup4, setup5, setup6, setup7, setup8, setup9, setup10, setup11, setup12).random()
         }
 
     fun getLinkingVerb(): String {
