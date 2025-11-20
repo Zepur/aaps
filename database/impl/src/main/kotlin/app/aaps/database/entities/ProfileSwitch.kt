@@ -41,7 +41,6 @@ data class ProfileSwitch(
     override var timestamp: Long,
     override var utcOffset: Long = TimeZone.getDefault().getOffset(timestamp).toLong(),
     var basalBlocks: List<Block>,
-    var basalLimitBlocks: List<Block>? = null,
     var isfBlocks: List<Block>,
     var icBlocks: List<Block>,
     var targetBlocks: List<TargetBlock>,
